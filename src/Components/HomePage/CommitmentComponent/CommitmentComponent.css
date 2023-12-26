@@ -1,0 +1,107 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../../public/Hauora-Medium.ttf);
+}
+
+.cards {
+    font-family: hauora-medium;
+}
+
+.commitment-section {
+    background-image: url('../../../assets/BackgroundImage.png');
+    background-size: cover;
+    color: #fff;
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+.commitment-section1 {
+    background-image: url('../../../assets/BackgroundImage.png');
+    background-size: cover;
+    color: #fff;
+    padding: 0rem 0rem 2rem 0rem;
+    display: none;
+}
+
+.commitment-heading {
+    font-size: calc(1.75rem + 1.5vw);
+    font-family: hauora-medium;
+    padding: 3rem 2rem 5rem 2rem;
+}
+
+.commit-col {
+    background-color: transparent;
+    color: #fff;
+    width: 25rem;
+    margin: 0 auto;
+}
+
+.commit-circle {
+    background-color: #A1A4Ac;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+}
+
+.commit-number {
+    font-size: 1rem;
+    color: #000;
+    margin: 0;
+}
+
+.commit-text {
+    padding: 1vh 0vh;
+    font-size: 1.1rem;
+}
+
+/* Increase the size of the dots in CommitmentComponent */
+.commitment-section1 .slick-dots li button:before {
+    font-size: 11px !important;
+    color: #fff !important;
+}
+
+@media only screen and (max-width: 1256px) {
+    .commit-col {
+        width: 22.92rem;
+    }
+}
+
+
+@media (max-width: 900px),
+(min-width: 778px) and (max-width: 900px) {
+    .commit-col {
+        width: 20.6rem;
+    }
+}
+
+@media (max-width: 778px) {
+
+    .commitment-section {
+        display: none;
+    }
+
+    .commitment-section1 {
+        display: block;
+        padding-bottom: 7vh;
+        margin-right: 0vh;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .commit-col {
+        width: 20.6rem;
+    }
+}
+
+@media only screen and (max-width: 351px) {
+    .commit-col {
+        width: 17.5rem;
+    }
+
+    .commitment-section1 {
+        margin-right: 0rem;
+    }
+}
