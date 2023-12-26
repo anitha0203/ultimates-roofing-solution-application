@@ -1,0 +1,159 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
+}
+
+/* Header CSS */
+.active,
+.active-service,
+.active-service>a,
+.not-active:hover,
+.not-active:hover>a {
+    color: #B22335 !important;
+    font-weight: 500;
+}
+
+.navbar-collapse {
+    margin: 1rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Dropdown styling */
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+} */
+
+.navbar-expand-xxl .navbar-nav .dropdown-menu {
+    margin-top: 1.4rem;
+    border-radius: 0px;
+}
+
+.dropdown-item,
+.dropdown-item.active {
+    font-size: 1.2rem;
+    font-family: hauora-medium;
+    padding: 0.8vh 0vh 0.8vh 2vh;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    color: #B22335;
+    background-color: transparent;
+}
+
+.nav-link-with-margin {
+    margin-right: 35px;
+}
+
+.not-active,
+.not-active>a {
+    color: #000;
+}
+
+.logo-section {
+    width: 16rem;
+}
+
+.navbar {
+    padding: 0rem 5rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #A1A4AC;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+}
+
+.main-logo {
+    font-size: 40px;
+    margin-top: -5px;
+}
+
+.phone-icon {
+    margin: -0.3vh 1vh 0vh 0vh;
+}
+
+.roof-quote-btn,
+.roof-quote-btn:hover {
+    background-color: #B22335;
+    border-color: #B22335;
+    border-radius: 0px;
+    padding: 14px 18px;
+    width: fit-content;
+
+}
+
+@media only screen and (max-width: 1399px) {
+    .navbar-expand-xxl .navbar-nav .dropdown-menu {
+        margin-top: 0rem;
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .nav-link-with-margin {
+        margin-right: 15px;
+    }
+
+}
+
+/* Styles to apply when the screen  */
+@media only screen and (max-width: 991px) {
+
+    /* Home Page CSS */
+    .homePage {
+        margin-top: 0px
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .background-video-container {
+        height: 80vh;
+    }
+
+    .main-heading {
+        font-size: 2.6rem;
+    }
+
+    .phone-icon {
+        margin: -0.4vh 1.5vh 0vh 0vh;
+    }
+}
+
+/* Styles to apply when the screen width is below 500px */
+@media only screen and (max-width: 650px) {
+    .main-heading {
+        font-size: 2rem !important;
+    }
+}
+
+/* Styles to apply when the screen width is below 500px */
+@media only screen and (max-width: 450px) {
+    .logo-section {
+        width: 11.5rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1470px) {
+    .navbar {
+        padding: 0rem 2rem;
+    }
+
+}

@@ -1,0 +1,144 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
+}
+
+@font-face {
+    font-family: hauora-light;
+    src: url(../../../public/Hauora-Light.ttf);
+}
+
+.footer-section {
+    font-family: hauora-medium;
+    color: #fff;
+    background-color: #323539;
+    padding: 4rem 5rem 2rem 5rem;
+    margin: 0px;
+}
+
+
+.description {
+    font-size: 2.5rem;
+    margin: 0rem 5rem 1.5rem 0rem;
+    font-size: calc(1.2rem + 1vw);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.74px;
+}
+
+.navbar-items {
+    margin-bottom: 4rem;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.navitems {
+    margin-left: -1vh;
+}
+
+.head-section {
+    margin-bottom: 1rem;
+}
+
+.contact-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 2vh;
+}
+
+.footer-cols {
+    letter-spacing: 0.36px;
+    font-family: hauora-light;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.36px;
+}
+
+.last-section {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1vh;
+    margin-top: 4vh;
+    font-size: 14px;
+    font-family: hauora-light;
+    letter-spacing: 0.28px;
+}
+
+.description1 {
+    font-size: 2.5rem;
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: calc(1.2rem + 1vw);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.74px;
+}
+
+.navbar-items1 {
+    margin-bottom: 2rem;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.estimate-btn1,
+.estimate-btn1:hover {
+    border-radius: 0px;
+    background-color: #B22335;
+    border: 1px solid #B22335;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+}
+
+.view2 {
+    display: none;
+}
+
+@media only screen and (max-width: 1350px) {
+    .view1 {
+        display: none;
+    }
+
+    .view2 {
+        display: block;
+    }
+    .head-section {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 946px) {
+    .footer-section {
+        padding: 2rem 1vh 2rem 1vh;
+    }
+
+    .head-section {
+        font-size: 1.2rem;
+    }
+
+    .footer-cols {
+        font-size: 13px;
+    }
+
+    .last-section {
+        font-size: calc(0.5rem + 0.7vw);
+    }
+
+    .navbar-items1 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 354px) {
+    .footer-section {
+        padding: 2rem 1vh 2rem 0vh;
+    }
+    .navbar-items1{
+        margin-left: -10px;
+    }
+}

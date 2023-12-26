@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Packages 
+
+### `npm i react-router-dom`
+
+### `npm install react-bootstrap bootstrap`
+
+### `npm i react-icons`
+
+### `npm install react-slick slick-carousel`
+
 ## Available Scripts
 
 In the project directory, you can run:
