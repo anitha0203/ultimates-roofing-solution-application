@@ -1,31 +1,29 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Form, Row, Button, Toast } from 'react-bootstrap'
-import { MdAccessTime, MdOutlineEmail, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
+import { Col, Form, Row, Button, Toast } from 'react-bootstrap'
+import { IoMailOutline } from "react-icons/io5";
+import { LuPhone } from "react-icons/lu";
+import { SlClock } from "react-icons/sl";
+import { CiLocationOn } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
 import './ContactPage.css'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
-import ContactForm from '../../assets/ContactForm.png'
 
 function ContactPage() {
 
     const navigate = useNavigate();
+    const [visible, setVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [toast, setToast] = useState(false)
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
-        email: '',
         phoneNumber: '',
         service: '',
-        address: '',
-        city: '',
-        state: '',
-        zip: '',
-        message: ''
+        message: '',
+        images: [],
     });
-    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -40,19 +38,27 @@ function ContactPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
-        if (formData.firstName === '' || formData.lastName === '' || formData.email === '' || formData.phoneNumber === '' ||
-            formData.service === '' || formData.address === '' || formData.city === '' || formData.state === '' || formData.zip === '') {
+        if (formData.firstName === '' || formData.lastName === '' || formData.phoneNumber === '' ||
+            formData.service === '') {
             setErrorMessage("Please fill all required fields");
         } else if (formData.phoneNumber.length != 10) {
             setErrorMessage("PhoneNumber is not valid");
-        } else if (!emailPattern.test(formData.email)) {
-            setErrorMessage("Email is not valid");
-        } else if (formData.zip.length != 5) {
-            setErrorMessage("Zip is not valid");
         } else {
             setErrorMessage('');
             setLoading(true);
-            axios.post('', { formData }).then(res => { setToast(true); navigate("/success-page") })
+            const formDataForUpload = new FormData();
+            Object.entries(formData).forEach(([key, value]) => {
+              if (key === 'images') {
+                for (let i = 0; i < value.length; i++) {
+                  formDataForUpload.append('images', value[i]);
+                }
+              } else {
+                formDataForUpload.append(key, value);
+              }
+            });
+            console.log(formDataForUpload);
+            console.log(formData);
+            axios.post('', { formDataForUpload }).then(res => { setToast(true); navigate("/success-page") })
                 .catch((error) => {
                     setToast(true);
                     if (error.response && error.response.status === 404 || error.response.status === 500 || error.response.status === 400) {
@@ -67,6 +73,8 @@ function ContactPage() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+        setVisible(true);
         if (toast) {
             const timer = setTimeout(() => {
                 setToast(false);
@@ -76,49 +84,55 @@ function ContactPage() {
         }
     }, [toast]);
 
-
+    const handleImageChange = (e) => {
+        
+        const files = e.target.files;
+        setErrorMessage('');
+    
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          images: [...files],
+        }));
+      };
+      
     return (
         <div className='contact-page'>
 
             <div className='contact-us'>
                 <h2 className='contact-heading'>Contact Us</h2>
-                <Row style={{ margin: "1px auto" }}>
+                <Row style={{ margin: "1px auto" }} className='contact-sections-row'>
                     <Col>
-                        <div className='contact-sections'>
-                            <MdOutlinePhone className='contact-icon' />
+                        <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
                             <div className='contact-text'>
-                                <p style={{ fontWeight: "bold", fontSize: "23px" }}>Call Us</p>
-                                <p>614-602-7980</p>
+                                <p style={{ fontWeight: "bold", fontSize: "23px" }}><LuPhone className='contact-icon' /> Call Us</p>
+                                <p className='address-text'>614-602-7980</p>
                             </div>
                         </div>
                     </Col>
-                    
+
                     <Col>
-                        <div className='contact-sections'>
-                            <MdOutlineEmail className='contact-icon' />
+                        <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
                             <div className='contact-text'>
-                                <p style={{ fontWeight: "bold", fontSize: "23px" }}>E-mail</p>
-                                <p>thossan247@gmail.com</p>
-                                <p>rockakash100@gmail.com</p>
-                            </div>
-                        </div>
-                    </Col>
-                   <Col>
-                        <div className='contact-sections'>
-                            <MdAccessTime className='contact-icon' />
-                            <div className='contact-text'>
-                                <p style={{ fontWeight: "bold", fontSize: "23px" }}>Timings</p>
-                                <p>Monday - Friday</p>
-                                <p>9 AM - 5 PM</p>
+                                <p style={{ fontWeight: "bold", fontSize: "23px" }}><IoMailOutline className='contact-icon' /> E-mail</p>
+                                <p className='address-text'>admin - roofs@ultimatesolutionsit.com</p>
+                                <p className='address-text'>sales - hrroofs@ultimatesolutionsit.com</p>
                             </div>
                         </div>
                     </Col>
                     <Col>
-                        <div className='contact-sections'>
-                            <MdOutlineLocationOn className='contact-icon' />
+                        <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
                             <div className='contact-text'>
-                                <p style={{ fontWeight: "bold", fontSize: "23px" }}>Address</p>
-                                <p>Columbus, Ohio</p>
+                                <p style={{ fontWeight: "bold", fontSize: "23px" }}><SlClock className='contact-icon' /> Timings</p>
+                                <p className='address-text'>Monday - Friday</p>
+                                <p className='address-text'>9 AM - 5 PM</p>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
+                            <div className='contact-text'>
+                                <p style={{ fontWeight: "bold", fontSize: "23px" }}><CiLocationOn className='contact-icon' /> Address</p>
+                                <p className='address-text'>Columbus, Ohio</p>
                             </div>
                         </div>
                     </Col>
@@ -126,7 +140,7 @@ function ContactPage() {
             </div>
 
             {toast ? (
-                <Toast style={{ position: 'fixed', top: 0, right: 0 }}>
+                <Toast style={{ position: 'fixed', top: "10%", right: 0 }}>
                     <Toast.Header>
                         <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
                         <strong className="me-auto">THANK YOU</strong>
@@ -148,7 +162,7 @@ function ContactPage() {
                                     </div>
                                 ) : null}
                             </div>
-                            <Row>
+                            <Row className='names-roww'>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
@@ -197,21 +211,6 @@ function ContactPage() {
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col>
-                                    <Form.Group>
-                                        <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> E-Mail
-                                        </Form.Label>
-                                        <Form.Control
-                                            type="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            isInvalid={errorMessage}
-                                            className="input"
-                                        />
-                                    </Form.Group>
-                                </Col>
                             </Row>
                             <Row>
                                 <Col>
@@ -238,52 +237,20 @@ function ContactPage() {
                                     </Form.Group>
                                 </Col>
                             </Row>
+
                             <Row>
-                                <Col>
-                                    <Form.Group>
-                                        <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Address
-                                        </Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            name="address"
-                                            value={formData.address}
-                                            onChange={handleInputChange}
-                                            className="input"
-                                        />
-                                    </Form.Group>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Form.Group>
-                                        <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> State
-                                        </Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            name="state"
-                                            value={formData.state}
-                                            onChange={handleInputChange}
-                                            className="input"
-                                        />
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    <Form.Group>
-                                        <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span>  Zip
-                                        </Form.Label>
-                                        <Form.Control
-                                            type="number"
-                                            name="zip"
-                                            value={formData.zip}
-                                            onChange={handleInputChange}
-                                            className="input"
-                                        />
-                                    </Form.Group>
-                                </Col>
-                            </Row>
+                            <Form.Group>
+                            <Form.Label className='label'>Upload Images</Form.Label>
+                            <Form.Control
+                              type='file'
+                              name='images'
+                              onChange={handleImageChange}
+                              accept='image/*'
+                              multiple
+                              className='input'
+                            />
+                          </Form.Group>
+                        </Row>
 
                             <Row>
                                 <Form.Group>
@@ -304,16 +271,18 @@ function ContactPage() {
                             <div style={{ textAlign: "center" }}>
                                 <Button onClick={handleSubmit} type="submit" style={{ marginTop: "2rem", padding: "1rem 6rem" }} className='estimate-btn'>
                                     Send Now
-                                </Button></div>
+                                </Button>
+                            </div>
 
                         </Form>
                     </Col>
-                    <Col>
-                        <img src={ContactForm} />
+                    <Col className='image-coll'>
+                        {/****  <img src={ContactForm} /> **/}
+                        <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195656.61280534012!2d-83.15563599435002!3d39.98309783384798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1703668481347!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </Col>
-
                 </Row>
             </div>
+            <LogosComponent />
         </div>
     )
 }

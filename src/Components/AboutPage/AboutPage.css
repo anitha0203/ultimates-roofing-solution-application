@@ -1,0 +1,134 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
+}
+
+.about-main {
+    margin: 150px 6rem;
+    font-family: hauora-medium;
+}
+
+.about-us {
+    font-family: hauora-medium;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+.about-page-heading {
+    font-size: calc(1.2rem + 1.3vw);
+    font-family: hauora-medium;
+    margin-bottom: 1rem;
+}
+
+.about-page-text {
+    font-size: 20px;
+}
+
+.about-main-image {
+    width: 100%;
+    height: 100%;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+}
+
+.work-text {
+    margin: 3rem;
+}
+
+.work-details {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.number-details {
+    font-size: 45px;
+    color: #B22335;
+}
+
+.work-experience {
+    font-size: 22px;
+    letter-spacing: 0.8px;
+}
+
+.work-text1 {
+    margin: 0px 3rem;
+}
+
+.about-page-heading1 {
+    font-size: calc(1.2rem + 1.3vw);
+    font-family: hauora-medium;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+}
+
+/* .plus-icon {
+    font-size: 1rem;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .accordion-item:not(.accordion-item-collapsed) .plus-icon {
+    transform: rotate(45deg);
+  } */
+
+.accordion-item {
+    border-left: none;
+    border-right: none;
+}
+
+.accordion-item:first-of-type .accordion-button{
+    border-radius: 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .work-text {
+        margin: 1rem;
+    }
+    .about-page-heading1 {
+        margin-right: 0rem;
+    }
+    .work-text1 {
+        margin: 1rem;
+    }
+    .about-main {
+        margin: 80px 6rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-main {
+        margin: 50px 2rem;
+    }
+
+    .work-text {
+        margin: 2rem 0rem 0rem 0rem;
+    }
+    .work-text1 {
+        margin: 2rem 0rem 0rem 0rem;
+    }
+
+    .about-experience-text {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .about-main {
+        margin: 50px 1rem;
+    }
+
+    .about-page-text {
+        font-size: 16px;
+    }
+
+    .number-details {
+        font-size: 25px;
+    }
+
+    .work-experience {
+        font-size: 18px;
+    }
+}

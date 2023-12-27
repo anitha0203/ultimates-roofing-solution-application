@@ -34,7 +34,7 @@ function ValueCardsComponent() {
                 <Card.Img className='value-img' src={value.imageUrl} variant="top" alt={value.title} />
               </div>
               <Card.Body className='value-body'>
-                <h2 className='value-title'>{value.heading}</h2>
+                <Card.Title className='value-title'>{value.heading}</Card.Title>
                 <p className='value-text'>{value.text}</p>
               </Card.Body>
             </Card>

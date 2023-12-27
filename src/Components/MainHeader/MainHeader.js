@@ -17,7 +17,7 @@ function MainHeader() {
 
     // Function to determine if the "Services" dropdown should be active based on current path
     const isServicesDropdownActive = () => {
-        const servicesPaths = ['/residential-roofing', '/commercial-roofing', '/siding', '/gutters', '/windows'];
+        const servicesPaths = ['/residential-roofing', '/commercial-roofing', '/siding', '/gutter-systems', '/window-services'];
         return servicesPaths.some((path) => location.pathname.startsWith(path));
     };
 
@@ -46,7 +46,7 @@ function MainHeader() {
                             <Nav.Link href="/home" className={`nav-link-with-margin not-active ${isNavLinkActive('/home') || isNavLinkActive('/') ? 'active' : ''}`}>Home</Nav.Link>
                             <Nav.Link href="/about" className={`nav-link-with-margin not-active ${isNavLinkActive('/about') ? 'active' : ''}`}>About</Nav.Link>
                             <NavDropdown title="Services" id="basic-nav-dropdown" className={`nav-link-with-margin ${isServicesDropdownActive() ? 'active-service' : 'not-active'}`}>
-                                {['/home-roofing', '/commercial-roofing', '/siding-enhancements', '/gutter-systems', '/window-services'].map((path) => (
+                                {['/residential-roofing', '/commercial-roofing', '/siding-enhancements', '/gutter-systems', '/window-services'].map((path) => (
                                     <NavDropdown.Item key={path} href={path} className={navLinkClass(path)}>
                                         {formatDisplayText(path.replace('/', ''))}
                                     </NavDropdown.Item>
@@ -57,7 +57,7 @@ function MainHeader() {
                         </Nav>
 
                         <Nav className="justify-content-end flex-grow-1">
-                            <Nav.Link href="/" style={{ marginTop: "0.6vh" }} className={`nav-link-with-margin not-active ${isNavLinkActive('/contact') ? 'active' : ''}`}><img src={PhoneIcon} className='phone-icon' alt='ultimates-roofing-llc' />675-456-9786</Nav.Link>
+                            <Nav.Link href="/" style={{ marginTop: "0.6vh" }} className={`nav-link-with-margin not-active ${isNavLinkActive('/contact') ? 'active' : ''}`}><img src={PhoneIcon} className='phone-icon' alt='ultimates-roofing-llc' />614-602-7980</Nav.Link>
                             <Button className='roof-quote-btn'>Instant Roof Quote</Button>
                         </Nav>
                     </Navbar.Collapse>

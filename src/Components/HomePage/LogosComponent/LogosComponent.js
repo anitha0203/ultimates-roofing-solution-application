@@ -3,11 +3,12 @@ import Logo1 from '../../../assets/Logo1.png'
 import Logo2 from '../../../assets/Logo2.png'
 import Logo3 from '../../../assets/Logo3.png'
 import Logo4 from '../../../assets/Logo4.png'
+import Logo5 from '../../../assets/Logo5.png'
 import './LogosComponent.css'
 import { Col, Row } from 'react-bootstrap'
 
 // Logos Urls
-const logos = [Logo1, Logo2, Logo3, Logo4, Logo3,]
+const logos = [Logo1, Logo2, Logo3, Logo4, Logo5,]
 function LogosComponent() {
     return (
         <div className='logo-slider'>

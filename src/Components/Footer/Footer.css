@@ -37,6 +37,7 @@
 
 .navitems {
     margin-left: -1vh;
+    cursor: pointer;
 }
 
 .head-section {
@@ -97,6 +98,12 @@
 
 .view2 {
     display: none;
+}
+
+.underline-text{
+    color:#B22335;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1350px) {

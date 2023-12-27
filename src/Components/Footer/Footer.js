@@ -3,8 +3,23 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import PhoneIcon from '../../assets/PhoneIcon.png'
 import EmailIcon from '../../assets/EmailIcon.png'
 import './Footer.css'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation(); // Get the current location
+
+  const isCurrentPage = (pageName) => {
+    // Check if the current location pathname equals to the pageName
+    return location.pathname === pageName;
+  };
+
+  const isServicesDropdownActive = () => {
+    const servicesPaths = ['/residential-roofing', '/commercial-roofing', '/siding', '/gutter-systems', '/window-services'];
+    return servicesPaths.some((path) => location.pathname.startsWith(path));
+  };
+
+
   return (
     <div className='footer-section'>
 
@@ -15,11 +30,11 @@ function Footer() {
         </Col>
         <Col>
           <Row className='navbar-items'>
-            <Col className='navitems'>Home</Col>
-            <Col>About</Col>
-            <Col>Services</Col>
-            <Col>Projects</Col>
-            <Col>Contact</Col>
+            <Col onClick={() => {navigate('/home')}} className={`navitems ${isCurrentPage('/home') || isCurrentPage('/') ? 'underline-text' : ''}`}>Home</Col>
+            <Col onClick={() => {navigate('/about')}} className={`navitems ${isCurrentPage('/about') ? 'underline-text' : ''}`}>About</Col>
+            <Col onClick={() => {navigate('/residential-roofing')}} className={`navitems ${isServicesDropdownActive() ? 'underline-text' : ''}`}>Services</Col>
+            <Col onClick={() => {navigate('/projects')}} className={`navitems ${isCurrentPage('/projects') ? 'underline-text' : ''}`}>Projects</Col>
+            <Col onClick={() => {navigate('/contact')}} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
           <Row style={{ margin: "0" }}>
             <Col>
@@ -39,7 +54,7 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} />675-456-9786</div>
+                <div><img className='contact-icons' src={PhoneIcon} />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} />
                   <div>
@@ -52,14 +67,14 @@ function Footer() {
         </Col>
       </Row>
 
-      <Row style={{margin: "0px"}} className='view2'>
+      <Row style={{ margin: "0px" }} className='view2'>
         <Col>
           <Row className='navbar-items1'>
-            <Col className='navitems'>Home</Col>
-            <Col>About</Col>
-            <Col>Services</Col>
-            <Col>Projects</Col>
-            <Col>Contact</Col>
+            <Col onClick={() => {navigate('/home')}} className={`navitems ${isCurrentPage('/home') || isCurrentPage('/') ? 'underline-text' : ''}`}>Home</Col>
+            <Col onClick={() => {navigate('/about')}} className={`navitems ${isCurrentPage('/about') ? 'underline-text' : ''}`}>About</Col>
+            <Col onClick={() => {navigate('/residential-roofing')}} className={`navitems ${isServicesDropdownActive() ? 'underline-text' : ''}`}>Services</Col>
+            <Col onClick={() => {navigate('/projects')}} className={`navitems ${isCurrentPage('/projects') ? 'underline-text' : ''}`}>Projects</Col>
+            <Col onClick={() => {navigate('/contact')}} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
           <h2 className='description1'>Connect with Us for a Roof Over Your Dreams!</h2>
           <Button className='estimate-btn1'>Get Your Free Estimate</Button>
@@ -81,7 +96,7 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} />675-456-9786</div>
+                <div><img className='contact-icons' src={PhoneIcon} />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} />
                   <div>
