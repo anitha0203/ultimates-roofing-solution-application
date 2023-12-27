@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './VideosComponent.css';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
@@ -21,7 +21,7 @@ function VideosComponent() {
     const [isNextDisabled, setIsNextDisabled] = useState(false);
     const [currentVideoIndex, setCurrentVideoIndex] = useState(1);
     const [showModal, setShowModal] = useState(false);
-    const videoRef = useRef(null);
+    // const videoRef = useRef(null);
 
     useEffect(() => {
         const box = document.querySelector('.video-carousel');
@@ -123,7 +123,7 @@ function VideosComponent() {
                                 <source src={video.url} type="video/mp4" />
                             </video>
                             <div className='play-icon' onClick={() => openModal(index)}>
-                                <img className='play-icon-img' src={PlayButton} />
+                                <img className='play-icon-img' src={PlayButton} alt='ultimates-roofing-llc' />
                             </div>
                         </div>
                     ))}

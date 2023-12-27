@@ -63,22 +63,22 @@
     color: #fff !important;
 }
 
-@media only screen and (max-width: 1256px) {
+@media only screen and (max-width: 1272px) {
     .commit-col {
-        width: 22.92rem;
+        width: 17rem;
+    }
+    .commit-text {
+        font-size: 1rem;
+    }
+    .commit-headd{
+        font-size: 22px;
     }
 }
 
-
-@media (max-width: 900px),
-(min-width: 778px) and (max-width: 900px) {
+@media (max-width: 573px) {
     .commit-col {
-        width: 20.6rem;
+        width: 25rem;
     }
-}
-
-@media (max-width: 778px) {
-
     .commitment-section {
         display: none;
     }

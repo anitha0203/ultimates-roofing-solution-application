@@ -65,13 +65,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    width: 30rem;
+    height: 60vh;
+    width: 28rem;
     margin: 0 auto;
+    padding-right: 5px;
 }
 
 .service-heading {
-    margin: 5rem 0rem 1rem 0rem;
+    margin: 0rem 0rem 1rem 0rem;
     font-size: calc(1.75rem + 1.5vw);
     font-family: hauora-medium;
 }
@@ -81,15 +82,12 @@
     letter-spacing: 1px;
 }
 
-/* .services-cards {
-    margin: 6rem;
-} */
-
 .hover-effect {
-    width: 31.5rem;
+    width: 28rem;
     margin: 2vh auto;
     overflow: hidden;
     border: none;
+    border-radius: 0px;
 }
 
 .hover-effect:hover .card-icon,
@@ -132,11 +130,14 @@
     color: #B22335;
     width: 60px;
     height: 60px;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 .learnmore-btn {
@@ -219,19 +220,6 @@
 }
 
 @media only screen and (min-width: 1920px) {
-    .section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        width: 25rem;
-        margin: 0 auto;
-    }
-
-    .hover-effect {
-        width: 26rem !important;
-    }
-
     .card-title {
         font-size: 33px;
     }
@@ -265,16 +253,41 @@
         padding-left: 2rem;
     }
 
-}
-
-@media only screen and (max-width: 1256px) {
     .section {
         width: 24rem;
     }
 
+    .cards {
+        margin: 130px 3rem;
+    }
+
     .hover-effect {
-        width: 25rem;
+        width: 24rem;
+        height: 32rem;
+    }
+
+}
+
+@media only screen and (max-width: 1256px) {
+    .section {
+        width: 22rem;
+    }
+
+    .hover-effect {
+        width: 22rem;
         height: 31rem;
+    }
+
+    .card-title {
+        font-size: 25px;
+    }
+
+    .service-heading {
+        font-size: 28px;
+    }
+
+    .service-text {
+        font-size: large;
     }
 
     .about-img {
@@ -294,16 +307,17 @@
     .cards {
         margin: 70px 2rem;
     }
-
-    .icon-circle {
-        margin-top: 10vh;
-        margin-left: -2vh;
-    }
 }
 
-@media only screen and (max-width: 1071px) {
+
+@media only screen and (max-width: 1130px) {
     .section {
-        margin-bottom: 3rem;
+        width: 25rem;
+    }
+
+    .hover-effect {
+        width: 26rem;
+        height: 31rem;
     }
 }
 
@@ -320,10 +334,6 @@
 
     .hover-effect {
         width: 22rem;
-    }
-
-    .icon-circle {
-        margin-top: 12vh;
     }
 
     .about-img {
@@ -343,7 +353,7 @@
 @media (max-width: 735px) {
     .section {
         width: 25rem;
-        height: 36vh;
+        height: 25vh;
     }
 
     .hover-effect {
@@ -392,7 +402,6 @@
 
 @media only screen and (min-width: 410px) and (max-width: 545px) {
     .section {
-        height: 38vh;
         width: 22rem;
         margin-bottom: 2rem;
     }
@@ -453,11 +462,16 @@
     .about-text {
         color: var(--Colors-Text-Light-Body, #323539);
     }
+
+    .estimate-btn {
+        font-size: 1rem;
+        padding: 15px 28px 18px 28px;
+        margin: 2px;
+    }
 }
 
 @media only screen and (max-width: 410px) {
     .section {
-        height: 38vh;
         width: 20rem;
         margin-bottom: 2rem;
     }
@@ -480,7 +494,7 @@
         padding: 1vh 0vh 0vh 0vh;
         margin: 0px;
     }
-    
+
     .about-section:before {
         top: 60%;
         left: 10%;
@@ -532,10 +546,6 @@
     .service-text {
         font-size: 1rem;
         letter-spacing: 1px;
-    }
-
-    .estimate-btn {
-        font-size: 1rem;
     }
 
     .mobile-img-view {

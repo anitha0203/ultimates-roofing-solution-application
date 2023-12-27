@@ -1,0 +1,68 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
+}
+
+.contact-page {
+    margin-top: 150px;
+}
+
+.contact-us {
+    border-radius: 3px;
+    background: var(--Colors-Secondary-100, #D5D4E8);
+    margin: 3rem 2rem;
+    padding: 2rem;
+}
+
+.contact-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.contact-sections {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    stroke: var(--Colors-Secondary-500-Default, #3D3B6D);
+    margin-right: 1vh;
+    margin-top: 0.5vh;
+}
+
+.contact-text {
+    font-size: 22px;
+    font-family: hauora-medium;
+}
+
+.contact-form {
+    margin: 3rem 2rem;
+}
+
+.label {
+    margin-top: 2rem;
+}
+
+.form-control {
+    height: 3rem;
+}
+
+.contact-form-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.errormessage {
+    text-align: center;
+    margin-bottom: 2vh;
+    color: red;
+    font-size: large;
+}

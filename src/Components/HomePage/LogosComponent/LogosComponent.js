@@ -15,12 +15,12 @@ function LogosComponent() {
             <div className='slide-track'>
                 {logos.map((logo, index) => (
                     <div key={index} className='slide'>
-                        <img className='logo-width' src={logo} alt="3" />
+                        <img className='logo-width' src={logo} alt='ultimates-roofing-llc' />
                     </div>
                 ))}
                 {logos.map((logo, index) => (
                     <div key={index} className='slide'>
-                        <img className='logo-width' src={logo} alt="3" />
+                        <img className='logo-width' src={logo} alt='ultimates-roofing-llc' />
                     </div>
                 ))}
             </div>
@@ -30,7 +30,7 @@ function LogosComponent() {
                 <Row>
                     {logos.map((logo, index) => (
                         <Col key={index} className='slide1'>
-                            <img className='logo-width1' src={logo} alt="3" />
+                            <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
                         </Col>
                     ))}
                 </Row>

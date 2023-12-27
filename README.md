@@ -6,11 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm i react-router-dom`
 
-### `npm install react-bootstrap bootstrap`
+### `npm i react-bootstrap bootstrap`
 
 ### `npm i react-icons`
 
-### `npm install react-slick slick-carousel`
+### `npm i react-slick slick-carousel`
+
+### `npm i axios`
+
+### `npm i react-helmet`
 
 ## Available Scripts
 

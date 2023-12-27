@@ -36,7 +36,7 @@ function CommitmentComponent() {
                                 <div className='commit-circle'>
                                     <p className='commit-number'>0{index + 1}</p>
                                 </div>
-                                <h2>{commit.heading}</h2>
+                                <h2 className='commit-headd'>{commit.heading}</h2>
                                 <p className='commit-text'>{commit.text}</p>
                             </Card>
                         </Col>

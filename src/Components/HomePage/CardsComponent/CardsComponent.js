@@ -38,7 +38,7 @@ function CardsComponent() {
                         <Card className='cards-section'>
                             <div className='cards-heading'>
                                 <h2 className='cards-head'>{card.heading}</h2>
-                                <img className={card.heading === "Vision" ? 'cards-img' : card.heading === "Mission" ? 'cards-img1' : 'cards-img2'} src={card.imageUrl} />
+                                <img className={card.heading === "Vision" ? 'cards-img' : card.heading === "Mission" ? 'cards-img1' : 'cards-img2'} src={card.imageUrl} alt='ultimates-roofing-llc' />
                             </div>
                             <div className='cards-text'>{card.text}</div>
                         </Card>
@@ -54,7 +54,7 @@ function CardsComponent() {
                             <Card className='cards-section'>
                                 <div className='cards-heading'>
                                     <h2 className='cards-head'>{card.heading}</h2>
-                                    <img className={card.heading === "Vision" ? 'cards-img' : card.heading === "Mission" ? 'cards-img1' : 'cards-img2'} src={card.imageUrl} />
+                                    <img className={card.heading === "Vision" ? 'cards-img' : card.heading === "Mission" ? 'cards-img1' : 'cards-img2'} src={card.imageUrl} alt='ultimates-roofing-llc' />
                                 </div>
                                 <div className='card-text'>{card.text}</div>
                             </Card>

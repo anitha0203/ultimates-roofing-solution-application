@@ -18,6 +18,7 @@ import CommitmentComponent from './CommitmentComponent/CommitmentComponent';
 import ValueCardsComponent from './ValueCardsComponent/ValueCardsComponent';
 import ReviewsComponent from './ReviewsComponent/ReviewsComponent';
 import LogosComponent from './LogosComponent/LogosComponent';
+import { useNavigate } from 'react-router-dom';
 
 // Service data
 const services = [
@@ -30,6 +31,8 @@ const services = [
 
 function HomePage() {
 
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="background-video-container">
@@ -40,14 +43,14 @@ function HomePage() {
         <div className="content-overlay">
           <h1 className='main-heading'>Elevate Every Horizon, Transforming Views with Our Roofing Expertise</h1>
           <p className='main-text'>A symphony of strength resonating through every project</p>
-          <Button className='estimate-btn'>Get Your Free Estimate</Button>
+          <Button className='estimate-btn' onClick={() => {navigate('/contact')}}>Get Your Free Estimate</Button>
         </div>
       </div>
 
       {/**  services */}
       <div className='cards'>
         <Row style={{ margin: "0" }}>
-          <Col>
+          <Col style={{ paddingLeft: "0px", paddingRight: "0px" }}>
             <div className='section'>
               <div>
                 <h1 className='service-heading'>Our Services</h1>
@@ -73,6 +76,26 @@ function HomePage() {
             </Col>
           ))}
         </Row>
+        {/***
+        <Row style={{ margin: "0" }}>
+          {services.slice(2,5).map((service, index) => (
+            <Col style={{ paddingLeft: "0px", paddingRight: "0px" }} key={index}>
+              <Card className='hover-effect'>
+                <Card.Img className='card-img' src={service.image} variant="top" alt={service.title} />
+                <Card.Body>
+                  <h2 className='card-title'>{service.title}</h2>
+                  <Row>
+                    <Col className='card-text'>
+                      {service.description}
+                    </Col>
+                    <Col xs={2} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
+                  </Row>
+                  <p className='learnmore-btn'>Learn More</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row> */}
       </div>
 
       {/*   About us  */}

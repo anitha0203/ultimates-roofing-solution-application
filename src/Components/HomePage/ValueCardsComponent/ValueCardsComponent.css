@@ -19,6 +19,12 @@
     margin: 2vh auto;
 }
 
+.value-title{
+    font-size: 2rem;
+    font-family: hauora-medium;
+    font-weight: 500;
+}
+
 .value-img {
     width: 100%;
     height: 12rem;
@@ -78,9 +84,16 @@
 
 }
 
-@media only screen and (max-width: 1256px) {
+@media only screen and (max-width: 1500px) {
     .value-cards {
         width: 21rem;
+    }
+
+    .value-title{
+        font-size: 25px;
+    }
+    .value-text {
+        font-size: 1rem;
     }
 }
 

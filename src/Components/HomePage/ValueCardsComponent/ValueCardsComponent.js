@@ -29,12 +29,12 @@ function ValueCardsComponent() {
             <Card className='value-cards'>
               <div>
                 <div className='value-circle'>
-                  <p className='value-icon'><img src={value.icon} /></p>
+                  <p className='value-icon'><img src={value.icon} alt='ultimates-roofing-llc' /></p>
                 </div>
                 <Card.Img className='value-img' src={value.imageUrl} variant="top" alt={value.title} />
               </div>
               <Card.Body className='value-body'>
-                <h2 className='card-title'>{value.heading}</h2>
+                <h2 className='value-title'>{value.heading}</h2>
                 <p className='value-text'>{value.text}</p>
               </Card.Body>
             </Card>
