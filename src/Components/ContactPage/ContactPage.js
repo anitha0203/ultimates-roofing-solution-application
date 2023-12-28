@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Col, Form, Row, Button, Toast } from 'react-bootstrap'
+import { Col, Form, Row, Button, Toast, Spinner } from 'react-bootstrap'
 import { IoMailOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { SlClock } from "react-icons/sl";
@@ -20,10 +20,16 @@ function ContactPage() {
         firstName: '',
         lastName: '',
         phoneNumber: '',
+        email: '',
         service: '',
+        address: '',
+        state: '',
+        city: '',
+        zipcode: '',
         message: '',
         images: [],
     });
+    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -38,30 +44,33 @@ function ContactPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
-        if (formData.firstName === '' || formData.lastName === '' || formData.phoneNumber === '' ||
-            formData.service === '') {
+        if (formData.firstName === '' || formData.lastName === '' || formData.phoneNumber === '' || formData.email === '' || formData.address === '' || formData.state === '' || formData.city === '' || formData.zipcode === '' || formData.service === '') {
             setErrorMessage("Please fill all required fields");
-        } else if (formData.phoneNumber.length != 10) {
+        } else if (formData.phoneNumber.length !== 10) {
             setErrorMessage("PhoneNumber is not valid");
+        } else if (!emailPattern.test(formData.email)) {
+            setErrorMessage("E-Mail is not valid");
+        } else if (formData.zipcode.length !== 5) {
+            setErrorMessage("Zipcode is not valid");
         } else {
             setErrorMessage('');
             setLoading(true);
             const formDataForUpload = new FormData();
             Object.entries(formData).forEach(([key, value]) => {
-              if (key === 'images') {
-                for (let i = 0; i < value.length; i++) {
-                  formDataForUpload.append('images', value[i]);
+                if (key === 'images') {
+                    for (let i = 0; i < value.length; i++) {
+                        formDataForUpload.append('images', value[i]);
+                    }
+                } else {
+                    formDataForUpload.append(key, value);
                 }
-              } else {
-                formDataForUpload.append(key, value);
-              }
             });
             console.log(formDataForUpload);
             console.log(formData);
             axios.post('', { formDataForUpload }).then(res => { setToast(true); navigate("/success-page") })
                 .catch((error) => {
                     setToast(true);
-                    if (error.response && error.response.status === 404 || error.response.status === 500 || error.response.status === 400) {
+                    if (error.response) {
                         setErrorMessage(error.response.data.message);
                     } else {
                         console.error("An error occurred:", error.message);
@@ -85,16 +94,16 @@ function ContactPage() {
     }, [toast]);
 
     const handleImageChange = (e) => {
-        
+
         const files = e.target.files;
         setErrorMessage('');
-    
+
         setFormData((prevFormData) => ({
-          ...prevFormData,
-          images: [...files],
+            ...prevFormData,
+            images: [...files],
         }));
-      };
-      
+    };
+
     return (
         <div className='contact-page'>
 
@@ -154,14 +163,7 @@ function ContactPage() {
                 <h2 className='contact-form-heading'>Reach Out To Us</h2>
                 <Row className='contact-form'>
                     <Col>
-                        <Form style={{ marginTop: "3vh" }}>
-                            <div className="errormessage">
-                                {errorMessage !== '' ? (
-                                    <div className="error">
-                                        <p>{errorMessage}</p>
-                                    </div>
-                                ) : null}
-                            </div>
+                        <Form>
                             <Row className='names-roww'>
                                 <Col>
                                     <Form.Group>
@@ -195,7 +197,7 @@ function ContactPage() {
                                 </Col>
                             </Row>
 
-                            <Row>
+                            <Row className='names-roww'>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
@@ -211,8 +213,24 @@ function ContactPage() {
                                         />
                                     </Form.Group>
                                 </Col>
+
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="label">
+                                            <span style={{ color: 'red' }}>*</span> Email
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            isInvalid={errorMessage}
+                                            className="input"
+                                        />
+                                    </Form.Group>
+                                </Col>
                             </Row>
-                            <Row>
+                            <Row className='names-roww'>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
@@ -236,23 +254,90 @@ function ContactPage() {
                                         </Form.Select>
                                     </Form.Group>
                                 </Col>
+
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="label">
+                                            <span style={{ color: 'red' }}>*</span> Address
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="string"
+                                            name="address"
+                                            value={formData.address}
+                                            onChange={handleInputChange}
+                                            isInvalid={errorMessage}
+                                            className="input"
+                                        />
+                                    </Form.Group>
+                                </Col>
                             </Row>
 
-                            <Row>
-                            <Form.Group>
-                            <Form.Label className='label'>Upload Images</Form.Label>
-                            <Form.Control
-                              type='file'
-                              name='images'
-                              onChange={handleImageChange}
-                              accept='image/*'
-                              multiple
-                              className='input'
-                            />
-                          </Form.Group>
-                        </Row>
 
-                            <Row>
+                            <Row className='names-roww'>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="label">
+                                            <span style={{ color: 'red' }}>*</span> State
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="string"
+                                            name="state"
+                                            value={formData.state}
+                                            onChange={handleInputChange}
+                                            isInvalid={errorMessage}
+                                            className="input"
+                                        />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="label">
+                                            <span style={{ color: 'red' }}>*</span> City
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="string"
+                                            name="city"
+                                            value={formData.city}
+                                            onChange={handleInputChange}
+                                            isInvalid={errorMessage}
+                                            className="input"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="label">
+                                            <span style={{ color: 'red' }}>*</span> Zipcode
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="number"
+                                            name="zipcode"
+                                            value={formData.zipcode}
+                                            onChange={handleInputChange}
+                                            isInvalid={errorMessage}
+                                            className="input"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+
+                            <Row className='names-roww'>
+                                <Form.Group>
+                                    <Form.Label className='label'>Upload Images</Form.Label>
+                                    <Form.Control
+                                        type='file'
+                                        name='images'
+                                        onChange={handleImageChange}
+                                        accept='image/*'
+                                        multiple
+                                        className='input'
+                                    />
+                                </Form.Group>
+                            </Row>
+
+                            <Row className='names-roww'>
                                 <Form.Group>
                                     <Form.Label className="label">
                                         Message
@@ -268,6 +353,13 @@ function ContactPage() {
                                     />
                                 </Form.Group>
                             </Row>
+                            <div className="errormessage">
+                                {errorMessage !== '' ? (
+                                    <div>
+                                        <p style={{margin: "0px"}}>{errorMessage}</p>
+                                    </div>
+                                ) : null}
+                            </div>
                             <div style={{ textAlign: "center" }}>
                                 <Button onClick={handleSubmit} type="submit" style={{ marginTop: "2rem", padding: "1rem 6rem" }} className='estimate-btn'>
                                     Send Now
@@ -283,6 +375,14 @@ function ContactPage() {
                 </Row>
             </div>
             <LogosComponent />
+
+            {loading ? (
+                <div className="loading-overlay">
+                    <div className="loading-indicator">
+                        <Spinner animation="border" variant="primary" />
+                    </div>
+                </div>
+            ) : null}
         </div>
     )
 }

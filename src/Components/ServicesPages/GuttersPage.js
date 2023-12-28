@@ -27,7 +27,7 @@ function GuttersPage() {
                         <Button className='estimate-btn' onClick={() => navigate('/contact')}>CONTACT US</Button>
                     </Col>
                     <Col>
-                        <img className='roofing-img' src="https://media.istockphoto.com/id/1328449441/photo/corner-of-house-with-windows-new-gray-metal-tile-roof-and-rain-gutter-metallic-guttering.jpg?s=612x612&w=0&k=20&c=4xu7Rm5atwauvb0QZO5Foh3EYBvkjEWHdyVTB4KLqrU=" />
+                        <img className='roofing-img' src="https://media.istockphoto.com/id/1328449441/photo/corner-of-house-with-windows-new-gray-metal-tile-roof-and-rain-gutter-metallic-guttering.jpg?s=612x612&w=0&k=20&c=4xu7Rm5atwauvb0QZO5Foh3EYBvkjEWHdyVTB4KLqrU=" alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
             </Container>

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Button, Col, Row } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react'
+import { Button, Col, Row, Toast } from 'react-bootstrap';
 import videoSource from '../../assets/Ultimate Roofing Video_N.mp4';
 import AboutHouse from '../../assets/AboutHouse.png';
 import './HomePage.css';
@@ -18,13 +18,39 @@ import { useNavigate } from 'react-router-dom';
 function HomePage() {
 
   const navigate = useNavigate();
+  const [toast, setToast] = useState(false);
+  const [toast1, setToast1] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const interval = setInterval(() => {
+      setToast(!toast);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [toast]);
+
+
+  const handleToastClose = () => {
+    setToast1(false);
+  };
 
   return (
     <div>
+      {toast1 && toast && (
+        <Toast style={{ position: 'fixed', top: '10%', right: 0, zIndex: '1000' }} onClose={handleToastClose}>
+          <Toast.Header style={{ cursor: "pointer", padding: "1rem 1rem", fontSize: "large" }}>
+            <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+            <strong className="me-auto" onClick={()  => navigate('/contact')}>Need consultant's advise?</strong>
+          </Toast.Header>
+          
+        <Toast.Body >
+          Request for a call back,
+          Leave a message to us
+        </Toast.Body>
+    
+        </Toast>
+      )}
+
       <div className="background-video-container">
         <video autoPlay muted playsInline loop className="background-video">
           <source src={videoSource} type="video/mp4" />
@@ -37,7 +63,7 @@ function HomePage() {
         </div>
       </div>
 
-      {/**  services */}
+      {/**  our services */}
       <ServiceCardsComponent />
 
       {/*   About us  */}
@@ -50,11 +76,11 @@ function HomePage() {
               <Button className='estimate-btn'>More About Us</Button>
             </div>
           </Col>
-          <Col><img className='about-img' src={AboutHouse} /></Col>
+          <Col><img className='about-img' src={AboutHouse} alt='ultimates-roofing-llc' /></Col>
         </Row>
       </div>
 
-      {/**  3 Cards */}
+      {/**  Mission, Value and Vision Cards */}
       <CardsComponent />
 
       {/**  Commitment */}
@@ -80,19 +106,19 @@ function HomePage() {
           <h5 className='store-heading'>Available on:</h5>
           <div className='apps-store'>
             <div className='app-icons'>
-              <img style={{ marginLeft: "1vh" }} src={PlayStore} />
+              <img style={{ marginLeft: "1vh" }} src={PlayStore} alt='ultimates-roofing-llc' />
               <p className='store-text'>PlayStore</p>
             </div>
             <div className='app-icons'>
-              <img style={{ marginLeft: "1vh" }} src={AppStore} />
+              <img style={{ marginLeft: "1vh" }} src={AppStore} alt='ultimates-roofing-llc' />
               <p className='store-text' >AppStore</p>
             </div>
-            <img className='mobile-img-view' src={Mobile} />
+            <img className='mobile-img-view' src={Mobile} alt='ultimates-roofing-llc' />
           </div>
         </Col>
         <Col xs={2}></Col>
         <Col xs={2}>
-          <img className='mobile-img' src={Mobile} />
+          <img className='mobile-img' src={Mobile} alt='ultimates-roofing-llc' />
         </Col>
       </Row>
 

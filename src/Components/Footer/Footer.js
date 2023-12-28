@@ -54,11 +54,11 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='ultimates-solution-llc' />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
-                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} />
+                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='ultimates-solution-llc' />
                   <div>
-                    Thossan247@gmail.com<br />Rockakash100@gmail.com
+                  roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
                   </div>
                 </div>
               </div>
@@ -96,11 +96,11 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='ultimates-solution-llc' />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
-                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} />
+                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='ultimates-solution-llc' />
                   <div>
-                    Thossan247@gmail.com<br />Rockakash100@gmail.com
+                  roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
                   </div>
                 </div>
               </div>

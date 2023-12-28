@@ -26,7 +26,7 @@ function SidingPage() {
                         <Button className='estimate-btn' onClick={() => navigate('/contact')}>CONTACT US</Button>
                     </Col>
                     <Col>
-                        <img className='roofing-img' src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/featured-image-siding-trends.jpeg" />
+                        <img className='roofing-img' src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/featured-image-siding-trends.jpeg" alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
             </Container>

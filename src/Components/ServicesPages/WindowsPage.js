@@ -26,7 +26,7 @@ function WindowsPage() {
                     <Button className='estimate-btn' onClick={() => navigate('/contact')}>CONTACT US</Button>
                 </Col>
                 <Col>
-                    <img className='roofing-img' src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" />
+                    <img className='roofing-img' src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </Container>

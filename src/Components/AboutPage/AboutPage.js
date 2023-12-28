@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
-import AboutMainImage from '../../assets/AboutMainImage.png'
-import AboutPageImage from '../../assets/AboutPageImage.png'
-import './AboutPage.css'
-import CardsComponent from '../HomePage/CardsComponent/CardsComponent'
+import React, { useEffect, useRef, useState } from 'react';
 import { Accordion, Col, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'
-import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
+import { useNavigate } from 'react-router-dom';
+import AboutMainImage from '../../assets/AboutMainImage.png';
+import AboutPageImage from '../../assets/AboutPageImage.png';
+import './AboutPage.css';
+import CardsComponent from '../HomePage/CardsComponent/CardsComponent';
+import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 
 const reviews = [
   { question: 'What roofing services does Ultimates Roofing provide?', answer: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
@@ -21,15 +21,16 @@ function AboutPage() {
   const navigate = useNavigate();
   const [countExperience, setCountExperience] = useState(1);
   const [countWarranty, setCountWarranty] = useState(1);
-  const [countQuality, setCountQuality] = useState(1);
   const [isIntersecting, setIsIntersecting] = useState(false);
   const countingRef = useRef(null);
 
+  // Intersection observer callback
   const handleIntersection = (entries) => {
     const entry = entries[0];
     setIsIntersecting(entry.isIntersecting);
   };
 
+  // Effect to set up the intersection observer
   useEffect(() => {
     const options = {
       threshold: 0.5, // Adjust as needed
@@ -48,40 +49,31 @@ function AboutPage() {
     };
   }, []);
 
+  // Effect to count experience and warranty years
   useEffect(() => {
     if (isIntersecting) {
       const intervalExperience = setInterval(() => {
-        if (countExperience < 15) {
-          setCountExperience((prevCount) => prevCount + 1);
-        }
-      }, 100);
+        setCountExperience((prevCount) => (prevCount < 15 ? prevCount + 1 : prevCount));
+      }, 200);
 
       const intervalWarranty = setInterval(() => {
-        if (countWarranty < 10) {
-          setCountWarranty((prevCount) => prevCount + 1);
-        }
-      }, 100);
-
-      const intervalQuality = setInterval(() => {
-        if (countQuality < 100) {
-          setCountQuality((prevCount) => prevCount + 1);
-        }
-      }, 100);
+        setCountWarranty((prevCount) => (prevCount < 10 ? prevCount + 1 : prevCount));
+      }, 200);
 
       return () => {
         clearInterval(intervalExperience);
         clearInterval(intervalWarranty);
-        clearInterval(intervalQuality);
       };
     }
-  }, [isIntersecting, countExperience, countWarranty, countQuality]);
+  }, [isIntersecting, countExperience, countWarranty]);
 
+  // Effect to scroll to the top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div style={{ marginTop: "150px" }}>
+    <div>
       <div className='about-main'>
         <p className='about-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> About Us</p>
         <h2 className='about-page-heading'>Ultimates Roofing LLC</h2>
@@ -112,7 +104,7 @@ function AboutPage() {
                 <div className='work-experience'>Years of Warranty</div>
               </Col>
               <Col>
-                <div className='number-details' >{isIntersecting ? `${countQuality}%` : ''}</div>
+                <div className='number-details' >100%</div>
                 <div className='work-experience'>Quality Products</div>
               </Col>
             </Row>

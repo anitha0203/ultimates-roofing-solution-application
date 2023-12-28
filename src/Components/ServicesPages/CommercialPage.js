@@ -30,7 +30,7 @@ function CommercialPage() {
                         </ul>
                     </Col>
                     <Col style={{ margin: "20px 0px" }}>
-                        <img style={{ width: "550px", height: "350px", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://atlasroofingandsiding.com/wp-content/uploads/2021/06/Commercial-Roofing-Image-1.jpg" />
+                        <img style={{ width: "550px", height: "350px", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://atlasroofingandsiding.com/wp-content/uploads/2021/06/Commercial-Roofing-Image-1.jpg" alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
                 <div style={{ textAlign: "center", margin: "5vh 0vh" }}>
@@ -41,7 +41,7 @@ function CommercialPage() {
             <Container style={{ marginTop: "8vh", marginBottom: "8vh" }}>
                 <Row>
                     <Col>
-                        <img style={{ width: "550px", height: "350px", marginTop: "3vh", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" />
+                        <img style={{ width: "550px", height: "350px", marginTop: "3vh", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" alt='ultimates-roofing-llc' />
                     </Col>
                     <Col>
                         <h2 style={{ fontWeight: "700" }}>CONKLIN METAL ROOF RESTORATION SYSTEM</h2>

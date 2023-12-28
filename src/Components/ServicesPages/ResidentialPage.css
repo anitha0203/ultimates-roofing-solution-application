@@ -1,6 +1,177 @@
-.roofing-page {
-    margin-top: 100px;
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
 }
+
+.service-main {
+    margin: 150px 6rem 0px;
+    font-family: hauora-medium;
+}
+
+.service-main1 {
+    margin: 150px 6rem 0px;
+    font-family: hauora-medium;
+}
+
+.service-us {
+    font-family: hauora-medium;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+.service-page-heading {
+    font-size: calc(1.2rem + 1.3vw);
+    font-family: hauora-medium;
+    margin-bottom: 1rem;
+}
+
+.service-page-text {
+    font-size: 20px;
+}
+
+.service-main-image {
+    width: 100%;
+    height: 100%;
+    margin: 3rem 0px;
+}
+
+.service-mid-heading {
+    font-size: 25px;
+    font-family: hauora-medium;
+    margin: 1.5rem 0px;
+}
+
+.roofing-image {
+    width: 556px;
+    height: 446px;
+}
+
+.roofs-shining-image {
+    width: 634px;
+    height: 378px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .temp-col{
+        display: none;
+    }
+    .roofing-image {
+        width: 456px;
+        height: 446px;
+    }
+    
+    .roofs-shining-image {
+        width: 534px;
+        height: 378px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-main {
+        margin: 150px 2rem 0px;
+    }
+
+    .service-main1 {
+        margin: 150px 2rem 0px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .roofing-image {
+        width: 356px;
+        height: 400px;
+    }
+    
+    .roofs-shining-image {
+        width: 434px;
+        height: 378px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .roofing-sections{
+        display: block;
+    }
+    .roofing-image {
+        width: 556px;
+        height: 446px;
+    }
+    
+    .roofs-shining-image {
+        width: 634px;
+        height: 378px;
+    }
+}
+
+@media only screen and (max-width: 678px) {
+    .roofing-image {
+        width: 500px;
+        height: 446px;
+    }
+    
+    .roofs-shining-image {
+        width: 534px;
+        height: 378px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .service-main {
+        margin: 150px 1rem 0px;
+    }
+    .service-main1 {
+        margin: 80px 1rem 0px;
+    }
+    .roofing-image {
+        width: 400px;
+        height: 446px;
+    }
+    
+    .roofs-shining-image {
+        width: 434px;
+        height: 378px;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .service-main {
+        margin: 150px 10px 0px;
+    }
+    .service-main1 {
+        margin: 60px 10px 0px;
+    }
+    .roofing-image {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .roofs-shining-image {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .roofing-image {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .roofs-shining-image {
+        width: 290px;
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 .roofing-background {
     width: 100%;
@@ -32,5 +203,5 @@
 }
 
 .roofing-section{
-    margin: 150px auto;
+    padding: 150px 6rem;
 }
