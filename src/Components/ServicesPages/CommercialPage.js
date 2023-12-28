@@ -5,22 +5,14 @@ function CommercialPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     return (
-        <div className='homePage'>
-            <div style={{
-                backgroundImage: "url('https://atlasroofingandsiding.com/wp-content/uploads/2021/06/Banner-Image-1.jpg')", backgroundSize: "cover",
-                width: "100%", height: "40vh", backgroundRepeat: "no-repeat", backgroundPosition: "center", display: "flex", justifyContent: "center", alignItems: "center"
-            }}>
-                <div style={{
-                    width: "100%", height: "40vh", backgroundColor: "#1E1E2A", opacity: "0.7", color: "white",
-                    textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center"
-                }}>
-                    <div style={{ marginTop: "13vh" }}>
-                        <h6>ULTIMATES ROOFING & SIDING</h6>
-                        <h1 style={{ fontWeight: "700", fontSize: "60px" }}>COMMERCIAL ROOFING</h1>
-                    </div>
+        <div className='roofing-page'>
+            <div className='roofing-background'>
+                <div>
+                    <h6>ULTIMATES ROOFING & SIDING</h6>
+                    <h1 className='roofing-heading'>COMMERCIAL ROOFING</h1>
                 </div>
             </div>
 
@@ -47,23 +39,23 @@ function CommercialPage() {
             </Container>
 
             <Container style={{ marginTop: "8vh", marginBottom: "8vh" }}>
-            <Row>
-                <Col>
-                    <img style={{ width: "550px", height: "350px", marginTop: "3vh",boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" />
-                </Col>
-                <Col>
-                    <h2 style={{ fontWeight: "700" }}>CONKLIN METAL ROOF RESTORATION SYSTEM</h2>
-                    <p>Don’t replace it – Restore it. A complete waterproofing system for metal roofs that inhibits rust, prevents leaks and provides an energy efficient and attractive finish coat for years of service.</p>
-                    <h6 style={{ fontWeight: "bold", fontSize: "22px" }}>Benefits:</h6>
-                    <ul style={{fontSize: "16px"}}>
-                        <li>All Employees are screened for security</li>
-                        <li>Install new water-resistant felt</li>
-                        <li>Install Rubberized Ice and Water Shield on all eaves and valleys</li>
-                        <li>Install New flashing to prevent leaks</li>
-                    </ul>                    <Button variant='danger' style={{ borderRadius: "0px" }}>FIND OUT MORE ABOUT THIS PROCESSS</Button>
-                </Col>
-            </Row>
-        </Container>
+                <Row>
+                    <Col>
+                        <img style={{ width: "550px", height: "350px", marginTop: "3vh", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" />
+                    </Col>
+                    <Col>
+                        <h2 style={{ fontWeight: "700" }}>CONKLIN METAL ROOF RESTORATION SYSTEM</h2>
+                        <p>Don’t replace it – Restore it. A complete waterproofing system for metal roofs that inhibits rust, prevents leaks and provides an energy efficient and attractive finish coat for years of service.</p>
+                        <h6 style={{ fontWeight: "bold", fontSize: "22px" }}>Benefits:</h6>
+                        <ul style={{ fontSize: "16px" }}>
+                            <li>All Employees are screened for security</li>
+                            <li>Install new water-resistant felt</li>
+                            <li>Install Rubberized Ice and Water Shield on all eaves and valleys</li>
+                            <li>Install New flashing to prevent leaks</li>
+                        </ul>                    <Button className='estimate-btn'>FIND OUT MORE ABOUT THIS PROCESSS</Button>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }

@@ -52,7 +52,7 @@
     height: 32vh;
 }
 
-.card-img:hover {
+.hover-effect:hover .card-img {
     transform: scale(1.1);
     overflow-x: hidden;
 }

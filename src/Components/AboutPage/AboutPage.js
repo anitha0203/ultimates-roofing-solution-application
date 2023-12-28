@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import AboutMainImage from '../../assets/AboutMainImage.png'
 import AboutPageImage from '../../assets/AboutPageImage.png'
 import './AboutPage.css'
@@ -19,6 +19,62 @@ const reviews = [
 
 function AboutPage() {
   const navigate = useNavigate();
+  const [countExperience, setCountExperience] = useState(1);
+  const [countWarranty, setCountWarranty] = useState(1);
+  const [countQuality, setCountQuality] = useState(1);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const countingRef = useRef(null);
+
+  const handleIntersection = (entries) => {
+    const entry = entries[0];
+    setIsIntersecting(entry.isIntersecting);
+  };
+
+  useEffect(() => {
+    const options = {
+      threshold: 0.5, // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (countingRef.current) {
+      observer.observe(countingRef.current);
+    }
+
+    return () => {
+      if (countingRef.current) {
+        observer.unobserve(countingRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      const intervalExperience = setInterval(() => {
+        if (countExperience < 15) {
+          setCountExperience((prevCount) => prevCount + 1);
+        }
+      }, 100);
+
+      const intervalWarranty = setInterval(() => {
+        if (countWarranty < 10) {
+          setCountWarranty((prevCount) => prevCount + 1);
+        }
+      }, 100);
+
+      const intervalQuality = setInterval(() => {
+        if (countQuality < 100) {
+          setCountQuality((prevCount) => prevCount + 1);
+        }
+      }, 100);
+
+      return () => {
+        clearInterval(intervalExperience);
+        clearInterval(intervalWarranty);
+        clearInterval(intervalQuality);
+      };
+    }
+  }, [isIntersecting, countExperience, countWarranty, countQuality]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,15 +104,15 @@ function AboutPage() {
             <p className='about-page-text'>Under our leadership, Ultimates Roofing has become synonymous with quality, innovation, and customer satisfaction. Our commitment to integrity, community, and the highest standards of craftsmanship reflects our unwavering belief that every roofing project is an opportunity to make a lasting impact.</p>
             <Row className='work-details'>
               <Col>
-                <div className='number-details'>15+</div>
+                <div className='number-details' ref={countingRef}>{isIntersecting ? `${countExperience}+` : ''}</div>
                 <div className='work-experience'>Years of Experience</div>
               </Col>
               <Col>
-                <div className='number-details'>10</div>
+                <div className='number-details' ref={countingRef}>{isIntersecting ? countWarranty  : ''}</div>
                 <div className='work-experience'>Years of Warranty</div>
               </Col>
               <Col>
-                <div className='number-details'>100%</div>
+                <div className='number-details' >{isIntersecting ? `${countQuality}%` : ''}</div>
                 <div className='work-experience'>Quality Products</div>
               </Col>
             </Row>

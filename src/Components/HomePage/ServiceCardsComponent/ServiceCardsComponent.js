@@ -43,7 +43,6 @@ function ServiceCardsComponent() {
                                         </Col>
                                         <Col xs={2} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
                                     </Row>
-                                    <p className='learnmore-btn'>Learn More</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -62,7 +61,6 @@ function ServiceCardsComponent() {
                                         </Col>
                                         <Col xs={2} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
                                     </Row>
-                                    <p className='learnmore-btn'>Learn More</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -70,6 +68,7 @@ function ServiceCardsComponent() {
                 </Row>
             </div>
 
+            {/**    medium and small screens */}
             <div className='cards-small-view'>
                 <Row style={{ margin: "0" }}>
                     <Col style={{ paddingLeft: "0px", paddingRight: "0px" }}>
