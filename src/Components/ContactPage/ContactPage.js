@@ -28,6 +28,7 @@ function ContactPage() {
         zipcode: '',
         message: '',
         images: [],
+        source: 'contact',
     });
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
@@ -52,6 +53,8 @@ function ContactPage() {
             setErrorMessage("E-Mail is not valid");
         } else if (formData.zipcode.length !== 5) {
             setErrorMessage("Zipcode is not valid");
+        } else if (formData.images.length > 3) {
+            setErrorMessage("Please select only up to 3 images.");
         } else {
             setErrorMessage('');
             setLoading(true);
@@ -67,9 +70,12 @@ function ContactPage() {
             });
             console.log(formDataForUpload);
             console.log(formData);
-            axios.post('', { formDataForUpload }).then(res => { setToast(true); navigate("/success-page") })
+            axios.post('', formDataForUpload ).then(res => { 
+                navigate("/success-page") 
+            })
                 .catch((error) => {
                     setToast(true);
+                    navigate("/success-page") 
                     if (error.response) {
                         setErrorMessage(error.response.data.message);
                     } else {
@@ -94,15 +100,18 @@ function ContactPage() {
     }, [toast]);
 
     const handleImageChange = (e) => {
-
         const files = e.target.files;
         setErrorMessage('');
 
+        if (files.length > 3) {
+            setErrorMessage('Please select only up to 3 images.');
+        }
         setFormData((prevFormData) => ({
             ...prevFormData,
             images: [...files],
         }));
     };
+
 
     return (
         <div className='contact-page'>
@@ -151,7 +160,6 @@ function ContactPage() {
             {toast ? (
                 <Toast style={{ position: 'fixed', top: "10%", right: 0 }}>
                     <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
                         <strong className="me-auto">THANK YOU</strong>
                     </Toast.Header>
                     <Toast.Body>Your message has been submitted successfully.</Toast.Body>
@@ -325,7 +333,7 @@ function ContactPage() {
 
                             <Row className='names-roww'>
                                 <Form.Group>
-                                    <Form.Label className='label'>Upload Images</Form.Label>
+                                    <Form.Label className='label'>Upload Images <span style={{ color: "#969696" }}>(accept only .png, .jpg)</span></Form.Label>
                                     <Form.Control
                                         type='file'
                                         name='images'
@@ -356,7 +364,7 @@ function ContactPage() {
                             <div className="errormessage">
                                 {errorMessage !== '' ? (
                                     <div>
-                                        <p style={{margin: "0px"}}>{errorMessage}</p>
+                                        <p style={{ margin: "0px" }}>{errorMessage}</p>
                                     </div>
                                 ) : null}
                             </div>
@@ -370,7 +378,7 @@ function ContactPage() {
                     </Col>
                     <Col className='image-coll'>
                         {/****  <img src={ContactForm} /> **/}
-                        <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195656.61280534012!2d-83.15563599435002!3d39.98309783384798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1703668481347!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195656.61280534012!2d-83.15563599435002!3d39.98309783384798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1703668481347!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Google Maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </Col>
                 </Row>
             </div>

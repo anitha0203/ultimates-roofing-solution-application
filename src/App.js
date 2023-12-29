@@ -11,6 +11,7 @@ import GuttersPage from './Components/ServicesPages/GuttersPage';
 import SidingPage from './Components/ServicesPages/SidingPage';
 import WindowsPage from './Components/ServicesPages/WindowsPage';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
+import SuccessPage from './Components/ContactPage/SuccessPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/window-services' Component={WindowsPage} />
         <Route path='/projects' Component={ProjectsPage} />
         <Route path='/contact' Component={ContactPage} />
+        <Route path='/success-page' Component={SuccessPage} />
         <Route path='*' Component={HomePage} />
       </Routes>
        <Footer />

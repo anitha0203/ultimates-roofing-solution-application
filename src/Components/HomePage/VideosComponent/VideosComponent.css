@@ -30,6 +30,7 @@
 .progress-bar {
     width: 20rem;
     height: 2px;
+    margin-top: 1rem;
     background-color: #A1A4AC;
 }
 
@@ -144,39 +145,6 @@
     color: #fff;
     font-size: 1.5rem;
 }
-
-/* .modal-arrows {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-}
-
-.arrow2 {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    padding: 0.5vh 1vh;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.modal-arrows .arrow2 {
-    cursor: pointer;
-    font-size: 2rem;
-    color: #fff;
-}
-
-.modal-arrows .disabled-icon {
-    color: rgb(255, 255, 255);
-    cursor: not-allowed;
-}
-
-.modal-arrows .arrow:hover {
-    color: #fff;
-} */
 
 @media (min-width: 778px) and (max-width: 900px) {
     .videos-slide {

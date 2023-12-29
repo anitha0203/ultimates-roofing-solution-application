@@ -4,6 +4,7 @@ import './ResidentialPage.css'
 import Roofs from '../../assets/Roofs.png'
 import ResidentialRoofing from '../../assets/ResidentialRoofing.png'
 import RoofsShining from '../../assets/RoofsShining.png'
+import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function ResidentialPage() {
 
@@ -22,7 +23,7 @@ function ResidentialPage() {
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                     <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
                     <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
-                    <Row>
+                    <Row className='roofing-list'>
                         <Col>
                             <ul>
                                 <li className='service-page-text'>New water-resistant felt</li>
@@ -76,7 +77,7 @@ function ResidentialPage() {
                 </Row>
             </div>
 
-            <div className='service-main1'></div>
+            <LogosComponent />
 
         </div>
     )

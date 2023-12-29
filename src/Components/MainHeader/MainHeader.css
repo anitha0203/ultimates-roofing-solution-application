@@ -96,6 +96,11 @@
     width: fit-content;
 }
 
+.roof-quote-btn:hover {
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+}
+
 @media only screen and (max-width: 1399px) {
     .navbar-expand-xxl .navbar-nav .dropdown-menu {
         margin-top: 0rem;

@@ -5,6 +5,8 @@ import { FaTimes } from "react-icons/fa";
 import video1 from '../../../assets/video1.mp4'
 import video2 from '../../../assets/video2.mp4'
 import video3 from '../../../assets/video3.mp4'
+import video4 from '../../../assets/video5.mp4'
+import video5 from '../../../assets/video4.mp4'
 import PlayButton from '../../../assets/PlayButton.png'
 
 // Videos data
@@ -12,8 +14,8 @@ const videos = [
     { id: 1, url: video1, thumbnail: 'thumbnail-url-1.jpg' },
     { id: 2, url: video2, thumbnail: 'thumbnail-url-2.jpg' },
     { id: 3, url: video3, thumbnail: 'thumbnail-url-3.jpg' },
-    { id: 4, url: video1, thumbnail: 'thumbnail-url-4.jpg' },
-    { id: 5, url: video2, thumbnail: 'thumbnail-url-5.jpg' }
+    { id: 4, url: video4, thumbnail: 'thumbnail-url-4.jpg' },
+    { id: 5, url: video5, thumbnail: 'thumbnail-url-5.jpg' }
 ];
 
 function VideosComponent() {
@@ -78,31 +80,13 @@ function VideosComponent() {
     const progress = videos.length > 1 ? (currentVideoIndex / (videos.length - 1)) * 100 : 0;
 
     const openModal = (index) => {
-        setCurrentVideoIndex(index + 1); // Add 1 because the index is 0-based
+        setCurrentVideoIndex(index + 1);
         setShowModal(true);
     };
 
     const closeModal = () => {
         setShowModal(false);
     };
-
-    // const playNextVideo = () => {
-    //     const nextIndex = (currentVideoIndex + 1) % videos.length;
-    //     setCurrentVideoIndex(nextIndex);
-    //     if (videoRef.current) {
-    //         videoRef.current.load(); // Reload the video element
-    //     }
-    // };
-
-    // const playPrevVideo = () => {
-    //     const prevIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-    //     setCurrentVideoIndex(prevIndex);
-    //     if (videoRef.current) {
-    //         videoRef.current.load(); // Reload the video element
-    //     }
-    // };
-
-
 
     return (
         <div className='videos-section'>
@@ -148,22 +132,6 @@ function VideosComponent() {
                         <div className="close-icon" onClick={closeModal}>
                             <FaTimes />
                         </div>
-                        {/**
-                        <div className="modal-arrows">
-                            <div
-                                className={`arrow2 ${isPrevDisabled ? 'disabled-icon' : ''}`}
-                                onClick={playPrevVideo}
-                            >
-                                <FaAngleLeft />
-                            </div>
-                            <div
-                                className={`arrow2 ${isNextDisabled ? 'disabled-icon' : ''}`}
-                                onClick={playNextVideo}
-                            >
-                                <FaAngleRight />
-                            </div>
-                        </div>
-                         */}
                     </div>
                 </div>
             )}

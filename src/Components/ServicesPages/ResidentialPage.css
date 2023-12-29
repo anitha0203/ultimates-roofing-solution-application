@@ -101,6 +101,9 @@
         width: 634px;
         height: 378px;
     }
+    .roofing-list{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 678px) {
@@ -153,12 +156,12 @@
 
 @media only screen and (max-width: 365px) {
     .roofing-image {
-        width: 300px;
+        width: 280px;
         height: 300px;
     }
     
     .roofs-shining-image {
-        width: 290px;
+        width: 280px;
         height: 300px;
     }
 }

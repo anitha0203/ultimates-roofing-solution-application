@@ -40,8 +40,7 @@
     padding: 1vh 0px;
 }
 
-.estimate-btn,
-.estimate-btn:hover {
+.estimate-btn {
     border-radius: 0px;
     background-color: #B22335;
     border: 1px solid #B22335;
@@ -50,10 +49,23 @@
     margin: 2px;
 }
 
+.estimate-btn:hover{
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+}
+
 .estimate-btn:hover {
     box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.10), 0px 8px 10px -6px rgba(16, 24, 40, 0.10);
     padding: 18px 34px 21px 34px;
     margin: 0px;
+}
+
+.toast-pos{
+    display: flex;
+}
+
+.model-form{
+    padding: 1rem 2rem;
 }
 
 /*   About us    */
@@ -197,6 +209,10 @@
     .store-heading {
         font-size: 1.5rem;
     }
+    .toast-pos{
+        display: block;
+    }
+    
 }
 
 @media only screen and (min-width: 545px) and (max-width: 675px) {

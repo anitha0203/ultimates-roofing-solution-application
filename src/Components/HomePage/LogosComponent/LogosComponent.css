@@ -1,41 +1,11 @@
 /*  Scrolling the logos Section  */
 .logo-slider {
-    overflow: hidden;
-    background-color: #EEEEEE;
+    /* background-color: #EEEEEE; */
     padding: 5vh 2vh;
-    margin: 150px 0px;
+    margin: 120px 0px;
 }
 
 .slide-track {
-    display: flex;
-    animation: scroll 40s linear infinite;
-}
-
-.slide-track-mobile {
-    display: none;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-250px * 9));
-    }
-}
-
-.logo-width {
-    width: calc(6rem + 6vw);
-}
-
-.slide {
-    margin: 0px 6rem;
-    display: flex;
-    align-items: center;
-}
-
-.slide-track-mobile {
     margin: 0 auto;
 }
 
@@ -45,7 +15,8 @@
 }
 
 .logo-width1 {
-    width: 10rem
+    height: auto;
+    max-width: 100%
 }
 
 @media only screen and (max-width: 1256px) {
@@ -54,31 +25,13 @@
     }
 }
 
-@media only screen and (max-width: 743px) {
-    .slide-track-mobile {
-        display: block;
-    }
-
-    .slide-track {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 545px) {
-    .logo-width1 {
-        width: 9rem
-    }
-
     .slide1 {
         --bs-gutter-x: 3rem;
     }
 }
 
 @media only screen and (max-width: 395px) {
-    .logo-width1 {
-        width: 7rem
-    }
-
     .slide1 {
         --bs-gutter-x: 1rem;
     }

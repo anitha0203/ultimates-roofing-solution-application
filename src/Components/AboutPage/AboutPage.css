@@ -65,23 +65,18 @@
     margin-right: 5rem;
 }
 
-/* .plus-icon {
-    font-size: 1rem;
-    margin-left: 5px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .accordion-item:not(.accordion-item-collapsed) .plus-icon {
-    transform: rotate(45deg);
-  } */
-
 .accordion-item {
     border-left: none;
     border-right: none;
 }
 
-.accordion-item:first-of-type .accordion-button{
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button.collapsed{
     border-radius: 0px;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #D5D4E8;
 }
 
 @media only screen and (max-width: 1200px) {
