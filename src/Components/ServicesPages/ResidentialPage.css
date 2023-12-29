@@ -136,9 +136,15 @@
     }
 }
 
+@media only screen and (max-width: 545px) {
+    .service-main {
+        margin: 100px 1rem 0px;
+    }
+}
+
 @media only screen and (max-width: 455px) {
     .service-main {
-        margin: 150px 10px 0px;
+        margin: 100px 10px 0px;
     }
     .service-main1 {
         margin: 60px 10px 0px;

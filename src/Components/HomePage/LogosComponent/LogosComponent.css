@@ -16,12 +16,17 @@
 
 .logo-width1 {
     height: auto;
-    max-width: 100%
+    max-width: 20rem
 }
+
 
 @media only screen and (max-width: 1256px) {
     .logo-slider {
         margin: 70px 0px;
+    }
+    .logo-width1 {
+        height: auto;
+        max-width: 100%
     }
 }
 

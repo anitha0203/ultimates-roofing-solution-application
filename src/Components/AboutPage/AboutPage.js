@@ -85,7 +85,7 @@ function AboutPage() {
       {/**  Cards */}
       <CardsComponent />
 
-      <div className='about-main'>
+      <div className='about-main1'>
         <Row className='about-experience-text'>
           <Col>
             <img className='work-image' src={AboutPageImage} alt='ultimates-roofing-llc' />

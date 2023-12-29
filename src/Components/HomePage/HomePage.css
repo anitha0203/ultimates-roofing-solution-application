@@ -197,6 +197,9 @@
     .about-section {
         padding-left: 2rem;
     }
+    .app-section {
+        padding: 7vh 2rem;
+    }
 }
 
 @media (max-width: 778px),
@@ -211,15 +214,13 @@
     }
     .toast-pos{
         display: block;
-    }
-    
+    }    
 }
 
 @media only screen and (min-width: 545px) and (max-width: 675px) {
     .mobile-img {
         width: 6rem;
     }
-
 }
 
 @media only screen and (min-width: 545px) and (max-width: 743px) {
@@ -244,9 +245,6 @@
         width: 5rem;
         margin-top: -2rem;
         margin-left: 3rem;
-    }
-    .app-section {
-        padding: 7vh 2rem;
     }
     .app-icons {
         padding: 2vh 4vh 0px 0px;

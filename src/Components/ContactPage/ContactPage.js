@@ -71,11 +71,17 @@ function ContactPage() {
             console.log(formDataForUpload);
             console.log(formData);
             axios.post('', formDataForUpload ).then(res => { 
+
                 navigate("/success-page") 
+
             })
                 .catch((error) => {
+
+
                     setToast(true);
                     navigate("/success-page") 
+
+
                     if (error.response) {
                         setErrorMessage(error.response.data.message);
                     } else {

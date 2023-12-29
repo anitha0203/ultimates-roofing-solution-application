@@ -9,7 +9,7 @@ import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 function ResidentialPage() {
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (

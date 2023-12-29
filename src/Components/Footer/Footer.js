@@ -26,7 +26,7 @@ function Footer() {
       <Row className='view1'>
         <Col xs={3}>
           <h2 className='description'>Connect with Us for a Roof Over Your Dreams!</h2>
-          <Button className='estimate-btn'>Get Your Free Estimate</Button>
+          <Button onClick={() => { navigate('/contact') }} className='estimate-btn'>Get Your Free Estimate</Button>
         </Col>
         <Col>
           <Row className='navbar-items'>
@@ -77,7 +77,7 @@ function Footer() {
             <Col onClick={() => {navigate('/contact')}} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
           <h2 className='description1'>Connect with Us for a Roof Over Your Dreams!</h2>
-          <Button className='estimate-btn1'>Get Your Free Estimate</Button>
+          <Button className='estimate-btn1' onClick={() => { navigate('/contact') }}>Get Your Free Estimate</Button>
           <Row style={{ margin: "0" }}>
             <Col>
               <h4 className='head-section'>Head Office</h4>

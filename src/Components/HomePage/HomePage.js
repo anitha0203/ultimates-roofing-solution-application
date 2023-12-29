@@ -34,6 +34,10 @@ function HomePage() {
     message: '', // additional field for form2
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setErrorMessage('');
@@ -64,14 +68,22 @@ function HomePage() {
           source: 'request', // Reset source to default
           message: '',
         });
+
+
+        
         navigate("/success-page");
         setSuccessToast(true)
         // Close the success toast after 15 seconds
         setTimeout(() => {
           setSuccessToast(false);
         }, 10000);
+
+
+
       })
         .catch((error) => {
+
+
           // navigate("/success-page");
 
           setFormData({
@@ -88,7 +100,9 @@ function HomePage() {
             setSuccessToast(false);
           }, 10000);
 
-          
+
+
+
           if (error.response) {
             setErrorMessage(error.response.data.message);
           } else {
@@ -109,7 +123,6 @@ function HomePage() {
 
     return () => clearInterval(interval);
   }, [toast]);
-
 
   const handleToastClose = () => {
     setToast1(false);
@@ -174,7 +187,7 @@ function HomePage() {
             <div className='about-div'>
               <h2 className='about-heading'>Welcome to Ultimates Roofing, Where Excellence Meets Innovation</h2>
               <p className='about-text'>Ultimates Roofing LLC presents a comprehensive array of services, encompassing new roof installations, meticulous roof maintenance, expert roof repairs, and cutting-edge re-roofing solutions for Residential and Commercial ventures. Our expertise extends to homes, offices, warehouses, and multi-family dwellings. Over the years, clients have recognized and valued the adept and professional service synonymous with us.</p>
-              <Button className='estimate-btn'>More About Us</Button>
+              <Button onClick={() => { navigate('/about') }} className='estimate-btn'>More About Us</Button>
             </div>
           </Col>
           <Col><img className='about-img' src={AboutHouse} alt='ultimates-roofing-llc' /></Col>
