@@ -2,7 +2,7 @@
 .logo-slider {
     /* background-color: #EEEEEE; */
     padding: 5vh 2vh;
-    margin: 120px 0px;
+    margin: 120px 6rem;
 }
 
 .slide-track {
@@ -10,13 +10,34 @@
 }
 
 .slide1 {
-    --bs-gutter-x: 6rem;
-    --bs-gutter-y: 2rem;
+    display: flex;
+    width: 422px;
+    height: 300px;
+    padding: 0px 75px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    margin: 2rem;
+    border: 1px solid var(--Colors-Neutrals-400, #EFEFF1);
+    background: var(--Colors-Base-White, #FFF);
+    box-shadow: 0px 10px 15px -3px rgba(16, 24, 40, 0.10), 0px 4px 6px -4px rgba(16, 24, 40, 0.10);
 }
 
 .logo-width1 {
     height: auto;
-    max-width: 20rem
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .logo-width1 {
+        max-width: 14rem;
+    }
+    .slide1 {
+        width: 100px;
+        height: 250px;
+        margin: 10px
+    }
 }
 
 
@@ -24,20 +45,34 @@
     .logo-slider {
         margin: 70px 0px;
     }
+}
+
+@media only screen and (max-width: 967px) {
     .logo-width1 {
-        height: auto;
-        max-width: 100%
+        width: 10rem;
     }
 }
 
 @media only screen and (max-width: 545px) {
     .slide1 {
-        --bs-gutter-x: 3rem;
+        --bs-gutter-x: 1rem;
+    }
+    .slide1 {
+        width: 150px;
+        height: 250px;
+        margin: 10px
     }
 }
 
 @media only screen and (max-width: 395px) {
     .slide1 {
         --bs-gutter-x: 1rem;
+    }
+    .logo-width1 {
+        width: 10rem;
+    }
+    .slide1 {
+        width: 50px;
+        height: 250px;
     }
 }

@@ -56,7 +56,7 @@ function CardsComponent() {
                                     <h2 className='cards-head'>{card.heading}</h2>
                                     <img className={card.heading === "Vision" ? 'cards-img' : card.heading === "Mission" ? 'cards-img1' : 'cards-img2'} src={card.imageUrl} alt='ultimates-roofing-llc' />
                                 </div>
-                                <div className='card-text'>{card.text}</div>
+                                <div style={{padding: "1rem"}} className='card-text'>{card.text}</div>
                             </Card>
                         </Col>
                     ))}

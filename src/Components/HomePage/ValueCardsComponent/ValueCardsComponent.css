@@ -13,7 +13,7 @@
 }
 
 .value-cards {
-    width: 25rem;
+    width: 20rem;
     border: none;
     margin: 2vh auto;
 }
@@ -74,19 +74,7 @@
 }
 
 
-@media only screen and (min-width: 1920px) {
-    .value-cards {
-        width: 19rem;
-        height: 20rem;
-    }
-
-    .value-text {
-        font-size: 1rem;
-    }
-
-}
-
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1863px) {
     .value-cards {
         width: 20rem;
     }

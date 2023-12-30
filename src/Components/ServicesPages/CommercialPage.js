@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
+import './ResidentialPage.css'
+import Roofs from '../../assets/Roofs.png'
+import ResidentialRoofing from '../../assets/ResidentialRoofing.png'
+import RoofsShining from '../../assets/RoofsShining.png'
+import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function CommercialPage() {
 
@@ -8,54 +13,71 @@ function CommercialPage() {
     }, []);
 
     return (
-        <div className='roofing-page'>
-            <div className='roofing-background'>
-                <div>
-                    <h6>ULTIMATES ROOFING & SIDING</h6>
-                    <h1 className='roofing-heading'>COMMERCIAL ROOFING</h1>
+        <div>
+            <div className='service-main'>
+                <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
+                <h2 className='service-page-heading'>Commercial Roofing</h2>
+                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Home Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
+                <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+                <div className='service-section'>
+                    <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
+                    <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
+                    <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
+                    <Row className='roofing-list'>
+                        <Col>
+                            <ul>
+                                <li className='service-page-text'>New water-resistant felt</li>
+                                <li className='service-page-text'>Rubberized Ice and Water Shield on eaves and valleys</li>
+                                <li className='service-page-text'>Fresh flashing for leak prevention</li>
+                                <li className='service-page-text'>Metal edges for enhanced roof integrity</li>
+                            </ul>
+                        </Col>
+                        <Col>
+                            <ul>
+                                <li className='service-page-text'>Upgraded vents and chimney flashing</li>
+                                <li className='service-page-text'>Premium Atlas Pinnacle shingles</li>
+                                <li className='service-page-text'>Our exceptional warranty: 15 years on workmanship, lifetime on materials</li>
+                                <li className='service-page-text'>Efficient one-day completion from start to clean-up!</li>
+                            </ul>
+                        </Col>
+                    </Row>
                 </div>
             </div>
 
-            <Container style={{ marginTop: "8vh" }}>
-                <h1 style={{ textAlign: "center", fontWeight: "700", marginBottom: "4vh" }}>ROOFING PRODUCTS – ULTIMATES SHINGLES</h1>
-                <Row>
-                    <Col style={{ marginTop: "3vh" }}>
-                        <p>Our shingles stand up to the toughest weather and the harshest conditions. Either Class A or Class C Fire rating, Class 4 Hail, 110 MPH wind uplift ratings. Excellent weathering properties, just like natural slate. Impermeable to water, won’t lift, cup, warp, break or delaminate.</p>
-                        <p style={{ color: "black", fontWeight: "500" }}>Backed by a 50-year transferable limited warranty.</p>
+            <div className='service-main1'>
+                <Row className='roofing-sections'>
+                    <Col>
+                        <h2 className='service-page-heading'>Your Style with Premium Shingles</h2>
+                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles. Designed to marry durability and aesthetic appeal, our shingles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles.</p>
                         <ul>
-                            <li>True to the environment</li>
-                            <li>100% recyclable blend of natural limestone and virgin resins.</li>
-                            <li>Authentic</li>
-                            <li>The natural beauty of random textures and edges is seen in authentic slate!</li>
+                            <li className='service-page-text'>Environmentally Conscious</li>
+                            <li className='service-page-text'>Crafted from a 100% recyclable blend of natural limestone and virgin resins</li>
+                            <li className='service-page-text'>Genuine</li>
+                            <li className='service-page-text'>Experience the true beauty of authentic slate with its natural textures and edges!</li>
                         </ul>
                     </Col>
-                    <Col style={{ margin: "20px 0px" }}>
-                        <img style={{ width: "550px", height: "350px", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://atlasroofingandsiding.com/wp-content/uploads/2021/06/Commercial-Roofing-Image-1.jpg" alt='ultimates-roofing-llc' />
+                    <Col className='temp-col' xs={1}></Col>
+                    <Col>
+                        <img src={Roofs} className='roofing-image' alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
-                <div style={{ textAlign: "center", margin: "5vh 0vh" }}>
-                    <div>Cool Ultimates roofs reflect heat and UV rays for more comfortable interiors, reduced air conditioning costs, and increased energy efficiency. Our roof recoating systems also offer a greener choice – recoating vs. replacement to save time, labor, disposal, and landfill costs.</div>
-                </div>
-            </Container>
+            </div>
 
-            <Container style={{ marginTop: "8vh", marginBottom: "8vh" }}>
-                <Row>
+            <div className='service-main1'>
+                <Row className='roofing-sections'>
                     <Col>
-                        <img style={{ width: "550px", height: "350px", marginTop: "3vh", boxShadow: "rgb(143 143 143 / 54%) -20px 20px 0px 0px" }} src="https://images.squarespace-cdn.com/content/v1/595cf3072994ca8947944b3f/1572367828386-YH5H3GTE7OADJ2NXXKM5/4752+Stoney+Brook+Lane+Highland+%288+of+13%29%281%29.jpg" alt='ultimates-roofing-llc' />
+                        <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
+                        <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
+                        <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
                     </Col>
+                    <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <h2 style={{ fontWeight: "700" }}>CONKLIN METAL ROOF RESTORATION SYSTEM</h2>
-                        <p>Don’t replace it – Restore it. A complete waterproofing system for metal roofs that inhibits rust, prevents leaks and provides an energy efficient and attractive finish coat for years of service.</p>
-                        <h6 style={{ fontWeight: "bold", fontSize: "22px" }}>Benefits:</h6>
-                        <ul style={{ fontSize: "16px" }}>
-                            <li>All Employees are screened for security</li>
-                            <li>Install new water-resistant felt</li>
-                            <li>Install Rubberized Ice and Water Shield on all eaves and valleys</li>
-                            <li>Install New flashing to prevent leaks</li>
-                        </ul>                    <Button className='estimate-btn'>FIND OUT MORE ABOUT THIS PROCESSS</Button>
+                        <img src={RoofsShining} className='roofs-shining-image' alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
-            </Container>
+            </div>
+
+            <LogosComponent />
         </div>
     )
 }

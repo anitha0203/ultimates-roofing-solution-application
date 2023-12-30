@@ -124,6 +124,7 @@
 @media only screen and (min-width: 1256px) and (max-width: 1500px) {
     .section {
         width: 24rem;
+        height: 45vh;
     }
 
     .cards {
@@ -139,6 +140,7 @@
 @media only screen and (max-width: 1256px) {
     .section {
         width: 22rem;
+        height: 45vh;
     }
 
     .hover-effect {

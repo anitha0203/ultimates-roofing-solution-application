@@ -34,9 +34,9 @@ function HomePage() {
     message: '', // additional field for form2
   });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

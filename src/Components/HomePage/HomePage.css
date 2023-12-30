@@ -180,7 +180,7 @@
 
 @media (max-width: 900px),
 (min-width: 778px) and (max-width: 900px) {
-    .content-overlay {
+     .content-overlay {
         margin-left: 2rem;
         width: 70%;
     }
@@ -199,6 +199,9 @@
     }
     .app-section {
         padding: 7vh 2rem;
+    }
+    .mobile-img{
+        margin-left: -3rem;
     }
 }
 
@@ -223,7 +226,7 @@
     }
 }
 
-@media only screen and (min-width: 545px) and (max-width: 743px) {
+@media only screen and (min-width: 545px) and (max-width: 778px) {
     .mobile-img {
         display: none;
     }
@@ -232,6 +235,9 @@
         display: block;
         width: 7rem;
         margin-top: -3.5rem;
+    }
+    .app-icons {
+        padding: 2vh 8vh 0px 0px;
     }
 }
 
@@ -247,12 +253,18 @@
         margin-left: 3rem;
     }
     .app-icons {
-        padding: 2vh 4vh 0px 0px;
+        padding: 2vh 2vh 0px 0px;
     }
 }
 
 
 @media only screen and (max-width: 545px) {
+    .about-section {
+        padding-left: 1rem;
+    }
+    .about-text{
+        font-size: 1rem;
+    }
     .about-img {
         display: none;
     }
@@ -305,13 +317,16 @@
     }
 
     .app-icons {
-        padding: 2vh 4vh 0px 0px;
+        padding: 2vh 2vh 0px 0px;
     }
 
 }
 
 
 @media only screen and (max-width: 351px) {
+    .about-section {
+        padding-left: 5px;
+    }
     .content-overlay {
         margin-left: 1rem;
     }

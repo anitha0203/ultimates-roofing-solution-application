@@ -134,6 +134,9 @@
         width: 434px;
         height: 378px;
     }
+    .service-page-text {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 545px) {
