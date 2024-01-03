@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Row, Toast, Form, Spinner, Modal } from 'react-bootstrap';
-import videoSource from '../../assets/Ultimate Roofing Video_Dec28.mp4';
-import AboutHouse from '../../assets/AboutHouse.png';
+import videoSource from '../../assets/HomePageImages/Ultimate Roofing Video_Dec28.mp4';
+import AboutHouse from '../../assets/HomePageImages/AboutHouse.png';
 import './HomePage.css';
-import PlayStore from '../../assets/PlayStore.png'
-import AppStore from '../../assets/AppStore.png'
-import Mobile from '../../assets/Mobile.png'
+import PlayStore from '../../assets/HomePageImages/PlayStore.png'
+import AppStore from '../../assets/HomePageImages/AppStore.png'
+import Mobile from '../../assets/HomePageImages/Mobile.png'
 import ServiceCardsComponent from './ServiceCardsComponent/ServiceCardsComponent';
 import CardsComponent from './CardsComponent/CardsComponent';
 import CommitmentComponent from './CommitmentComponent/CommitmentComponent';
@@ -19,7 +19,7 @@ import axios from 'axios';
 function HomePage() {
 
   const navigate = useNavigate();
-  const [sucessToast, setSuccessToast] = useState(false)
+  const [successToast, setSuccessToast] = useState(false)
   const [toast, setToast] = useState(false);
   const [toast1, setToast1] = useState(true);
   const [showModel, setShowModal] = useState(false);
@@ -34,9 +34,9 @@ function HomePage() {
     message: '', // additional field for form2
   });
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -68,41 +68,18 @@ function HomePage() {
           source: 'request', // Reset source to default
           message: '',
         });
-
-
-        
-        navigate("/success-page");
         setSuccessToast(true)
         // Close the success toast after 15 seconds
         setTimeout(() => {
           setSuccessToast(false);
-        }, 10000);
-
-
-
+        }, 15000);
       })
         .catch((error) => {
-
-
-          // navigate("/success-page");
-
-          setFormData({
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            source: 'request', // Reset source to default
-            message: '',
-          });
-          setShowModal(false)
           setSuccessToast(true)
-          // Close the success toast after 15 seconds
-          setTimeout(() => {
-            setSuccessToast(false);
-          }, 10000);
-
-
-
-
+        // Close the success toast after 15 seconds
+        setTimeout(() => {
+          setSuccessToast(false);
+        }, 15000);
           if (error.response) {
             setErrorMessage(error.response.data.message);
           } else {
@@ -118,7 +95,7 @@ function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setToast(!toast);
+      setToast(true);
     }, 10000);
 
     return () => clearInterval(interval);
@@ -150,16 +127,16 @@ function HomePage() {
         <div className="content-overlay">
           <h1 className='main-heading'>Elevate Every Horizon, Transforming Views with Our Roofing Expertise</h1>
           <p className='main-text'>A symphony of strength resonating through every project</p>
-          <div className='toast-pos'>
+          <div className='toast-div'>
             <Button className='estimate-btn' onClick={() => { navigate('/contact') }}>Get Your Free Estimate</Button>
             {toast1 && toast && (
-              <Toast style={{ borderRadius: "0px" }} onClose={handleToastClose}>
+              <Toast style={{ borderRadius: "0px", position: "absolute", right: "0" }} onClose={handleToastClose}>
                 <Toast.Header style={{ fontSize: "14px" }}>
                   <strong className="me-auto" >Need consultant's advise?</strong>
                 </Toast.Header>
-                <Toast.Body style={{ color: "#000", fontSize: "13px" }}>
-                  <span style={{ cursor: "pointer" }} onClick={() => handleShow('request')}>Request for a call back,</span>
-                  <span style={{ cursor: "pointer" }} onClick={() => handleShow('message')}> Leave a message to us</span>
+                <Toast.Body style={{ color: "#000", fontSize: "13px", display: "flex", justifyContent: "space-between" }}>
+                  <div style={{ cursor: "pointer" }} onClick={() => handleShow('request')}>Request for a call back</div>
+                  <div style={{ cursor: "pointer" }} onClick={() => handleShow('message')}> Leave a message for us</div>
                 </Toast.Body>
               </Toast>
             )}
@@ -167,15 +144,21 @@ function HomePage() {
         </div>
       </div>
 
-      {sucessToast ? (
-        <Toast style={{ position: 'fixed', top: "10%", right: 0, color: "#fff" }} bg='success'>
+      {successToast ? (
+        <Toast style={{ position: 'fixed', top: "77%", right: 0, color: "#fff" }} bg='success'>
           <Toast.Header>
             <strong className="me-auto">THANK YOU</strong>
           </Toast.Header>
-          <Toast.Body>Your message has been submitted successfully.</Toast.Body>
+          <Toast.Body>
+            {formData.source === 'request' ? (
+              'We will call you back shortly.'
+            ) : (
+              'We will get back to you as soon as possible.'
+            )}
+          </Toast.Body>
         </Toast>
-      ) : null
-      }
+      ) : null}
+
 
       {/**  our services */}
       <ServiceCardsComponent />
@@ -208,9 +191,6 @@ function HomePage() {
 
       {/**    logo slider */}
       <LogosComponent />
-
-      {/**    Reviews  */}
-      <ReviewsComponent />
 
       {/**  download app */}
       <Row className='app-section'>

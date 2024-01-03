@@ -49,7 +49,7 @@
     margin: 2px;
 }
 
-.estimate-btn:hover{
+.estimate-btn:hover {
     background-color: #3D3B6D !important;
     border-color: #3D3B6D !important;
 }
@@ -60,17 +60,17 @@
     margin: 0px;
 }
 
-.toast-pos{
-    display: flex;
+.model-form {
+    padding: 1rem 2rem;
 }
 
-.model-form{
-    padding: 1rem 2rem;
+.toast-div {
+    display: flex;
 }
 
 /*   About us    */
 .about-section {
-    background-image: url('../../assets/AboutBackground.jpg');
+    background-image: url('../../assets/HomePageImages/AboutBackground.jpg');
     background-size: cover;
     padding: 4rem 0rem 0rem 5rem;
     width: 100%;
@@ -180,7 +180,7 @@
 
 @media (max-width: 900px),
 (min-width: 778px) and (max-width: 900px) {
-     .content-overlay {
+    .content-overlay {
         margin-left: 2rem;
         width: 70%;
     }
@@ -197,10 +197,12 @@
     .about-section {
         padding-left: 2rem;
     }
+
     .app-section {
         padding: 7vh 2rem;
     }
-    .mobile-img{
+
+    .mobile-img {
         margin-left: -3rem;
     }
 }
@@ -215,14 +217,17 @@
     .store-heading {
         font-size: 1.5rem;
     }
-    .toast-pos{
-        display: block;
-    }    
 }
 
 @media only screen and (min-width: 545px) and (max-width: 675px) {
     .mobile-img {
         width: 6rem;
+    }
+}
+
+@media (max-width: 675px) {
+    .toast-div {
+        display: block;
     }
 }
 
@@ -236,6 +241,7 @@
         width: 7rem;
         margin-top: -3.5rem;
     }
+
     .app-icons {
         padding: 2vh 8vh 0px 0px;
     }
@@ -252,6 +258,7 @@
         margin-top: -2rem;
         margin-left: 3rem;
     }
+
     .app-icons {
         padding: 2vh 2vh 0px 0px;
     }
@@ -262,9 +269,11 @@
     .about-section {
         padding-left: 1rem;
     }
-    .about-text{
+
+    .about-text {
         font-size: 1rem;
     }
+
     .about-img {
         display: none;
     }
@@ -276,7 +285,7 @@
         left: 20%;
         width: 80%;
         height: 60%;
-        background-image: url('../../assets/AboutHouse.png');
+        background-image: url('../../assets/HomePageImages/AboutHouse.png');
         background-size: cover;
         z-index: -1;
     }
@@ -327,9 +336,11 @@
     .about-section {
         padding-left: 5px;
     }
+
     .content-overlay {
         margin-left: 1rem;
     }
+
     .mobile-img-view {
         margin-left: 0rem;
     }

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap';
-import HomeRoofing from '../../../assets/HomeRoofing.jpg';
-import CommercialRoofing from '../../../assets/CommercialRoofing.jpg';
-import SidingEnhancement from '../../../assets/SidingEnhancements.jpg';
-import GutterSystems from '../../../assets/GutterSystems.jpg';
-import WindowServices from '../../../assets/WindowsServices.jpg';
+import HomeRoofing from '../../../assets/HomePageImages/HomeRoofing.jpg';
+import CommercialRoofing from '../../../assets/HomePageImages/CommercialRoofing.jpg';
+import SidingEnhancement from '../../../assets/HomePageImages/SidingEnhancements.jpg';
+import GutterSystems from '../../../assets/HomePageImages/GutterSystems.jpg';
+import WindowServices from '../../../assets/HomePageImages/WindowsServices.jpg';
 import { FaArrowRight } from "react-icons/fa6";
 import './ServiceCardsComponent.css';
 import { useNavigate } from 'react-router-dom';

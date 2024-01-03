@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SuccessImages from '../../assets/SuccessImages.png';
-import { BsHandThumbsUp } from "react-icons/bs";
 
 const successPageStyles = {
     backgroundContainer: {
@@ -36,14 +35,18 @@ const successPageStyles = {
 };
 
 function SuccessPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div style={successPageStyles.backgroundContainer}>
             <div style={successPageStyles.backgroundImage}>
                 <img style={successPageStyles.image} src={SuccessImages} alt='ultimates-solution-llc' />
             </div>
             <div style={successPageStyles.text}>
-                <h1 style={{fontWeight: "Bold"}}>Thank You <BsHandThumbsUp style={{marginLeft: "1rem", marginTop: "-5px"}} /></h1>
-                <p>Success! Your message has been delivered and received.</p>
+                <h1 style={{fontWeight: "Bold"}}>Thank You</h1>
+                <p>Your message was received successfully. We'll be in touch soon!</p>
             </div>
         </div>
     );

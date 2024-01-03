@@ -16,6 +16,7 @@ function ContactPage() {
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [toast, setToast] = useState(false)
+    const [images, setImages] = useState([]);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -27,7 +28,6 @@ function ContactPage() {
         city: '',
         zipcode: '',
         message: '',
-        images: [],
         source: 'contact',
     });
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
@@ -53,35 +53,20 @@ function ContactPage() {
             setErrorMessage("E-Mail is not valid");
         } else if (formData.zipcode.length !== 5) {
             setErrorMessage("Zipcode is not valid");
-        } else if (formData.images.length > 3) {
+        } else if (images.length > 3) {
             setErrorMessage("Please select only up to 3 images.");
         } else {
             setErrorMessage('');
             setLoading(true);
-            const formDataForUpload = new FormData();
-            Object.entries(formData).forEach(([key, value]) => {
-                if (key === 'images') {
-                    for (let i = 0; i < value.length; i++) {
-                        formDataForUpload.append('images', value[i]);
-                    }
-                } else {
-                    formDataForUpload.append(key, value);
-                }
-            });
-            console.log(formDataForUpload);
-            console.log(formData);
-            axios.post('', formDataForUpload ).then(res => { 
+            console.log(formData,images)
+            axios.post('http://localhost:8080/v1/ultimates/customer/register', { customer: formData, files: images },
+                {
+                    headers: { 'Content-Type': 'multipart/form-data', }
+                }).then(res => {
 
-                navigate("/success-page") 
+                    navigate("/success-page")
 
-            })
-                .catch((error) => {
-
-
-                    setToast(true);
-                    navigate("/success-page") 
-
-
+                }).catch((error) => {
                     if (error.response) {
                         setErrorMessage(error.response.data.message);
                     } else {
@@ -109,14 +94,23 @@ function ContactPage() {
         const files = e.target.files;
         setErrorMessage('');
 
+        const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
         if (files.length > 3) {
             setErrorMessage('Please select only up to 3 images.');
+            return;
         }
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            images: [...files],
-        }));
+
+        const oversizedImages = Array.from(files).filter((file) => file.size > maxSize);
+
+        if (oversizedImages.length > 0) {
+            setErrorMessage('Please ensure that all selected images are under 5MB in size.');
+            return;
+        }
+
+        setImages([...files]);
     };
+
 
 
     return (
@@ -138,8 +132,8 @@ function ContactPage() {
                         <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
                             <div className='contact-text'>
                                 <p style={{ fontWeight: "bold", fontSize: "23px" }}><IoMailOutline className='contact-icon' /> E-mail</p>
-                                <p className='address-text'>admin - roofs@ultimatesolutionsit.com</p>
-                                <p className='address-text'>sales - hrroofs@ultimatesolutionsit.com</p>
+                                <p className='address-text'>admin - hrroofs@ultimatesolutionsit.com</p>
+                                <p className='address-text'>sales - roofs@ultimatesolutionsit.com</p>
                             </div>
                         </div>
                     </Col>
@@ -264,7 +258,6 @@ function ContactPage() {
                                             <option value="gutters">Gutters</option>
                                             <option value="windows">Windows</option>
                                             <option value="other">Other</option>
-                                            {/* Add more options as needed */}
                                         </Form.Select>
                                     </Form.Group>
                                 </Col>
@@ -339,7 +332,7 @@ function ContactPage() {
 
                             <Row className='names-roww'>
                                 <Form.Group>
-                                    <Form.Label className='label'>Upload Images <span style={{ color: "#969696" }}>(accept only .png, .jpg)</span></Form.Label>
+                                    <Form.Label className='label'>Upload Images</Form.Label>
                                     <Form.Control
                                         type='file'
                                         name='images'
@@ -349,6 +342,7 @@ function ContactPage() {
                                         className='input'
                                     />
                                 </Form.Group>
+                                <div style={{ color: "#969696", paddingTop: "6px" }}>Note: (Upload up to 3 images (.png or .jpg), each not exceeding 5MB.)</div>
                             </Row>
 
                             <Row className='names-roww'>
@@ -383,7 +377,6 @@ function ContactPage() {
                         </Form>
                     </Col>
                     <Col className='image-coll'>
-                        {/****  <img src={ContactForm} /> **/}
                         <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195656.61280534012!2d-83.15563599435002!3d39.98309783384798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1703668481347!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Google Maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </Col>
                 </Row>

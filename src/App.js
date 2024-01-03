@@ -12,6 +12,7 @@ import SidingPage from './Components/ServicesPages/SidingPage';
 import WindowsPage from './Components/ServicesPages/WindowsPage';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 import SuccessPage from './Components/ContactPage/SuccessPage';
+import ReviewsPage from './Components/ReviewsPage/ReviewsPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/gutter-systems' Component={GuttersPage} />
         <Route path='/window-services' Component={WindowsPage} />
         <Route path='/projects' Component={ProjectsPage} />
+        <Route path='/reviews' Component={ReviewsPage} />
         <Route path='/contact' Component={ContactPage} />
         <Route path='/success-page' Component={SuccessPage} />
         <Route path='*' Component={HomePage} />

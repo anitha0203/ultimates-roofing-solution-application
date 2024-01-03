@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import './ReviewsComponent.css';
 import { Accordion, Card, Col, Row } from 'react-bootstrap';
-import Quote from '../../../assets/Quote.png'
+import Quote from '../../../assets/HomePageImages/Quote.png'
 
 //  Reviews Data
-
 const reviews = [
   { name: 'John T', place: 'Denver, Colorado', description: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
   { name: 'Sarah L', place: 'Austin, Texas', description: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },

@@ -1,14 +1,14 @@
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap';
 import './ValueCardsComponent.css';
-import ReliableExpertise from '../../../assets/ReliableExpertise.png'
-import CraftedExcellence from '../../../assets/CraftedExcellence.png'
-import CompetitivePricing from '../../../assets/CompetitivePricing.png'
-import InnovativeQuality from '../../../assets/InnovativeQuality.png'
-import ValueIcon1 from '../../../assets/ValueIcon1.png'
-import ValueIcon2 from '../../../assets/ValueIcon2.png'
-import ValueIcon3 from '../../../assets/ValueIcon3.png'
-import ValueIcon4 from '../../../assets/ValueIcon4.png'
+import ReliableExpertise from '../../../assets/HomePageImages/ReliableExpertise.png'
+import CraftedExcellence from '../../../assets/HomePageImages/CraftedExcellence.png'
+import CompetitivePricing from '../../../assets/HomePageImages/CompetitivePricing.png'
+import InnovativeQuality from '../../../assets/HomePageImages/InnovativeQuality.png'
+import ValueIcon1 from '../../../assets/HomePageImages/ValueIcon1.png'
+import ValueIcon2 from '../../../assets/HomePageImages/ValueIcon2.png'
+import ValueIcon3 from '../../../assets/HomePageImages/ValueIcon3.png'
+import ValueIcon4 from '../../../assets/HomePageImages/ValueIcon4.png'
 
 //  Values data
 const values = [

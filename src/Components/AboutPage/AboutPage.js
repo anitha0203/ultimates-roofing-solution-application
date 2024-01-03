@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Accordion, Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import AboutMainImage from '../../assets/AboutMainImage.png';
-import AboutPageImage from '../../assets/AboutPageImage.png';
+import AboutMainImage from '../../assets/AboutPageImages/AboutMainImage.png';
+import AboutPageImage from '../../assets/AboutPageImages/AboutPageImage.png';
 import './AboutPage.css';
 import CardsComponent from '../HomePage/CardsComponent/CardsComponent';
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
@@ -19,8 +19,10 @@ const reviews = [
 
 function AboutPage() {
   const navigate = useNavigate();
-  const [countExperience, setCountExperience] = useState(1);
-  const [countWarranty, setCountWarranty] = useState(1);
+  const [countExperience, setCountExperience] = useState(0);
+  const [countWarranty, setCountWarranty] = useState(0);
+  const [countWarranty1, setCountWarranty1] = useState(0);
+  const [countQuality, setCountQuality] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
   const countingRef = useRef(null);
 
@@ -57,15 +59,25 @@ function AboutPage() {
       }, 200);
 
       const intervalWarranty = setInterval(() => {
-        setCountWarranty((prevCount) => (prevCount < 10 ? prevCount + 1 : prevCount));
+        setCountWarranty((prevCount) => (prevCount < 20 ? prevCount + 1 : prevCount));
+      }, 200);
+
+      const intervalWarranty1 = setInterval(() => {
+        setCountWarranty1((prevCount) => (prevCount < 25 ? prevCount + 1 : prevCount));
+      }, 200);
+
+      const intervalQuality = setInterval(() => {
+        setCountQuality((prevCount) => (prevCount < 100 ? prevCount + 2 : prevCount));
       }, 200);
 
       return () => {
         clearInterval(intervalExperience);
         clearInterval(intervalWarranty);
+        clearInterval(intervalWarranty1);
+        clearInterval(intervalQuality);
       };
     }
-  }, [isIntersecting, countExperience, countWarranty]);
+  }, [isIntersecting, countExperience, countWarranty, countWarranty1, countQuality]);
 
   // Effect to scroll to the top on component mount
   useEffect(() => {
@@ -79,7 +91,10 @@ function AboutPage() {
         <h2 className='about-page-heading'>Ultimates Roofing LLC</h2>
         <p className='about-page-text'>At Ultimates Roofing LLC, we believe that every home and business deserves the highest quality roofing solutions. Established [Year], we have proudly served [Location] and surrounding areas, earning a reputation for excellence in the Roofing and Siding industry.</p>
         <p className='about-page-text'>From comprehensive roof installation and replacement services to meticulous long-term repairs, Ultimates Roofing is your all-encompassing solution. With nearly a decade of dedicated expertise in the industry, our seasoned roofing contractor ensures that your project is not just a task but a commitment to excellence, providing you with the utmost peace of mind throughout the process.</p>
-        <img src={AboutMainImage} className='about-main-image' alt='ultimates-roofing-llc' />
+
+        <div className='image-container'>
+          <img src={AboutMainImage} className='about-main-image' alt='ultimates-roofing-llc' />
+        </div>
       </div>
 
       {/**  Cards */}
@@ -100,11 +115,11 @@ function AboutPage() {
                 <div className='work-experience'>Years of Experience</div>
               </Col>
               <Col>
-                <div className='number-details' ref={countingRef}>{isIntersecting ? countWarranty  : ''}</div>
+                <div className='number-details' ref={countingRef}>{isIntersecting ? countWarranty : ''} - {isIntersecting ? countWarranty1 : ''}</div>
                 <div className='work-experience'>Years of Warranty</div>
               </Col>
               <Col>
-                <div className='number-details' >100%</div>
+                <div className='number-details' >{isIntersecting ? countQuality : ''}%</div>
                 <div className='work-experience'>Quality Products</div>
               </Col>
             </Row>

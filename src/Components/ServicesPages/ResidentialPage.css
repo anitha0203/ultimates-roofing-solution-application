@@ -51,15 +51,33 @@
     height: 378px;
 }
 
+.section4 {
+    max-width: 60%;
+}
+
+.section4-heading {
+    font-family: hauora-medium;
+}
+
+.roofing-sections1 {
+    margin: 5rem 0rem;
+    max-width: 2000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
 @media only screen and (max-width: 1400px) {
-    .temp-col{
+    .temp-col {
         display: none;
     }
+
     .roofing-image {
         width: 456px;
         height: 446px;
     }
-    
+
     .roofs-shining-image {
         width: 534px;
         height: 378px;
@@ -81,27 +99,32 @@
         width: 356px;
         height: 400px;
     }
-    
+
     .roofs-shining-image {
         width: 434px;
         height: 378px;
     }
+    .section4 {
+        max-width: 80%;
+    }
 }
 
 @media only screen and (max-width: 900px) {
-    .roofing-sections{
+    .roofing-sections {
         display: block;
     }
+
     .roofing-image {
         width: 556px;
         height: 446px;
     }
-    
+
     .roofs-shining-image {
         width: 634px;
         height: 378px;
     }
-    .roofing-list{
+
+    .roofing-list {
         display: block;
     }
 }
@@ -111,7 +134,7 @@
         width: 500px;
         height: 446px;
     }
-    
+
     .roofs-shining-image {
         width: 534px;
         height: 378px;
@@ -122,20 +145,26 @@
     .service-main {
         margin: 150px 1rem 0px;
     }
+
     .service-main1 {
         margin: 80px 1rem 0px;
     }
+
     .roofing-image {
         width: 400px;
         height: 446px;
     }
-    
+
     .roofs-shining-image {
         width: 434px;
         height: 378px;
     }
+
     .service-page-text {
         font-size: 16px;
+    }
+    .section4 {
+        max-width: 100%;
     }
 }
 
@@ -149,14 +178,16 @@
     .service-main {
         margin: 100px 10px 0px;
     }
+
     .service-main1 {
         margin: 60px 10px 0px;
     }
+
     .roofing-image {
         width: 350px;
         height: 350px;
     }
-    
+
     .roofs-shining-image {
         width: 350px;
         height: 300px;
@@ -168,7 +199,7 @@
         width: 280px;
         height: 300px;
     }
-    
+
     .roofs-shining-image {
         width: 280px;
         height: 300px;
@@ -208,12 +239,12 @@
     box-shadow: rgb(143 143 143 / 54%) -20px 20px 0px 0px
 }
 
-.roofing-text{
+.roofing-text {
     font-size: large;
     letter-spacing: 1px;
     margin-top: 1rem;
 }
 
-.roofing-section{
+.roofing-section {
     padding: 150px 6rem;
 }

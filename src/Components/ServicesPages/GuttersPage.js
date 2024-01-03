@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import Roofs from '../../assets/Roofs.png'
-import ResidentialRoofing from '../../assets/ResidentialRoofing.png'
-import RoofsShining from '../../assets/RoofsShining.png'
+import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
+import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function GuttersPage() {
@@ -17,27 +16,26 @@ function GuttersPage() {
         <div className='service-main'>
             <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
             <h2 className='service-page-heading'>Gutter Systems</h2>
-            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Home Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
-            <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where we extend our expertise beyond roofing to provide comprehensive solutions for your home, including top-of-the-line Gutter Systems. Our commitment to safeguarding your property encompasses not only the roof but also the crucial aspect of effective water management through advanced gutter installations.</p>
+            <img src='https://www.tichenorinc.com/wp-content/uploads/gutters-subpage-banner-min-aspect-ratio-1920-755-1.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
             <div className='service-section'>
                 <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
-                <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
-                <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
+                <p className='service-page-text'>Invest in the protection and longevity of your home with Ultimates Gutter Systems. Our commitment to excellence extends to every aspect of your property, providing you with peace of mind and a well-protected investment. Contact us today to explore our gutter solutions and take the first step toward effective water management for your home.</p>
+                <h5 className='service-mid-heading'>Ultimates Gutter Systems: Enhancing Protection and Efficiency</h5>
                 <Row className='roofing-list'>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>New water-resistant felt</li>
-                            <li className='service-page-text'>Rubberized Ice and Water Shield on eaves and valleys</li>
-                            <li className='service-page-text'>Fresh flashing for leak prevention</li>
-                            <li className='service-page-text'>Metal edges for enhanced roof integrity</li>
+                            <li className='service-page-text'>Customized Gutter Solutions</li>
+                            <li className='service-page-text'>Durable and High-Quality Materials</li>
+                            <li className='service-page-text'>Efficient Water Diversion</li>
+                            <li className='service-page-text'>Leaf Guard Protection</li>
                         </ul>
                     </Col>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>Upgraded vents and chimney flashing</li>
-                            <li className='service-page-text'>Premium Atlas Pinnacle shingles</li>
-                            <li className='service-page-text'>Our exceptional warranty: 15 years on workmanship, lifetime on materials</li>
-                            <li className='service-page-text'>Efficient one-day completion from start to clean-up!</li>
+                            <li className='service-page-text'>Seamless Installation</li>
+                            <li className='service-page-text'>Aesthetic Appeal</li>
+                            <li className='service-page-text'>Professional Maintenance Services</li>
                         </ul>
                     </Col>
                 </Row>
@@ -58,7 +56,7 @@ function GuttersPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src={Roofs} className='roofing-image' alt='ultimates-roofing-llc' />
+                    <img src='https://www.yorkshireroofing.com/wp-content/uploads/2020/09/gutter-install-square.jpg' className='roofing-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>

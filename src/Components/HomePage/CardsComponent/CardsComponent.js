@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap';
 import './CardsComponent.css';
-import Vision from '../../../assets/Vision.png';
-import Mission from '../../../assets/Mission.png';
-import Value from '../../../assets/Value.png';
+import Vision from '../../../assets/HomePageImages/Vision.png';
+import Mission from '../../../assets/HomePageImages/Mission.png';
+import Value from '../../../assets/HomePageImages/Value.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

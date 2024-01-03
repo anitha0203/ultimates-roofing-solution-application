@@ -101,6 +101,15 @@
     border-color: #3D3B6D !important;
 }
 
+@media only screen and (max-width: 1550px) {
+    .logo-section {
+        width: 11.5rem;
+    }
+    .roof-quote-btn {
+        font-size: 15px;
+    }
+}
+
 @media only screen and (max-width: 1399px) {
     .navbar-expand-xxl .navbar-nav .dropdown-menu {
         margin-top: 0rem;
@@ -108,12 +117,25 @@
     }
 }
 
-@media only screen and (max-width: 1090px) {
+@media only screen and (max-width: 1469px) {
     .nav-link-with-margin {
         margin-right: 15px;
     }
-
+    .navbar {
+        font-size: 15px;
+    }
 }
+
+@media only screen and (max-width: 1256px) {
+    .nav-link-with-margin {
+        margin-right: 5px;
+    }
+    .navbar {
+        padding: 0rem;
+        font-size: 13px;
+    }
+}
+
 
 /* Styles to apply when the screen  */
 @media only screen and (max-width: 991px) {
@@ -151,21 +173,5 @@
 @media only screen and (max-width: 450px) {
     .logo-section {
         width: 11.5rem;
-    }
-}
-
-@media only screen and (max-width: 1470px) {
-    .navbar {
-        padding: 0rem;
-        font-size: 15px;
-    }
-    .logo-section {
-        width: 11.5rem;
-    }
-    .roof-quote-btn {
-        font-size: 15px;
-    }
-    .nav-link-with-margin{
-        margin-right: 10px;
     }
 }

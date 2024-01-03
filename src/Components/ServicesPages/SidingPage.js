@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import Roofs from '../../assets/Roofs.png'
-import ResidentialRoofing from '../../assets/ResidentialRoofing.png'
-import RoofsShining from '../../assets/RoofsShining.png'
+import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
+import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function SidingPage() {
@@ -16,27 +15,25 @@ function SidingPage() {
         <div className='service-main'>
             <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
             <h2 className='service-page-heading'>Siding Enhancements</h2>
-            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Home Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
-            <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for not only exceptional roofing solutions but also premium Siding Enhancements that add both style and durability to your property. Our commitment to elevating the overall protection and aesthetic appeal of your home extends to our comprehensive siding services.</p>
+            <img src='https://d7fcfvvxwoz9e.cloudfront.net/dom43635/wp-content/uploads/2022/03/Board-and-Batten-Siding-Vs.-Vinyl-Siding.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
             <div className='service-section'>
                 <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
-                <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
-                <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
+                <p className='service-page-text'>Your home is a reflection of your unique style, and our team works closely with you to achieve the desired look for your property. Whether you seek a traditional charm or a modern aesthetic, Ultimates Roofing offers customized siding solutions to enhance the visual appeal of your home.</p>
+                <h5 className='service-mid-heading'>Enhance Your Home's Exterior with Ultimates Siding Solutions:</h5>
                 <Row className='roofing-list'>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>New water-resistant felt</li>
-                            <li className='service-page-text'>Rubberized Ice and Water Shield on eaves and valleys</li>
-                            <li className='service-page-text'>Fresh flashing for leak prevention</li>
-                            <li className='service-page-text'>Metal edges for enhanced roof integrity</li>
+                            <li className='service-page-text'>Diverse Siding Options</li>
+                            <li className='service-page-text'>Durability and Weather Resistance</li>
+                            <li className='service-page-text'>Energy-Efficient Siding</li>
                         </ul>
                     </Col>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>Upgraded vents and chimney flashing</li>
-                            <li className='service-page-text'>Premium Atlas Pinnacle shingles</li>
-                            <li className='service-page-text'>Our exceptional warranty: 15 years on workmanship, lifetime on materials</li>
-                            <li className='service-page-text'>Efficient one-day completion from start to clean-up!</li>
+                            <li className='service-page-text'>Professional Installation and Craftsmanship</li>
+                            <li className='service-page-text'>Low Maintenance and Longevity</li>
+                            <li className='service-page-text'>Customized Design and Personalization</li>
                         </ul>
                     </Col>
                 </Row>
@@ -57,7 +54,7 @@ function SidingPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src={Roofs} className='roofing-image' alt='ultimates-roofing-llc' />
+                    <img src='https://risebuildingproducts.com/wp-content/uploads/2023/06/iStock-157441498-1024x753.jpg' className='roofing-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>

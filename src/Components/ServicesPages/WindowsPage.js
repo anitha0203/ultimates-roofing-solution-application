@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import Roofs from '../../assets/Roofs.png'
-import ResidentialRoofing from '../../assets/ResidentialRoofing.png'
-import RoofsShining from '../../assets/RoofsShining.png'
+import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
+import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function WindowsPage() {
@@ -16,27 +15,26 @@ function WindowsPage() {
         <div className='service-main'>
             <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
             <h2 className='service-page-heading'>Window Services</h2>
-            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Home Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
-            <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+            <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where our commitment to enhancing your home extends to every detail, including high-quality Window Solutions. We understand that windows play a crucial role in the aesthetics, energy efficiency, and overall comfort of your home. With Ultimates Window Solutions, we bring you a blend of style, functionality, and durability.</p>
+            <img src='https://www.guttermanservices.com/wp-content/uploads/2018/12/Home-Page-Banners-Roof-Desktop.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
             <div className='service-section'>
                 <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
-                <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
-                <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
+                <p className='service-page-text'>Our skilled installation team ensures a precise and seamless installation process. We pay careful attention to detail, ensuring that your windows not only perform optimally but also contribute to the overall aesthetic appeal of your home.</p>
+                <h5 className='service-mid-heading'>Ultimates Window Solutions: Elevating Your Home Experience</h5>
                 <Row className='roofing-list'>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>New water-resistant felt</li>
-                            <li className='service-page-text'>Rubberized Ice and Water Shield on eaves and valleys</li>
-                            <li className='service-page-text'>Fresh flashing for leak prevention</li>
-                            <li className='service-page-text'>Metal edges for enhanced roof integrity</li>
+                            <li className='service-page-text'>Energy-Efficient Windows</li>
+                            <li className='service-page-text'>Customized Styles and Designs</li>
+                            <li className='service-page-text'>Durable Materials</li>
+                            <li className='service-page-text'>Noise Reduction Technology</li>
                         </ul>
                     </Col>
                     <Col>
                         <ul>
-                            <li className='service-page-text'>Upgraded vents and chimney flashing</li>
-                            <li className='service-page-text'>Premium Atlas Pinnacle shingles</li>
-                            <li className='service-page-text'>Our exceptional warranty: 15 years on workmanship, lifetime on materials</li>
-                            <li className='service-page-text'>Efficient one-day completion from start to clean-up!</li>
+                            <li className='service-page-text'>Low Maintenance and Easy Operation</li>
+                            <li className='service-page-text'>UV Protection</li>
+                            <li className='service-page-text'>Professional Installation</li>
                         </ul>
                     </Col>
                 </Row>

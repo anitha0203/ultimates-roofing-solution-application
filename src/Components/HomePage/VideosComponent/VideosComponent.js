@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './VideosComponent.css';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import video1 from '../../../assets/video1.mp4'
-import video2 from '../../../assets/video2.mp4'
-import video3 from '../../../assets/video3.mp4'
-import video4 from '../../../assets/video5.mp4'
-import video5 from '../../../assets/video4.mp4'
-import PlayButton from '../../../assets/PlayButton.png'
+import video1 from '../../../assets/HomePageImages/video1.mp4'
+import video2 from '../../../assets/HomePageImages/video2.mp4'
+import video3 from '../../../assets/HomePageImages/video3.mp4'
+import video4 from '../../../assets/HomePageImages/video5.mp4'
+import video5 from '../../../assets/HomePageImages/video4.mp4'
+import PlayButton from '../../../assets/HomePageImages/PlayButton.png'
 
 // Videos data
 const videos = [

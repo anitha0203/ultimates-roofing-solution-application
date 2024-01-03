@@ -34,6 +34,7 @@ function Footer() {
             <Col onClick={() => {navigate('/about')}} className={`navitems ${isCurrentPage('/about') ? 'underline-text' : ''}`}>About</Col>
             <Col onClick={() => {navigate('/residential-roofing')}} className={`navitems ${isServicesDropdownActive() ? 'underline-text' : ''}`}>Services</Col>
             <Col onClick={() => {navigate('/projects')}} className={`navitems ${isCurrentPage('/projects') ? 'underline-text' : ''}`}>Projects</Col>
+            <Col onClick={() => {navigate('/reviews')}} className={`navitems ${isCurrentPage('/reviews') ? 'underline-text' : ''}`}>Reviews</Col>
             <Col onClick={() => {navigate('/contact')}} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
           <Row style={{ margin: "0" }}>

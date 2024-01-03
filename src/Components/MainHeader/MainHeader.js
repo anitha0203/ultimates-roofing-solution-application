@@ -53,6 +53,7 @@ function MainHeader() {
                                 ))}
                             </NavDropdown>
                             <Nav.Link href="/projects" className={`nav-link-with-margin not-active ${isNavLinkActive('/projects') ? 'active' : ''}`}>Projects</Nav.Link>
+                            <Nav.Link href="/reviews" className={`nav-link-with-margin not-active ${isNavLinkActive('/reviews') ? 'active' : ''}`}>Reviews</Nav.Link>
                             <Nav.Link href="/contact" className={`nav-link-with-margin not-active ${isNavLinkActive('/contact') ? 'active' : ''}`}>Contact</Nav.Link>
                         </Nav>
 
