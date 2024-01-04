@@ -17,7 +17,7 @@ import axios from 'axios';
 
 function HomePage() {
 
-  const url = '';
+  const url = 'http://localhost:8080/v1/student/modelData';
   const navigate = useNavigate();
   const [successToast, setSuccessToast] = useState(false)
   const [toast, setToast] = useState(false);
@@ -59,7 +59,8 @@ function HomePage() {
     } else {
       setErrorMessage('');
       setLoading(true);
-      axios.post(url, formData).then(res => {
+      axios.post(url, {firstName: "Anitha"})
+.then(res => {
         // Reset the form after successful submission
         setFormData({
           firstName: '',

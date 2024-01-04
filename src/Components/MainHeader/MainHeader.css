@@ -101,6 +101,18 @@
     border-color: #3D3B6D !important;
 }
 
+.roof-quote-btn:focus-visible {
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+    box-shadow: none;
+}
+
+.roof-canvas{
+    width: 62% !important;
+    text-align: center !important;
+    top: 9% !important
+}
+
 @media only screen and (max-width: 1550px) {
     .logo-section {
         width: 11.5rem;
@@ -136,6 +148,12 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .roof-canvas{
+        width: 72% !important;
+    }
+}
+
 
 /* Styles to apply when the screen  */
 @media only screen and (max-width: 991px) {
@@ -168,11 +186,17 @@
     .main-heading {
         font-size: 2rem !important;
     }
+    .roof-canvas{
+        width: 85% !important;
+    }
 }
 
 /* Styles to apply when the screen width is below 500px */
 @media only screen and (max-width: 450px) {
     .logo-section {
         width: 11.5rem;
+    }
+    .roof-canvas{
+        width: 95% !important;
     }
 }

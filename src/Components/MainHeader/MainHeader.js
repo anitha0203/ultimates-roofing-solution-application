@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, NavDropdown, Navbar, Offcanvas } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import './MainHeader.css'
 import Logo from '../../assets/Logo.png'
 import PhoneIcon from '../../assets/HeaderPhoneIcon.png'
 import { FaBars, FaTimes } from "react-icons/fa";
+import InstantRoofQuote from './InstantRoofQuote';
 
 function MainHeader() {
     // Get the current location using react-router-dom
@@ -28,6 +29,11 @@ function MainHeader() {
     const formatDisplayText = (text) => {
         return text.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     };
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <div>
@@ -58,12 +64,23 @@ function MainHeader() {
                         </Nav>
 
                         <Nav className="justify-content-end flex-grow-1">
-                            <Nav.Link href="/" style={{ marginTop: "0.6vh", cursor: "default",color: "#000" }} className='nav-link-with-margin'><img src={PhoneIcon} className='phone-icon' alt='ultimates-roofing-llc' />614-602-7980</Nav.Link>
-                            <Button className='roof-quote-btn'>Instant Roof Quote</Button>
+                            <Nav.Link href="/" style={{ marginTop: "0.6vh", cursor: "default", color: "#000" }} className='nav-link-with-margin'><img src={PhoneIcon} className='phone-icon' alt='ultimates-roofing-llc' />614-602-7980</Nav.Link>
+                            <Button className='roof-quote-btn' onClick={handleShow}>Instant Roof Quote</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            <Offcanvas show={show} onHide={handleClose} placement="end" className='roof-canvas'>
+                <Offcanvas.Header closeButton style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Offcanvas.Title></Offcanvas.Title>
+                </Offcanvas.Header>
+                <h3>Ultimates Instant Roof Quote (Call for specials)</h3>
+                <p>Enter your street address to get an estimate instantly</p>
+                <Offcanvas.Body >
+                    <InstantRoofQuote />
+                </Offcanvas.Body>
+            </Offcanvas>
         </div>
     );
 }

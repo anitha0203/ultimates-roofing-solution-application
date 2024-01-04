@@ -11,7 +11,7 @@ import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 
 function ContactPage() {
 
-    const url = '';
+    const url = 'http://localhost:8080/v1/ultimates/customer/register';
 
     const navigate = useNavigate();
     const [visible, setVisible] = useState(false);
@@ -19,7 +19,7 @@ function ContactPage() {
     const [loading, setLoading] = useState(false);
     const [toast, setToast] = useState(false)
     const [images, setImages] = useState([]);
-    const [formData, setFormData] = useState({
+    const [details, setDetails] = useState({
         firstName: '',
         lastName: '',
         phoneNumber: '',
@@ -30,7 +30,7 @@ function ContactPage() {
         city: '',
         zipcode: '',
         message: '',
-        source: 'contact',
+        source: 'contactForm',
     });
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
@@ -38,7 +38,7 @@ function ContactPage() {
         const { name, value } = e.target;
         setErrorMessage('');
 
-        setFormData((prevFormData) => ({
+        setDetails((prevFormData) => ({
             ...prevFormData,
             [name]: value,
         }));
@@ -47,23 +47,24 @@ function ContactPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
-        if (formData.firstName === '' || formData.lastName === '' || formData.phoneNumber === '' || formData.email === '' || formData.address === '' || formData.state === '' || formData.city === '' || formData.zipcode === '' || formData.service === '') {
+        if (details.firstName === '' || details.lastName === '' || details.phoneNumber === '' || details.email === '' || details.address === '' || details.state === '' || details.city === '' || details.zipcode === '' || details.service === '') {
             setErrorMessage("Please fill all required fields");
-        } else if (formData.phoneNumber.length !== 10) {
+        } else if (details.phoneNumber.length !== 10) {
             setErrorMessage("PhoneNumber is not valid");
-        } else if (!emailPattern.test(formData.email)) {
+        } else if (!emailPattern.test(details.email)) {
             setErrorMessage("E-Mail is not valid");
-        } else if (formData.zipcode.length !== 5) {
+        } else if (details.zipcode.length !== 5) {
             setErrorMessage("Zipcode is not valid");
         } else if (images.length > 3) {
             setErrorMessage("Please select only up to 3 images.");
         } else {
             setErrorMessage('');
             setLoading(true);
-            console.log(formData,images)
-            axios.post(url, { customer: formData, files: images },
+            console.log(details,images)
+            const formData = new FormData();
+            axios.post(url, { 'customer':JSON.stringify(details),'files':images} ,
                 {
-                    headers: { 'Content-Type': 'multipart/form-data', }
+                    headers: { 'Content-Type': 'multipart/form-data' },
                 }).then(res => {
 
                     navigate("/success-page")
@@ -183,7 +184,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="text"
                                             name="firstName"
-                                            value={formData.firstName}
+                                            value={details.firstName}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -198,7 +199,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="text"
                                             name="lastName"
-                                            value={formData.lastName}
+                                            value={details.lastName}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -216,7 +217,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="number"
                                             name="phoneNumber"
-                                            value={formData.phoneNumber}
+                                            value={details.phoneNumber}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -232,7 +233,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="email"
                                             name="email"
-                                            value={formData.email}
+                                            value={details.email}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -248,7 +249,7 @@ function ContactPage() {
                                         </Form.Label>
                                         <Form.Select
                                             name="service"
-                                            value={formData.service}
+                                            value={details.service}
                                             onChange={handleInputChange}
                                             placeholder='Choose a service'
                                             className="input"
@@ -272,7 +273,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="string"
                                             name="address"
-                                            value={formData.address}
+                                            value={details.address}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -291,7 +292,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="string"
                                             name="state"
-                                            value={formData.state}
+                                            value={details.state}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -307,7 +308,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="string"
                                             name="city"
-                                            value={formData.city}
+                                            value={details.city}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -322,7 +323,7 @@ function ContactPage() {
                                         <Form.Control
                                             type="number"
                                             name="zipcode"
-                                            value={formData.zipcode}
+                                            value={details.zipcode}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -344,7 +345,7 @@ function ContactPage() {
                                         className='input'
                                     />
                                 </Form.Group>
-                                <div style={{ color: "#969696", paddingTop: "6px" }}>Note: (Upload up to 3 images (.png or .jpg), each not exceeding 5MB.)</div>
+                                <div style={{ color: "#969696", paddingTop: "6px" }}>Note: Please upload up to 3 images in either .png or .jpg format, and ensure that each file size is below 5MB.</div>
                             </Row>
 
                             <Row className='names-roww'>
@@ -355,7 +356,7 @@ function ContactPage() {
                                     <Form.Control
                                         as="textarea"
                                         name="message"
-                                        value={formData.message}
+                                        value={details.message}
                                         onChange={handleInputChange}
                                         placeholder='Please share detailed information about your project to help us understand better.'
                                         className="input"
