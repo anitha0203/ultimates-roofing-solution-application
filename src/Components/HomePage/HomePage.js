@@ -11,13 +11,13 @@ import CardsComponent from './CardsComponent/CardsComponent';
 import CommitmentComponent from './CommitmentComponent/CommitmentComponent';
 import ValueCardsComponent from './ValueCardsComponent/ValueCardsComponent';
 import VideosComponent from './VideosComponent/VideosComponent';
-import ReviewsComponent from './ReviewsComponent/ReviewsComponent';
 import LogosComponent from './LogosComponent/LogosComponent';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function HomePage() {
 
+  const url = '';
   const navigate = useNavigate();
   const [successToast, setSuccessToast] = useState(false)
   const [toast, setToast] = useState(false);
@@ -59,7 +59,7 @@ function HomePage() {
     } else {
       setErrorMessage('');
       setLoading(true);
-      axios.post('', formData).then(res => {
+      axios.post(url, formData).then(res => {
         // Reset the form after successful submission
         setFormData({
           firstName: '',
@@ -75,11 +75,6 @@ function HomePage() {
         }, 15000);
       })
         .catch((error) => {
-          setSuccessToast(true)
-        // Close the success toast after 15 seconds
-        setTimeout(() => {
-          setSuccessToast(false);
-        }, 15000);
           if (error.response) {
             setErrorMessage(error.response.data.message);
           } else {

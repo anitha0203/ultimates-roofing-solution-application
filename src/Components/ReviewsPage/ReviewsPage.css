@@ -5,7 +5,7 @@
 
 .reviews-section {
     font-family: hauora-medium;
-    margin: 150px 0rem 150px 4rem;
+    margin: 50px 6rem;
 }
 
 .reviews-heading {
@@ -22,11 +22,11 @@
 
 .review-cards {
     border: none;
-    background: var(--Colors-Secondary-100, #D5D4E8);
+    background: var(--Colors-Background-One, #EAEEF0);
     box-shadow: 0px 10px 15px -3px rgba(16, 24, 40, 0.10), 0px 4px 6px -4px rgba(16, 24, 40, 0.10);
-    width: 30rem;
-    height: 32.5rem;
-    margin-top: 2rem;
+    width: 480px;
+    height: 480px;
+    margin: 2rem auto
 }
 
 .reviewcard-heading {
@@ -34,7 +34,7 @@
 }
 
 .reviewcard-description {
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 5rem 1rem 0rem 1rem;
     vertical-align: bottom;
 }
 
@@ -54,19 +54,146 @@
     margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 1920px) {
-    .review-cards {
-        width: 25rem;
-        height: 28rem;
-    }
+.review-form-col {
+    margin-top: 2rem;
+}
 
+.review-form-row {
+    margin-top: 4rem;
+}
+
+.quote-image {
+    width: 100%;
+    height: 100%;
+}
+
+.review-btn {
+    border-radius: 0px;
+    background-color: #B22335;
+    border: 1px solid #B22335;
+    font-size: 1.3rem;
+    padding: 1rem 10rem;
+    margin: 2px;
+}
+
+.review-btn:hover {
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+    box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.10), 0px 8px 10px -6px rgba(16, 24, 40, 0.10);
+    padding: 18px 34px 21px 34px;
+    margin: 0px;
+}
+
+@media only screen and (min-width: 1920px) {
     .reviews-para {
         font-size: 1.1rem;
     }
 }
 
+@media (min-width: 1401px) and (max-width: 1700px) {
+    .review-cards {
+        width: 24.8rem;
+        height: 33rem;
+    }
+
+    .review-form-col {
+        margin-top: 0rem;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .review-cards {
+        width: 20.7rem;
+        height: 33rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .reviews-section {
-        margin: 150px 2rem 70px;
+        margin: 40px 2rem 0px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1030px) {
+    .review-cards {
+        width: 25.9rem;
+        height: 30rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+    .review-cards {
+        width: 22.8rem;
+        height: 32rem;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .review-form-row {
+        display: block;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 799px) {
+    .review-cards {
+        width: 20.2rem;
+        height: 32.5rem;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 720px) {
+    .review-cards {
+        width: 18rem;
+        height: 28rem;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 649px) {
+    .review-cards {
+        width: 15.7rem;
+        height: 32rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .review-cards {
+        height: 25rem;
+    }
+
+    .reviews-section {
+        margin: 40px 10px 0px;
+    }
+}
+
+@media (max-width: 495px) {
+    .review-cards {
+        width: 25rem;
+        height: 25rem;
+    }
+    .review-btn {
+        font-size: 1rem;
+        padding: 15px 28px 18px 28px;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 415px) {
+    .review-cards {
+        width: 22rem;
+        height: 28rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .review-cards {
+        width: 19rem;
+        height: 28rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .review-cards {
+        width: 17.2rem;
+        height: 29rem;
     }
 }

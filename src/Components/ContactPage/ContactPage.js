@@ -11,6 +11,8 @@ import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 
 function ContactPage() {
 
+    const url = '';
+
     const navigate = useNavigate();
     const [visible, setVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
@@ -59,7 +61,7 @@ function ContactPage() {
             setErrorMessage('');
             setLoading(true);
             console.log(formData,images)
-            axios.post('http://localhost:8080/v1/ultimates/customer/register', { customer: formData, files: images },
+            axios.post(url, { customer: formData, files: images },
                 {
                     headers: { 'Content-Type': 'multipart/form-data', }
                 }).then(res => {

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
 import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
