@@ -51,6 +51,10 @@
     color: #3D3B6D;
 }
 
+.project-card{
+    height: 100%;
+}
+
 /* Style the dots in the Slider */
 .project-card .slick-dots {
     position: absolute;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Col, Form, Row, Spinner, Toast, Button } from 'react-bootstrap';
+import { Card, Col, Form, Row, Spinner, Toast, Button, Accordion } from 'react-bootstrap';
 import Quote from '../../assets/HomePageImages/Quote.png'
 import './ReviewsPage.css'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
@@ -37,44 +37,44 @@ function ReviewsPage() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setErrorMessage('');
-    
+
         setReviewsData((prevFormData) => ({
-          ...prevFormData,
-          [name]: value,
+            ...prevFormData,
+            [name]: value,
         }));
-      };
-    
-      const handleSubmit = (e) => {
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
-    
+
         if (reviewData.fullName === '' || reviewData.location === '' || reviewData.message === '') {
-          setErrorMessage("Please fill all required fields");
+            setErrorMessage("Please fill all required fields");
         } else {
-          setErrorMessage('');
-          setLoading(true);
-          axios.post(url, reviewData).then(res => {
-            // Reset the form after successful submission
-            setReviewsData({fullName: '',location: '',message: ''});
-            setSuccessToast(true)
-            // Close the success toast after 15 seconds
-            setTimeout(() => {
-              setSuccessToast(false);
-            }, 15000);
-          })
-            .catch((error) => {
-              if (error.response) {
-                setErrorMessage(error.response.data.message);
-              } else {
-                setErrorMessage("An unexpected error occurred. Please try again.");
-                console.error("An error occurred:", error.message);
-              }
+            setErrorMessage('');
+            setLoading(true);
+            axios.post(url, reviewData).then(res => {
+                // Reset the form after successful submission
+                setReviewsData({ fullName: '', location: '', message: '' });
+                setSuccessToast(true)
+                // Close the success toast after 15 seconds
+                setTimeout(() => {
+                    setSuccessToast(false);
+                }, 15000);
             })
-            .finally(() => {
-              setLoading(false);
-            });
+                .catch((error) => {
+                    if (error.response) {
+                        setErrorMessage(error.response.data.message);
+                    } else {
+                        setErrorMessage("An unexpected error occurred. Please try again.");
+                        console.error("An error occurred:", error.message);
+                    }
+                })
+                .finally(() => {
+                    setLoading(false);
+                });
         }
-      };
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -83,14 +83,14 @@ function ReviewsPage() {
     return (
         <div>
 
-        {successToast ? (
-            <Toast style={{ position: 'fixed', top: "77%", right: 0, color: "#fff" }} bg='success'>
-              <Toast.Header>
-                <strong className="me-auto">THANK YOU</strong>
-              </Toast.Header>
-              <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
-            </Toast>
-          ) : null}
+            {successToast ? (
+                <Toast style={{ position: 'fixed', top: "77%", right: 0, color: "#fff" }} bg='success'>
+                    <Toast.Header>
+                        <strong className="me-auto">THANK YOU</strong>
+                    </Toast.Header>
+                    <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
+                </Toast>
+            ) : null}
 
             <div className='projects-main'>
                 <p className='projects-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Reviews</p>
@@ -115,6 +115,21 @@ function ReviewsPage() {
                 ))}
             </Row>
 
+            <Row className='reviews-section1'>
+                <Accordion defaultActiveKey="0" style={{marginTop: "3rem"}}>
+                    {reviews.map((review, index) => (
+                        <Accordion.Item key={index} eventKey={index.toString()}>
+                            <Accordion.Header>{review.name}</Accordion.Header>
+                            <Accordion.Body>
+                                <p className="reviews-para-mobile">{review.description}</p>
+                                <div>- {review.place}</div>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    ))}
+                </Accordion>
+            </Row>
+
+
             <div className='projects-main1'>
                 <h2 className='service-page-heading'>Share Your Experience</h2>
                 <p className='projects-page-text'>Please take a moment to share your experience with Ultimates Roofing LLC. Your feedback helps us continually improve our services and assists future customers in making informed decisions. Thank you for being a part of our journey.</p>
@@ -122,7 +137,7 @@ function ReviewsPage() {
                     <Col>
                         <img className='quote-image' src={ReviewsPageImage} alt='ultimates-solution-llc' />
                     </Col>
-                    <Col className='review-form-col'>
+                    <Col>
                         <Form className='model-form'>
                             <Row className='names-roww'>
                                 <Col>
@@ -163,7 +178,7 @@ function ReviewsPage() {
                             <Row className='names-roww'>
                                 <Form.Group>
                                     <Form.Label className="label">
-                                    <span style={{ color: 'red' }}>*</span> Message
+                                        <span style={{ color: 'red' }}>*</span> Message
                                     </Form.Label>
                                     <Form.Control
                                         as="textarea"
@@ -197,11 +212,11 @@ function ReviewsPage() {
 
             {loading ? (
                 <div className="loading-overlay">
-                  <div className="loading-indicator">
-                    <Spinner animation="border" variant="primary" />
-                  </div>
+                    <div className="loading-indicator">
+                        <Spinner animation="border" variant="primary" />
+                    </div>
                 </div>
-              ) : null}
+            ) : null}
         </div>
 
     )

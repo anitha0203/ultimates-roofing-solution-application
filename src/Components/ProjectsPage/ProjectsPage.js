@@ -53,7 +53,9 @@ function ProjectsPage() {
       <Row className='projects-main1'>
         <Col className='project-col'>
           <Card className='project-card'>
-            <img src={VideoImage} alt='ultimates-solution-llc' />
+            <video autoPlay muted playsInline loop>
+              <source src={video5} type="video/mp4" />
+            </video>
             <div className='play-icon1' onClick={() => openModal()}>
               <img className='play-icon-img1' src={PlayButton} alt='ultimates-roofing-llc' />
             </div>

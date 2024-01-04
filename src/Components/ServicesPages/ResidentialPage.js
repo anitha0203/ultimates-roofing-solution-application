@@ -5,6 +5,7 @@ import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
 import ResidentialRoofing from '../../assets/ServicesPagesImages/ResidentialRoofing.png'
 import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
+import Arrow from '../../assets/ServicesPagesImages/Arrow 2.png'
 
 function ResidentialPage() {
 
@@ -82,29 +83,64 @@ function ResidentialPage() {
                     <h2 className='service-page-heading'>TruDefinition® Duration® Designer Colors by Owens Corning</h2>
                     <p className='service-page-text'>Owens Corning's TruDefinition® Duration® Designer Colors Collection Shingles enhance your home's aesthetics and perceived value, offering unparalleled vibrancy and unique colors.</p>
                 </div>
-               
+
                 <Row className='roofing-sections1'>
                     <Col>
-                        <h4 className='section4-heading'>Innovative Design</h4>
-                        <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
+                                <h4 className='section4-heading'>Innovative Design</h4>
+                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
+                            </div>
+                        </div>
                     </Col>
                     <Col>
-                        <h4 className='section4-heading'>Strong Adhesion</h4>
-                        <p className='service-page-text'>Specially formulated with wide adhesive bands to maintain lamination between shingle layers.</p>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
+                                <h4 className='section4-heading'>Strong Adhesion</h4>
+                                <p className='service-page-text'>Specially formulated with wide adhesive bands to maintain lamination between shingle layers.</p>
+                            </div>
+                        </div>
                     </Col>
                     <Col>
-                        <h4 className='section4-heading'>Enhanced Grip:</h4>
-                        <p className='service-page-text'>The Tru-Bond®** sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.</p>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
+                                <h4 className='section4-heading'>Enhanced Grip:</h4>
+                                <p className='service-page-text'>The Tru-Bond®** sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.</p>
+                            </div>
+                        </div>
                     </Col>
                 </Row>
                 <Row className='roofing-sections1'>
                     <Col>
-                        <h4 className='section4-heading'>Triple-Layer Reinforcement®:</h4>
-                        <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
+                                <h4 className='section4-heading'>Triple-Layer Reinforcement®:</h4>
+                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
+                            </div>
+                        </div>
                     </Col>
                     <Col>
-                        <h4 className='section4-heading'>High Wind Resistance:</h4>
-                        <p className='service-page-text'>Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.</p>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
+                                <h4 className='section4-heading'>High Wind Resistance:</h4>
+                                <p className='service-page-text'>Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.</p>
+                            </div>
+                        </div>
                     </Col>
                     <Col></Col>
                 </Row>

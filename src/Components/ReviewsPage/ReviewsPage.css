@@ -54,10 +54,6 @@
     margin-bottom: 1rem;
 }
 
-.review-form-col {
-    margin-top: 2rem;
-}
-
 .review-form-row {
     margin-top: 4rem;
 }
@@ -84,6 +80,10 @@
     margin: 0px;
 }
 
+.reviews-section1 {
+    display: none;
+}
+
 @media only screen and (min-width: 1920px) {
     .reviews-para {
         font-size: 1.1rem;
@@ -94,10 +94,6 @@
     .review-cards {
         width: 24.8rem;
         height: 33rem;
-    }
-
-    .review-form-col {
-        margin-top: 0rem;
     }
 }
 
@@ -161,7 +157,12 @@
     }
 
     .reviews-section {
-        margin: 40px 10px 0px;
+        display: none;
+    }
+
+    .reviews-section1 {
+        margin: 40px 10px 70px;
+        display: block;
     }
 }
 
