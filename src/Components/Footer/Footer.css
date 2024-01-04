@@ -100,8 +100,8 @@
     display: none;
 }
 
-.underline-text{
-    color:#B22335;
+.underline-text {
+    color: #B22335;
     font-weight: 700;
 }
 
@@ -113,6 +113,7 @@
     .view2 {
         display: block;
     }
+
     .head-section {
         margin-top: 2rem;
     }
@@ -140,11 +141,24 @@
     }
 }
 
-@media only screen and (max-width: 354px) {
-    .footer-section {
-        padding: 2rem 1vh 2rem 0vh;
+@media only screen and (max-width: 380px) {
+
+    .navitems {
+        padding: 0px;
+        margin-left: 0px;
     }
-    .navbar-items1{
-        margin-left: -10px;
+
+    .navbar-items1 {
+        margin-left: -5px;
+    }
+
+    .footer-section {
+        padding: 2rem 0px;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    .navbar-items1 {
+        font-size: 11px;
     }
 }
