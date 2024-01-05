@@ -138,7 +138,7 @@ function ReviewsPage() {
                         <img className='quote-image' src={ReviewsPageImage} alt='ultimates-solution-llc' />
                     </Col>
                     <Col>
-                        <Form className='model-form'>
+                        <Form>
                             <Row className='names-roww'>
                                 <Col>
                                     <Form.Group>
