@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Nav, NavDropdown, Navbar, Offcanvas } from 'react-bootstrap';
+import { Button, Container, Nav, NavDropdown, Navbar, Offcanvas, Modal } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import './MainHeader.css'
 import Logo from '../../assets/Logo.png'
@@ -71,16 +71,28 @@ function MainHeader() {
                 </Container>
             </Navbar>
 
+            {/** Modal Component 
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Instant Roof Quote</Modal.Title>
+                </Modal.Header>
+                <Modal.Body style={{ display: "flex", justifyContent: "space-between" }}>
+                    <div>Please email us with your Details <span style={{ color: "#3D3B6D", fontWeight: "bold" }}>roofs@ultimatesolutionsit.com</span></div>
+                    <div>Request for a call back</div>
+                </Modal.Body>
+            </Modal>
+        */}
+
             <Offcanvas show={show} onHide={handleClose} placement="end" className='roof-canvas'>
-                <Offcanvas.Header closeButton style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Offcanvas.Title></Offcanvas.Title>
+                <Offcanvas.Header closeButton>
                 </Offcanvas.Header>
-                <h3>Ultimates Instant Roof Quote (Call for specials)</h3>
-                <p>Enter your street address to get an estimate instantly</p>
+                <h3 className='instant-heading'>Instant Roof Quote</h3>
+                <p style={{ fontSize: "large" }}>Enter your street address for a quick estimate</p>
                 <Offcanvas.Body >
                     <InstantRoofQuote />
                 </Offcanvas.Body>
             </Offcanvas>
+
         </div>
     );
 }

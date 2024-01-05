@@ -60,24 +60,35 @@ function ContactPage() {
         } else {
             setErrorMessage('');
             setLoading(true);
-            console.log(details,images)
+            console.log(details, images)
+
             const formData = new FormData();
-            axios.post(url, { 'customer':JSON.stringify(details),'files':images} ,
-                {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                }).then(res => {
 
-                    navigate("/success-page")
+            // Append customer details as a nested object with key 'customer'
+            formData.append('customer', JSON.stringify(details));
 
-                }).catch((error) => {
-                    if (error.response) {
-                        setErrorMessage(error.response.data.message);
-                    } else {
-                        console.error("An error occurred:", error.message);
-                    }
-                }).finally(() => {
-                    setLoading(false);
-                });
+            // Append each image file to the FormData with the correct field name 'files'
+            images.forEach((image, index) => {
+                formData.append('files', image);
+            });
+
+            console.log(formData);
+            axios.post(url, formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then(res => {
+
+                navigate("/success-page")
+
+            }).catch((error) => {
+                if (error.response) {
+                    console.log(formData);
+                    setErrorMessage(error.response.data.message);
+                } else {
+                    console.error("An error occurred:", error.message);
+                }
+            }).finally(() => {
+                setLoading(false);
+            });
         }
     };
 

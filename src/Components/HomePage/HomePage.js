@@ -59,22 +59,22 @@ function HomePage() {
     } else {
       setErrorMessage('');
       setLoading(true);
-      axios.post(url, {firstName: "Anitha"})
-.then(res => {
-        // Reset the form after successful submission
-        setFormData({
-          firstName: '',
-          lastName: '',
-          phoneNumber: '',
-          source: 'request', // Reset source to default
-          message: '',
-        });
-        setSuccessToast(true)
-        // Close the success toast after 15 seconds
-        setTimeout(() => {
-          setSuccessToast(false);
-        }, 15000);
-      })
+      axios.post(url, { firstName: "Anitha" })
+        .then(res => {
+          // Reset the form after successful submission
+          setFormData({
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            source: 'request', // Reset source to default
+            message: '',
+          });
+          setSuccessToast(true)
+          // Close the success toast after 15 seconds
+          setTimeout(() => {
+            setSuccessToast(false);
+          }, 15000);
+        })
         .catch((error) => {
           if (error.response) {
             setErrorMessage(error.response.data.message);

@@ -116,13 +116,13 @@ function ReviewsPage() {
             </Row>
 
             <Row className='reviews-section1'>
-                <Accordion defaultActiveKey="0" style={{marginTop: "3rem"}}>
+                <Accordion defaultActiveKey="0" style={{ marginTop: "3rem" }}>
                     {reviews.map((review, index) => (
                         <Accordion.Item key={index} eventKey={index.toString()}>
-                            <Accordion.Header>{review.name}</Accordion.Header>
+                            <Accordion.Header><div>{review.name}<div style={{ fontSize: "13px" }}>{review.place}</div></div></Accordion.Header>
                             <Accordion.Body>
+                                <img className='quote' src={Quote} alt='reviews-quote' />
                                 <p className="reviews-para-mobile">{review.description}</p>
-                                <div>- {review.place}</div>
                             </Accordion.Body>
                         </Accordion.Item>
                     ))}
@@ -133,8 +133,8 @@ function ReviewsPage() {
             <div className='projects-main1'>
                 <h2 className='service-page-heading'>Share Your Experience</h2>
                 <p className='projects-page-text'>Please take a moment to share your experience with Ultimates Roofing LLC. Your feedback helps us continually improve our services and assists future customers in making informed decisions. Thank you for being a part of our journey.</p>
-                <Row className='review-form-row'>
-                    <Col>
+                <Row style={{ marginTop: "4rem" }}>
+                    <Col className='form-image-col'>
                         <img className='quote-image' src={ReviewsPageImage} alt='ultimates-solution-llc' />
                     </Col>
                     <Col>

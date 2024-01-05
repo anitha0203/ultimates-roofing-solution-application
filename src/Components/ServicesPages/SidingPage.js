@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
+import SidingEnhancement from '../../assets/ServicesPagesImages/SidingEnhancement.png'
+import Siding1 from '../../assets/ServicesPagesImages/Siding1.jpg'
+import Siding2 from '../../assets/ServicesPagesImages/Siding2.jpg'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function SidingPage() {
@@ -15,7 +17,7 @@ function SidingPage() {
             <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
             <h2 className='service-page-heading'>Siding Enhancements</h2>
             <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for not only exceptional roofing solutions but also premium Siding Enhancements that add both style and durability to your property. Our commitment to elevating the overall protection and aesthetic appeal of your home extends to our comprehensive siding services.</p>
-            <img src='https://d7fcfvvxwoz9e.cloudfront.net/dom43635/wp-content/uploads/2022/03/Board-and-Batten-Siding-Vs.-Vinyl-Siding.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
+            <img src={SidingEnhancement} className='service-main-image' alt='ultimates-roofing-llc' />
             <div className='service-section'>
                 <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                 <p className='service-page-text'>Your home is a reflection of your unique style, and our team works closely with you to achieve the desired look for your property. Whether you seek a traditional charm or a modern aesthetic, Ultimates Roofing offers customized siding solutions to enhance the visual appeal of your home.</p>
@@ -53,7 +55,7 @@ function SidingPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src='https://risebuildingproducts.com/wp-content/uploads/2023/06/iStock-157441498-1024x753.jpg' className='roofing-image' alt='ultimates-roofing-llc' />
+                    <img src={Siding1} className='roofing-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>
@@ -67,7 +69,7 @@ function SidingPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src={RoofsShining} className='roofs-shining-image' alt='ultimates-roofing-llc' />
+                    <img src={Siding2} className='roofs-shining-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>

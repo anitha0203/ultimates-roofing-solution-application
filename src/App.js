@@ -33,7 +33,7 @@ function App() {
         <Route path='/success-page' Component={SuccessPage} />
         <Route path='*' Component={HomePage} />
       </Routes>
-       <Footer />
+      <Footer />
     </BrowserRouter>
   );
 }

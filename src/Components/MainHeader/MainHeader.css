@@ -37,7 +37,7 @@
     display: block;
 } */
 
-.navbar-expand-xxl .navbar-nav .dropdown-menu {
+.navbar-expand-lg .navbar-nav .dropdown-menu {
     margin-top: 1.4rem;
     border-radius: 0px;
 }
@@ -107,23 +107,46 @@
     box-shadow: none;
 }
 
-.roof-canvas{
+.roof-canvas {
     width: 62% !important;
     text-align: center !important;
-    top: 9% !important
+    top: 9.4% !important
+}
+
+.instant-heading {
+    font-weight: bold;
+    font-size: 3rem
+}
+
+
+.instant-input-div {
+    display: flex;
+    justify-content: center
+}
+
+.instant-note-text {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0px 4vh;
+    text-align: left;
+}
+
+.display-style1 {
+    display: none;
 }
 
 @media only screen and (max-width: 1550px) {
     .logo-section {
         width: 11.5rem;
     }
+
     .roof-quote-btn {
         font-size: 15px;
     }
 }
 
-@media only screen and (max-width: 1399px) {
-    .navbar-expand-xxl .navbar-nav .dropdown-menu {
+@media only screen and (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
         margin-top: 0rem;
         width: fit-content;
     }
@@ -133,6 +156,7 @@
     .nav-link-with-margin {
         margin-right: 15px;
     }
+
     .navbar {
         font-size: 15px;
     }
@@ -142,6 +166,7 @@
     .nav-link-with-margin {
         margin-right: 5px;
     }
+
     .navbar {
         padding: 0rem;
         font-size: 13px;
@@ -149,7 +174,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .roof-canvas{
+    .roof-canvas {
         width: 72% !important;
     }
 }
@@ -186,17 +211,46 @@
     .main-heading {
         font-size: 2rem !important;
     }
-    .roof-canvas{
+
+    .roof-canvas {
         width: 85% !important;
+    }
+
+    .instant-heading {
+        font-size: 2rem
     }
 }
 
-/* Styles to apply when the screen width is below 500px */
+/* Styles to apply when the screen width is below 450px */
 @media only screen and (max-width: 450px) {
     .logo-section {
         width: 11.5rem;
     }
-    .roof-canvas{
+
+    .roof-canvas {
         width: 95% !important;
+    }
+
+    .instant-heading {
+        font-size: 1.5rem
+    }
+}
+
+/* Styles to apply when the screen width is below 400px */
+@media only screen and (max-width: 400px) {
+    .instant-input-div {
+        display: block;
+    }
+
+    .display-style1 {
+        display: block;
+    }
+
+    .display-style2 {
+        display: none;
+    }
+
+    .instant-note-text {
+        margin: 10px 0px 1vh;
     }
 }

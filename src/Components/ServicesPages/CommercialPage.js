@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
+import CommercialRoofing from '../../assets/ServicesPagesImages/CommercialRoofng.png'
+import Commercial1 from '../../assets/ServicesPagesImages/Commercial1.jpg'
+import Commercial2 from '../../assets/ServicesPagesImages/Commercial2.jpg'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function CommercialPage() {
@@ -16,7 +18,7 @@ function CommercialPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Commercial Roofing</h2>
                 <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your premier choice for top-notch Commercial Roofing solutions in Columbus, Ohio! At Ultimates Roofing, we understand the unique demands of commercial properties, and our expert team is dedicated to providing unparalleled roofing services that blend durability, functionality, and aesthetic appeal.</p>
-                <img src='https://www.silverbowroofinginc.com/assets/sub-banner/banner-v1-bg.2203311530550.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
+                <img src={CommercialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                     <p className='service-page-text'>Our Commercial Roofing services encompass a comprehensive range of solutions, tailored to meet the specific requirements of businesses and industrial establishments. We pride ourselves on our commitment to excellence, ensuring that every project is executed with precision and attention to detail.</p>
@@ -54,7 +56,7 @@ function CommercialPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src='https://www.doddroofs.com/static/5e4ac99f86a93238c34f9c675f37e273/f1e8a/dodd_commercial_roofing_services_banner_592f91e0b2.jpg' className='roofing-image' alt='ultimates-roofing-llc' />
+                        <img src={Commercial1} className='roofing-image' alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
             </div>
@@ -68,7 +70,7 @@ function CommercialPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={RoofsShining} className='roofs-shining-image' alt='ultimates-roofing-llc' />
+                        <img src={Commercial2} className='roofs-shining-image' alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
             </div>

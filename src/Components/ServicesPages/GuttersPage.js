@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
-import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
+import Gutters from '../../assets/ServicesPagesImages/Gutters.png'
+import Gutters1 from '../../assets/ServicesPagesImages/Gutters1.jpg'
+import Gutters2 from '../../assets/ServicesPagesImages/Gutters2.jpg'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 
 function GuttersPage() {
@@ -16,7 +18,7 @@ function GuttersPage() {
             <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
             <h2 className='service-page-heading'>Gutter Systems</h2>
             <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where we extend our expertise beyond roofing to provide comprehensive solutions for your home, including top-of-the-line Gutter Systems. Our commitment to safeguarding your property encompasses not only the roof but also the crucial aspect of effective water management through advanced gutter installations.</p>
-            <img src='https://www.tichenorinc.com/wp-content/uploads/gutters-subpage-banner-min-aspect-ratio-1920-755-1.jpg' className='service-main-image' alt='ultimates-roofing-llc' />
+            <img src={Gutters} className='service-main-image' alt='ultimates-roofing-llc' />
             <div className='service-section'>
                 <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                 <p className='service-page-text'>Invest in the protection and longevity of your home with Ultimates Gutter Systems. Our commitment to excellence extends to every aspect of your property, providing you with peace of mind and a well-protected investment. Contact us today to explore our gutter solutions and take the first step toward effective water management for your home.</p>
@@ -55,7 +57,7 @@ function GuttersPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src='https://www.yorkshireroofing.com/wp-content/uploads/2020/09/gutter-install-square.jpg' className='roofing-image' alt='ultimates-roofing-llc' />
+                    <img src={Gutters1} className='roofing-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>
@@ -69,7 +71,7 @@ function GuttersPage() {
                 </Col>
                 <Col className='temp-col' xs={1}></Col>
                 <Col>
-                    <img src={RoofsShining} className='roofs-shining-image' alt='ultimates-roofing-llc' />
+                    <img src={Gutters2} className='roofs-shining-image' alt='ultimates-roofing-llc' />
                 </Col>
             </Row>
         </div>
