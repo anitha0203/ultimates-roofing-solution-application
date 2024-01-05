@@ -1,17 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import './ProjectsPage.css'
+
 import video5 from '../../assets/HomePageImages/video4.mp4'
-import ProjectImage1 from '../../assets/ProjectPageImages/ProjectImage1.png'
-import ProjectImage2 from '../../assets/ProjectPageImages/ProjectImage2.png'
-import ProjectImage3 from '../../assets/ProjectPageImages/ProjectImage3.png'
+import Roofing1 from '../../assets/ProjectPageImages/Roofing1.png'
+import Roofing2 from '../../assets/ProjectPageImages/Roofing2.png'
+import Roofing3 from '../../assets/ProjectPageImages/Roofing3.png'
+import Commercial1 from '../../assets/ProjectPageImages/Commercial1.png'
+import Commercial2 from '../../assets/ProjectPageImages/Commercial2.png'
+import Commercial3 from '../../assets/ProjectPageImages/Commercial3.png'
+import Siding1 from '../../assets/ProjectPageImages/Siding1.png'
+import Siding2 from '../../assets/ProjectPageImages/Siding2.png'
+import Siding3 from '../../assets/ProjectPageImages/Siding3.png'
+import Gutters1 from '../../assets/ProjectPageImages/Gutters1.png'
+import Gutters2 from '../../assets/ProjectPageImages/Gutters2.png'
+import Gutters3 from '../../assets/ProjectPageImages/Gutters2.png'
+import Windows1 from '../../assets/ProjectPageImages/Windows1.png'
+import Windows2 from '../../assets/ProjectPageImages/Windows2.png'
+import Windows3 from '../../assets/ProjectPageImages/Windows3.png'
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 import PlayButton from '../../assets/HomePageImages/PlayButton.png'
 import { FaTimes } from "react-icons/fa";
-import VideoImage from '../../assets/ProjectPageImages/VideoImage.png'
+
+const ResidentialRoofingImages = [Roofing1, Roofing2, Roofing3]
+const CommercialRoofingImages = [Commercial1, Commercial2, Commercial3]
+const SidingEnhancementImages = [Siding1, Siding2, Siding3]
+const GuttersImages = [Gutters1, Gutters2, Gutters3]
+const WindowsImages = [Windows1, Windows2, Windows3]
 
 function ProjectsPage() {
 
@@ -69,10 +88,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-              {/* {cards.map((card, index) => (...))} */}
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
+              {ResidentialRoofingImages.map((imageUrl, index) => (
+                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+              ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
@@ -88,9 +106,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-              <img src={ProjectImage2} alt='ultimates-solution-llc' />
-              <img src={ProjectImage2} alt='ultimates-solution-llc' />
-              <img src={ProjectImage2} alt='ultimates-solution-llc' />
+            {CommercialRoofingImages.map((imageUrl, index) => (
+              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+            ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>New York, NY - Jan 25, 2023</p>
@@ -102,9 +120,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-              <img src={ProjectImage3} alt='ultimates-solution-llc' />
-              <img src={ProjectImage3} alt='ultimates-solution-llc' />
-              <img src={ProjectImage3} alt='ultimates-solution-llc' />
+            {SidingEnhancementImages.map((imageUrl, index) => (
+              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+            ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
@@ -120,9 +138,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-              <img src={VideoImage} alt='ultimates-solution-llc' />
-              <img src={VideoImage} alt='ultimates-solution-llc' />
-              <img src={VideoImage} alt='ultimates-solution-llc' />
+            {WindowsImages.map((imageUrl, index) => (
+              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+            ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>New York, NY - Jan 25, 2023</p>
@@ -134,9 +152,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
-              <img src={ProjectImage1} alt='ultimates-solution-llc' />
+            {GuttersImages.map((imageUrl, index) => (
+              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+            ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
