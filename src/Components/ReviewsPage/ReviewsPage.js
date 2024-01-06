@@ -5,32 +5,19 @@ import './ReviewsPage.css'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 import ReviewsPageImage from '../../assets/ReviewsPageImage.png'
 import axios from 'axios';
-
-//  Reviews Data
-const reviews = [
-    { name: 'John T', place: 'Denver, Colorado', description: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { name: 'Sarah L', place: 'Austin, Texas', description: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { name: 'Robert H', place: 'Orlando, Florida', description: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { name: 'Emily W', place: ' Seattle, Washington', description: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-    { name: 'John T', place: 'Denver, Colorado', description: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { name: 'Sarah L', place: 'Austin, Texas', description: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { name: 'Robert H', place: 'Orlando, Florida', description: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { name: 'Emily W', place: ' Seattle, Washington', description: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-    { name: 'John T', place: 'Denver, Colorado', description: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { name: 'Sarah L', place: 'Austin, Texas', description: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { name: 'Robert H', place: 'Orlando, Florida', description: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { name: 'Emily W', place: ' Seattle, Washington', description: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-]
+import { Helmet } from 'react-helmet';
 
 function ReviewsPage() {
 
-    const url = '';
+    const url = 'http://localhost:8080/v1/ultimates/reviews';
+
+    const [reviewData, setReviewData] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [successToast, setSuccessToast] = useState(false)
     const [loading, setLoading] = useState(false);
-    const [reviewData, setReviewsData] = useState({
-        fullName: '',
-        location: '',
+    const [reviewsData, setReviewsData] = useState({
+        name: '',
+        address: '',
         message: '',
     });
 
@@ -48,14 +35,14 @@ function ReviewsPage() {
         e.preventDefault();
         setErrorMessage('');
 
-        if (reviewData.fullName === '' || reviewData.location === '' || reviewData.message === '') {
+        if (reviewsData.name === '' || reviewsData.address === '' || reviewsData.message === '') {
             setErrorMessage("Please fill all required fields");
         } else {
             setErrorMessage('');
             setLoading(true);
-            axios.post(url, reviewData).then(res => {
+            axios.post(url, reviewsData).then(res => {
                 // Reset the form after successful submission
-                setReviewsData({ fullName: '', location: '', message: '' });
+                setReviewsData({ name: '', address: '', message: '' });
                 setSuccessToast(true)
                 // Close the success toast after 15 seconds
                 setTimeout(() => {
@@ -78,17 +65,43 @@ function ReviewsPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        setLoading(true);
+        axios.get(url).then(res => {
+            setReviewData(res.data);
+        })
+            .catch((error) => {
+                if (error.response) {
+                    setErrorMessage(error.response.data.message);
+                } else {
+                    setErrorMessage("An unexpected error occurred. Please try again.");
+                    console.error("An error occurred:", error.message);
+                }
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
+
+    // Thank you for sharing your feedback with us!
 
     return (
         <div>
+        <Helmet>
+        <title>Ultimations Solution LLC - Reviews</title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/reviews" />
+        <meta name="description" content="Read reviews from satisfied clients who have experienced Ultimations Solution LLC's exceptional construction and home improvement services. Discover why we are a trusted partner for roofing, siding, windows, and more." />
+        <meta name="keywords" content="Ultimations Solution LLC, reviews, testimonials, residential roofing, construction, home improvement" />
+        <meta name="author" content="Ultimations Solution LLC" />
+        <meta name="robots" content="index, follow" />
+        <html lang="en" />
+      </Helmet>
 
             {successToast ? (
-                <Toast style={{ position: 'fixed', top: "77%", right: 0, color: "#fff" }} bg='success'>
+                <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
                     <Toast.Header>
                         <strong className="me-auto">THANK YOU</strong>
                     </Toast.Header>
-                    <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
+                    <Toast.Body>Your feedback has been received and is important to us</Toast.Body>
                 </Toast>
             ) : null}
 
@@ -98,17 +111,17 @@ function ReviewsPage() {
             </div>
 
             <Row className='reviews-section'>
-                {reviews.map((review, index) => (
+                {reviewData.map((review, index) => (
                     <Col key={index} style={{ padding: "0" }}>
                         <Card className='review-cards'>
                             <div className='reviewcard-heading'>
-                                <h2 className='review-client'>{review.name}</h2>
-                                <div className='review-place'>{review.place}</div>
+                                <h2 className='review-client'>{review.reviewerName}</h2>
+                                <div className='review-place'>{review.reviewerAddress}</div>
                             </div>
                             <hr style={{ color: "#F9F9F9" }} />
                             <div className='reviewcard-description'>
                                 <img className='quote' src={Quote} alt='reviews-quote' />
-                                <p className='projects-page-text'>{review.description}</p>
+                                <p className='projects-page-text'>{review.reviewerMessage}</p>
                             </div>
                         </Card>
                     </Col>
@@ -117,12 +130,12 @@ function ReviewsPage() {
 
             <Row className='reviews-section1'>
                 <Accordion defaultActiveKey="0" style={{ marginTop: "3rem" }}>
-                    {reviews.map((review, index) => (
+                    {reviewData.map((review, index) => (
                         <Accordion.Item key={index} eventKey={index.toString()}>
-                            <Accordion.Header><div>{review.name}<div style={{ fontSize: "13px" }}>{review.place}</div></div></Accordion.Header>
+                            <Accordion.Header><div>{review.reviewerName}<div style={{ fontSize: "13px" }}>{review.reviewerAddress}</div></div></Accordion.Header>
                             <Accordion.Body>
                                 <img className='quote' src={Quote} alt='reviews-quote' />
-                                <p className="reviews-para-mobile">{review.description}</p>
+                                <p className="reviews-para-mobile">{review.reviewerMessage}</p>
                             </Accordion.Body>
                         </Accordion.Item>
                     ))}
@@ -147,8 +160,8 @@ function ReviewsPage() {
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
-                                            name="fullName"
-                                            value={reviewData.fullName}
+                                            name="name"
+                                            value={reviewsData.name}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -165,8 +178,8 @@ function ReviewsPage() {
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
-                                            name="location"
-                                            value={reviewData.location}
+                                            name="address"
+                                            value={reviewsData.address}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"
@@ -183,7 +196,7 @@ function ReviewsPage() {
                                     <Form.Control
                                         as="textarea"
                                         name="message"
-                                        value={reviewData.message}
+                                        value={reviewsData.message}
                                         onChange={handleInputChange}
                                         placeholder='Please enter your message'
                                         className="input"

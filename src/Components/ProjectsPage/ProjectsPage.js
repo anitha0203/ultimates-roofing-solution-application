@@ -25,6 +25,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
 import PlayButton from '../../assets/HomePageImages/PlayButton.png'
 import { FaTimes } from "react-icons/fa";
+import { Helmet } from 'react-helmet'
 
 const ResidentialRoofingImages = [Roofing1, Roofing2, Roofing3]
 const CommercialRoofingImages = [Commercial1, Commercial2, Commercial3]
@@ -62,6 +63,16 @@ function ProjectsPage() {
   return (
 
     <div>
+      <Helmet>
+        <title>Ultimations Solution LLC - Projects</title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/projects" />
+        <meta name='description' content='Explore the impressive projects completed by Ultimations Solution LLC. From residential roofing to commercial renovations, discover our commitment to excellence and quality craftsmanship.' />
+        <meta name='keywords' content='Ultimations Solution LLC, projects, residential roofing, commercial renovations, construction, home improvement' />
+        <meta name='author' content='Ultimations Solution LLC' />
+        <meta name='robots' content='index, follow' />
+        <html lang="en" />
+      </Helmet>
+
       <div className='projects-main'>
         <p className='projects-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Projects</p>
         <p className='projects-page-text'>Our portfolio reflects a decade of industry experience, featuring projects ranging from roof installation and replacement to repairs, siding enhancements, gutter installations, and window services. Each project is a testament to our craftsmanship and the enduring impact we aim to create on every rooftop.</p>
@@ -106,9 +117,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-            {CommercialRoofingImages.map((imageUrl, index) => (
-              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
-            ))}
+              {CommercialRoofingImages.map((imageUrl, index) => (
+                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+              ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>New York, NY - Jan 25, 2023</p>
@@ -120,9 +131,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-            {SidingEnhancementImages.map((imageUrl, index) => (
-              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
-            ))}
+              {SidingEnhancementImages.map((imageUrl, index) => (
+                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+              ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
@@ -138,9 +149,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-            {WindowsImages.map((imageUrl, index) => (
-              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
-            ))}
+              {WindowsImages.map((imageUrl, index) => (
+                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+              ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>New York, NY - Jan 25, 2023</p>
@@ -152,9 +163,9 @@ function ProjectsPage() {
         <Col className='project-col'>
           <Card className='project-card'>
             <Slider {...settings} >
-            {GuttersImages.map((imageUrl, index) => (
-              <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
-            ))}
+              {GuttersImages.map((imageUrl, index) => (
+                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+              ))}
             </Slider>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>

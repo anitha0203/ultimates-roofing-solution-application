@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Nav, NavDropdown, Navbar, Offcanvas, Modal } from 'react-bootstrap';
+import { Button, Container, Nav, NavDropdown, Navbar, Offcanvas } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import './MainHeader.css'
 import Logo from '../../assets/Logo.png'
@@ -37,7 +37,7 @@ function MainHeader() {
 
     return (
         <div>
-            {isNavbarOpen && <div className="overlay" onClick={() => setNavbarOpen(false)}></div>}
+            {isNavbarOpen && <div className="overlay"></div>}
             <Navbar expand="lg" fixed="top">
                 <Container fluid>
                     <Navbar.Brand href="/" className='main-logo'><img className='logo-section' alt='ultimates-roofing-llc' src={Logo} /></Navbar.Brand>

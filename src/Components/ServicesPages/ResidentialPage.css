@@ -51,16 +51,12 @@
     height: 378px;
 }
 
-.section4 {
-    max-width: 60%;
-}
-
 .section4-heading {
     font-family: hauora-medium;
 }
 
 .roofing-sections1 {
-    margin: 5rem 0rem;
+    margin: 2rem 0rem 4rem;
     max-width: 2000px;
     width: 100%;
     display: grid;
@@ -71,6 +67,24 @@
 .arrow2{
     margin-right: 1rem;
 }
+
+.learn-btn {
+    border-radius: 0px;
+    background-color: #B22335;
+    border: 1px solid #B22335;
+    font-size: 1.3rem;
+    padding: 16px 32px 19px 32px;
+    margin: 2px;
+}
+
+.learn-btn:hover {
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+    box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.10), 0px 8px 10px -6px rgba(16, 24, 40, 0.10);
+    padding: 18px 34px 21px 34px;
+    margin: 0px;
+}
+
 
 @media only screen and (max-width: 1400px) {
     .temp-col {
@@ -107,9 +121,6 @@
     .roofs-shining-image {
         width: 434px;
         height: 378px;
-    }
-    .section4 {
-        max-width: 80%;
     }
 }
 
@@ -172,9 +183,6 @@
 
     .service-page-text {
         font-size: 16px;
-    }
-    .section4 {
-        max-width: 100%;
     }
 }
 

@@ -8,6 +8,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';
 import './ContactPage.css'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
+import { Helmet } from 'react-helmet';
 
 function ContactPage() {
 
@@ -28,7 +29,7 @@ function ContactPage() {
         address: '',
         state: '',
         city: '',
-        zipcode: '',
+        zipCode: '',
         message: '',
         source: 'contactForm',
     });
@@ -47,14 +48,14 @@ function ContactPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
-        if (details.firstName === '' || details.lastName === '' || details.phoneNumber === '' || details.email === '' || details.address === '' || details.state === '' || details.city === '' || details.zipcode === '' || details.service === '') {
+        if (details.firstName === '' || details.lastName === '' || details.phoneNumber === '' || details.email === '' || details.address === '' || details.state === '' || details.city === '' || details.zipCode === '' || details.service === '') {
             setErrorMessage("Please fill all required fields");
         } else if (details.phoneNumber.length !== 10) {
             setErrorMessage("PhoneNumber is not valid");
         } else if (!emailPattern.test(details.email)) {
             setErrorMessage("E-Mail is not valid");
-        } else if (details.zipcode.length !== 5) {
-            setErrorMessage("Zipcode is not valid");
+        } else if (details.zipCode.length !== 5) {
+            setErrorMessage("ZipCode is not valid");
         } else if (images.length > 3) {
             setErrorMessage("Please select only up to 3 images.");
         } else {
@@ -65,7 +66,7 @@ function ContactPage() {
             const formData = new FormData();
 
             // Append customer details as a nested object with key 'customer'
-            formData.append('customer', JSON.stringify(details));
+            formData.append('customerJson', JSON.stringify(details));
 
             // Append each image file to the FormData with the correct field name 'files'
             images.forEach((image, index) => {
@@ -129,6 +130,16 @@ function ContactPage() {
 
     return (
         <div className='contact-page'>
+
+            <Helmet>
+                <title>Ultimations Solution LLC - Contact Us</title>
+                <link rel="canonical" href="https://visheshcountrycache.tech/contact" />
+                <meta name='description' content='Get in touch with Ultimations Solution LLC for all your construction and home improvement needs. Whether you have questions, need a quote, or want to discuss a project, our team is here to assist you.' />
+                <meta name='keywords' content='Ultimations Solution LLC, contact us, construction, home improvement, residential roofing, commercial renovations' />
+                <meta name='author' content='Ultimations Solution LLC' />
+                <meta name='robots' content='index, follow' />
+                <html lang="en" />
+            </Helmet>
 
             <div className='contact-us'>
                 <h2 className='contact-heading'>Contact Us</h2>
@@ -329,12 +340,12 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Zipcode
+                                            <span style={{ color: 'red' }}>*</span> ZipCode
                                         </Form.Label>
                                         <Form.Control
                                             type="number"
-                                            name="zipcode"
-                                            value={details.zipcode}
+                                            name="zipCode"
+                                            value={details.zipCode}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"

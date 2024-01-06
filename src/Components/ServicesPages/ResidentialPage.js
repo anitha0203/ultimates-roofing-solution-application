@@ -1,24 +1,50 @@
 import React, { useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
 import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
 import ResidentialRoofing from '../../assets/ServicesPagesImages/ResidentialRoofing.png'
 import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
+import ResidentialShingleColors from '../../assets/ServicesPagesImages/ResidentialShingleColors.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 import Arrow from '../../assets/ServicesPagesImages/Arrow 2.png'
+import { Helmet } from 'react-helmet'
+
+const ResidentialData = [
+    {title: 'Innovative Design', description: 'Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation'},
+    {title: 'Strong Adhesion', description: 'Specially formulated with wide adhesive bands to maintain lamination between shingle layers.'},
+    {title: 'Enhanced Grip:', description: 'The Tru-Bond® sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.'},
+    {title: 'SureNail® Technology', description: 'Owens Corning\'s Duration® Series Shingles boast patented SureNail® Technology for built-in strength and durability. SureNail, a visible fabric strip in the nailing area.'},
+    {title: 'Triple-Layer Reinforcement®:', description: 'The fabric overlay creates a unique triple layer, reinforcing the common bond of shingle laminate layers for superior fastener holding power.'},
+    {title: 'High Wind Resistance:', description: 'Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.'}
+]
 
 function ResidentialPage() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
+
+    const openLinkInNewTab = () => {
+        window.open('https://www.owenscorning.com/en-us/roofing/duration-series-shingles', '_blank');
+    };
 
     return (
         <div>
+            <Helmet>
+                <title>Ultimations Solution LLC - Residential Roofing</title>
+                <link rel="canonical" href="https://visheshcountrycache.tech/residential-roofing" />
+                <meta name="description" content="Discover Ultimations Solution LLC's expert residential roofing services. From roof installations to repairs, we provide high-quality solutions with a focus on durability and aesthetics." />
+                <meta name="keywords" content="Ultimations Solution LLC, residential roofing, roof installations, roof repairs, construction, home improvement" />
+                <meta name="author" content="Ultimations Solution LLC" />
+                <meta name="robots" content="index, follow" />
+                <html lang="en" />
+            </Helmet>
+
+            {/**    Residential Roofing Heading and banner */}
             <div className='service-main'>
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Residential Roofing</h2>
-                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Residential Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
+                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Residentail Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
                 <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
@@ -45,6 +71,7 @@ function ResidentialPage() {
                 </div>
             </div>
 
+            {/**    Premium Shingles */}
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
@@ -64,12 +91,14 @@ function ResidentialPage() {
                 </Row>
             </div>
 
+            {/**    Corning Products */}
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
                         <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
                         <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
                         <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
+                        <Button className='learn-btn'>Learn More</Button>
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
@@ -78,10 +107,16 @@ function ResidentialPage() {
                 </Row>
             </div>
 
+            {/**    Owens Corning */}
             <div className='service-main1'>
                 <div className='section4'>
-                    <h2 className='service-page-heading'>TruDefinition® Duration® Designer Colors by Owens Corning</h2>
-                    <p className='service-page-text'>Owens Corning's TruDefinition® Duration® Designer Colors Collection Shingles enhance your home's aesthetics and perceived value, offering unparalleled vibrancy and unique colors.</p>
+                    <h2 className='service-page-heading'>Duration® Series Shingles by Owens Corning</h2>
+                    <p className='service-page-text'>The Duration® Series Shingles stand out among architectural shingles, thanks to our patented SureNail® Technology, a groundbreaking innovation in shingle design that sets them apart from the competition.</p>
+                    <Button className='learn-btn' onClick={openLinkInNewTab}>Learn More</Button>
+                </div>
+
+                <div>
+                    <img src={ResidentialShingleColors} className='service-main-image' alt='ultimates-roofing-llc' />
                 </div>
 
                 <Row className='roofing-sections1'>
@@ -137,12 +172,22 @@ function ResidentialPage() {
                                 <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
                             </div>
                             <div>
+                                <h4 className='section4-heading'>Triple-Layer Reinforcement®:</h4>
+                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div style={{ display: "flex" }}>
+                            <div>
+                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                            </div>
+                            <div>
                                 <h4 className='section4-heading'>High Wind Resistance:</h4>
                                 <p className='service-page-text'>Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.</p>
                             </div>
                         </div>
                     </Col>
-                    <Col></Col>
                 </Row>
             </div>
 

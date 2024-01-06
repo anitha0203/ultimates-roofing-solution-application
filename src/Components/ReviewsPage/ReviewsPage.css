@@ -65,15 +65,13 @@
     border: 1px solid #B22335;
     font-size: 1.3rem;
     padding: 1rem 10rem;
-    margin: 2px;
+    margin: 1rem;
 }
 
 .review-btn:hover {
     background-color: #3D3B6D !important;
     border-color: #3D3B6D !important;
     box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.10), 0px 8px 10px -6px rgba(16, 24, 40, 0.10);
-    padding: 18px 34px 21px 34px;
-    margin: 0px;
 }
 
 .reviews-section1 {

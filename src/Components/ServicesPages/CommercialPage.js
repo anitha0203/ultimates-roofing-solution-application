@@ -5,6 +5,7 @@ import CommercialRoofing from '../../assets/ServicesPagesImages/CommercialRoofng
 import Commercial1 from '../../assets/ServicesPagesImages/Commercial1.jpg'
 import Commercial2 from '../../assets/ServicesPagesImages/Commercial2.jpg'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
+import { Helmet } from 'react-helmet'
 
 function CommercialPage() {
 
@@ -14,6 +15,16 @@ function CommercialPage() {
 
     return (
         <div>
+            <Helmet>
+                <title>Ultimations Solution LLC - Commercial Roofing</title>
+                <link rel="canonical" href="https://visheshcountrycache.tech/commercial-roofing" />
+                <meta name="description" content="Explore Ultimations Solution LLC's commercial roofing services. Our expert team specializes in providing durable and efficient roofing solutions for businesses and commercial properties." />
+                <meta name="keywords" content="Ultimations Solution LLC, commercial roofing, roof installations, roof repairs, construction, business improvement" />
+                <meta name="author" content="Ultimations Solution LLC" />
+                <meta name="robots" content="index, follow" />
+                <html lang="en" />
+            </Helmet>
+
             <div className='service-main'>
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Commercial Roofing</h2>

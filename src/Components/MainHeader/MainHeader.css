@@ -25,17 +25,11 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
-
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
 }
-
-/* Dropdown styling */
-/* .dropdown:hover .dropdown-menu {
-    display: block;
-} */
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
     margin-top: 1.4rem;

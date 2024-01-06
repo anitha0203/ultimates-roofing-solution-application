@@ -14,25 +14,35 @@ import VideosComponent from './VideosComponent/VideosComponent';
 import LogosComponent from './LogosComponent/LogosComponent';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 function HomePage() {
 
-  const url = 'http://localhost:8080/v1/student/modelData';
+  const url = 'http://localhost:8080/v1/ultimates/customer/register';
   const navigate = useNavigate();
   const [successToast, setSuccessToast] = useState(false)
+  const [successToast1, setSuccessToast1] = useState(false)
   const [toast, setToast] = useState(false);
   const [toast1, setToast1] = useState(true);
   const [showModel, setShowModal] = useState(false);
+  const [showModel1, setShowModal1] = useState(false);
 
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [requestData, setRequestData] = useState({
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    source: 'request', // default source for form1
-    message: '', // additional field for form2
+    source: 'modal',
   });
+  const [messageData, setMessageData] = useState({
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    source: 'modal',
+    message: '',
+  });
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,52 +52,101 @@ function HomePage() {
     const { name, value } = e.target;
     setErrorMessage('');
 
-    setFormData((prevFormData) => ({
+    setRequestData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
+  };
+
+  const handleInputChange1 = (e) => {
+    const { name, value } = e.target;
+    setErrorMessage('');
+
+    setMessageData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit1 = (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    if (messageData.firstName === '' || messageData.lastName === '' || messageData.phoneNumber === '') {
+      setErrorMessage("Please fill all required fields");
+    } else if (messageData.phoneNumber.length !== 10) {
+      setErrorMessage("PhoneNumber is not valid");
+    } else {
+      setErrorMessage('');
+      setLoading(true);
+      SubmitData(messageData, 'message');
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorMessage('');
 
-    if (formData.firstName === '' || formData.lastName === '' || formData.phoneNumber === '') {
+    if (requestData.firstName === '' || requestData.lastName === '' || requestData.phoneNumber === '') {
       setErrorMessage("Please fill all required fields");
-    } else if (formData.phoneNumber.length !== 10) {
+    } else if (requestData.phoneNumber.length !== 10) {
       setErrorMessage("PhoneNumber is not valid");
     } else {
       setErrorMessage('');
       setLoading(true);
-      axios.post(url, { firstName: "Anitha" })
-        .then(res => {
+      SubmitData(requestData, 'request');
+    }
+  };
+
+  const SubmitData = (ModalData, source) => {
+    const formData = new FormData();
+    formData.append('customerJson', JSON.stringify(ModalData));
+    axios.post(url, formData)
+      .then(res => {
+        if (source == 'request') {
           // Reset the form after successful submission
-          setFormData({
+          setRequestData({
             firstName: '',
             lastName: '',
             phoneNumber: '',
-            source: 'request', // Reset source to default
-            message: '',
+            source: 'modal', // Reset source to default
           });
           setSuccessToast(true)
+          setShowModal(false)
           // Close the success toast after 15 seconds
           setTimeout(() => {
             setSuccessToast(false);
           }, 15000);
-        })
-        .catch((error) => {
-          if (error.response) {
-            setErrorMessage(error.response.data.message);
-          } else {
-            setErrorMessage("An unexpected error occurred. Please try again.");
-            console.error("An error occurred:", error.message);
-          }
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }
-  };
+        } else {
+          // Reset the form after successful submission
+          setMessageData({
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            source: 'modal', // Reset source to default
+            message: '',
+          });
+          setSuccessToast1(true)
+          setShowModal1(false)
+          // Close the success toast after 15 seconds
+          setTimeout(() => {
+            setSuccessToast1(false);
+          }, 15000);
+        }
+
+      })
+      .catch((error) => {
+        if (error.response) {
+          setErrorMessage(error.response.data.message);
+        } else {
+          setErrorMessage("An unexpected error occurred. Please try again.");
+          console.error("An error occurred:", error.message);
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,16 +164,22 @@ function HomePage() {
     setShowModal(false);
   };
 
-  const handleShow = (source) => {
-    setShowModal(true);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      source: source,
-    }));
+  const handleCloseModal1 = () => {
+    setShowModal1(false);
   };
 
   return (
     <div>
+      <Helmet>
+        <title>Ultimations Solution LLC - Home</title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/home" />
+        <meta name='description' content='Welcome to Ultimations Solution LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Providing top-notch services with a commitment to excellence.' />
+        <meta name='keywords' content='Ultimations Solution LLC, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
+        <meta name='author' content='Ultimations Solution LLC' />
+        <meta name='robots' content='index, follow' />
+        <html lang="en" />
+      </Helmet>
+
       <div className="background-video-container">
         <video autoPlay muted playsInline loop className="background-video">
           <source src={videoSource} type="video/mp4" />
@@ -131,8 +196,8 @@ function HomePage() {
                   <strong className="me-auto" >Need consultant's advise?</strong>
                 </Toast.Header>
                 <Toast.Body style={{ color: "#000", fontSize: "13px", display: "flex", justifyContent: "space-between" }}>
-                  <div style={{ cursor: "pointer" }} onClick={() => handleShow('request')}>Request for a call back</div>
-                  <div style={{ cursor: "pointer" }} onClick={() => handleShow('message')}> Leave a message for us</div>
+                  <div style={{ cursor: "pointer" }} onClick={() => setShowModal(true)}>Request for a call back</div>
+                  <div style={{ cursor: "pointer" }} onClick={() => setShowModal1(true)}> Leave a message for us</div>
                 </Toast.Body>
               </Toast>
             )}
@@ -141,17 +206,20 @@ function HomePage() {
       </div>
 
       {successToast ? (
-        <Toast style={{ position: 'fixed', top: "77%", right: 0, color: "#fff" }} bg='success'>
+        <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
           <Toast.Header>
             <strong className="me-auto">THANK YOU</strong>
           </Toast.Header>
-          <Toast.Body>
-            {formData.source === 'request' ? (
-              'We will call you back shortly.'
-            ) : (
-              'We will get back to you as soon as possible.'
-            )}
-          </Toast.Body>
+          <Toast.Body>We will call you back shortly.</Toast.Body>
+        </Toast>
+      ) : null}
+
+      {successToast1 ? (
+        <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
+          <Toast.Header>
+            <strong className="me-auto">THANK YOU</strong>
+          </Toast.Header>
+          <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
         </Toast>
       ) : null}
 
@@ -215,14 +283,7 @@ function HomePage() {
       {/** Modal Component */}
       <Modal show={showModel} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>
-            {formData.source === 'request' ? (
-              'Request for a call back'
-            ) : (
-              'Leave a message to us'
-            )}
-          </Modal.Title>
-
+          <Modal.Title>Request for a call back</Modal.Title>
         </Modal.Header>
         <Form className='model-form'>
           <Row className='names-roww'>
@@ -234,7 +295,7 @@ function HomePage() {
                 <Form.Control
                   type="text"
                   name="firstName"
-                  value={formData.firstName}
+                  value={requestData.firstName}
                   onChange={handleInputChange}
                   isInvalid={errorMessage}
                   className="input"
@@ -249,7 +310,7 @@ function HomePage() {
                 <Form.Control
                   type="text"
                   name="lastName"
-                  value={formData.lastName}
+                  value={requestData.lastName}
                   onChange={handleInputChange}
                   isInvalid={errorMessage}
                   className="input"
@@ -267,7 +328,7 @@ function HomePage() {
                 <Form.Control
                   type="number"
                   name="phoneNumber"
-                  value={formData.phoneNumber}
+                  value={requestData.phoneNumber}
                   onChange={handleInputChange}
                   isInvalid={errorMessage}
                   className="input"
@@ -275,24 +336,6 @@ function HomePage() {
               </Form.Group>
             </Col>
           </Row>
-          {formData.source === 'message' && (
-            <Row className='names-roww'>
-              <Form.Group>
-                <Form.Label className="label">
-                  Message
-                </Form.Label>
-                <Form.Control
-                  as="textarea"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder='Please enter your message'
-                  className="input"
-                  style={{ height: "8vh" }}
-                />
-              </Form.Group>
-            </Row>
-          )}
           <div className="errormessage">
             {errorMessage !== '' ? (
               <div>
@@ -302,6 +345,94 @@ function HomePage() {
           </div>
           <div style={{ textAlign: "center" }}>
             <Button onClick={handleSubmit} type="submit" style={{ marginTop: "2rem", padding: "1rem 5rem" }} className='estimate-btn'>
+              Submit
+            </Button>
+          </div>
+        </Form>
+      </Modal>
+
+
+      {/** Modal Component1 */}
+      <Modal show={showModel1} onHide={handleCloseModal1}>
+        <Modal.Header closeButton>
+          <Modal.Title>Leave a message to us</Modal.Title>
+        </Modal.Header>
+        <Form className='model-form'>
+          <Row className='names-roww'>
+            <Col>
+              <Form.Group>
+                <Form.Label className="label">
+                  <span style={{ color: 'red' }}>*</span> First Name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="firstName"
+                  value={messageData.firstName}
+                  onChange={handleInputChange1}
+                  isInvalid={errorMessage}
+                  className="input"
+                />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group>
+                <Form.Label className="label">
+                  <span style={{ color: 'red' }}>*</span> Last Name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="lastName"
+                  value={messageData.lastName}
+                  onChange={handleInputChange1}
+                  isInvalid={errorMessage}
+                  className="input"
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+
+          <Row className='names-roww'>
+            <Col>
+              <Form.Group>
+                <Form.Label className="label">
+                  <span style={{ color: 'red' }}>*</span> Phone Number
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  name="phoneNumber"
+                  value={messageData.phoneNumber}
+                  onChange={handleInputChange1}
+                  isInvalid={errorMessage}
+                  className="input"
+                />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row className='names-roww'>
+            <Form.Group>
+              <Form.Label className="label">
+                Message
+              </Form.Label>
+              <Form.Control
+                as="textarea"
+                name="message"
+                value={messageData.message}
+                onChange={handleInputChange1}
+                placeholder='Please enter your message'
+                className="input"
+                style={{ height: "8vh" }}
+              />
+            </Form.Group>
+          </Row>
+          <div className="errormessage">
+            {errorMessage !== '' ? (
+              <div>
+                <p style={{ margin: "0px" }}>{errorMessage}</p>
+              </div>
+            ) : null}
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <Button onClick={handleSubmit1} type="submit" style={{ marginTop: "2rem", padding: "1rem 5rem" }} className='estimate-btn'>
               Submit
             </Button>
           </div>

@@ -6,6 +6,7 @@ import AboutPageImage from '../../assets/AboutPageImages/AboutPageImage.png';
 import './AboutPage.css';
 import CardsComponent from '../HomePage/CardsComponent/CardsComponent';
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent';
+import { Helmet } from 'react-helmet';
 
 const reviews = [
   { question: 'What roofing services does Ultimates Roofing provide?', answer: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
@@ -86,6 +87,16 @@ function AboutPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Ultimations Solution LLC - About Us</title>
+        <link rel="canonical" href="https://visheshcountrycache.tech/about" />
+        <meta name='description' content='Learn more about Ultimations Solution LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Discover our commitment to excellence and dedication to providing top-notch construction and home improvement services.' />
+        <meta name='keywords' content='Ultimations Solution LLC, about us, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
+        <meta name='author' content='Ultimations Solution LLC' />
+        <meta name='robots' content='index, follow' />
+        <html lang="en" />
+      </Helmet>
+
       <div className='about-main'>
         <p className='about-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> About Us</p>
         <h2 className='about-page-heading'>Ultimates Roofing LLC</h2>
