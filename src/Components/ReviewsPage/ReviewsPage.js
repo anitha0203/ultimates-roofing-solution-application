@@ -7,6 +7,22 @@ import ReviewsPageImage from '../../assets/ReviewsPageImage.png'
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 
+//  Reviews Data
+const reviews = [
+    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
+    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
+    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
+    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
+    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
+    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
+    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
+    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
+    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
+    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
+    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
+    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
+]
+
 function ReviewsPage() {
 
     const url = 'http://localhost:8080/v1/ultimates/reviews';
@@ -111,7 +127,7 @@ function ReviewsPage() {
             </div>
 
             <Row className='reviews-section'>
-                {reviewData.map((review, index) => (
+                {reviews.map((review, index) => (
                     <Col key={index} style={{ padding: "0" }}>
                         <Card className='review-cards'>
                             <div className='reviewcard-heading'>
@@ -130,7 +146,7 @@ function ReviewsPage() {
 
             <Row className='reviews-section1'>
                 <Accordion defaultActiveKey="0" style={{ marginTop: "3rem" }}>
-                    {reviewData.map((review, index) => (
+                    {reviews.map((review, index) => (
                         <Accordion.Item key={index} eventKey={index.toString()}>
                             <Accordion.Header><div>{review.reviewerName}<div style={{ fontSize: "13px" }}>{review.reviewerAddress}</div></div></Accordion.Header>
                             <Accordion.Body>
