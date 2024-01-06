@@ -79,24 +79,24 @@ function ReviewsPage() {
         }
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        setLoading(true);
-        axios.get(url).then(res => {
-            setReviewData(res.data);
-        })
-            .catch((error) => {
-                if (error.response) {
-                    setErrorMessage(error.response.data.message);
-                } else {
-                    setErrorMessage("An unexpected error occurred. Please try again.");
-                    console.error("An error occurred:", error.message);
-                }
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    //     setLoading(true);
+    //     axios.get(url).then(res => {
+    //         setReviewData(res.data);
+    //     })
+    //         .catch((error) => {
+    //             if (error.response) {
+    //                 setErrorMessage(error.response.data.message);
+    //             } else {
+    //                 setErrorMessage("An unexpected error occurred. Please try again.");
+    //                 console.error("An error occurred:", error.message);
+    //             }
+    //         })
+    //         .finally(() => {
+    //             setLoading(false);
+    //         });
+    // }, []);
 
     // Thank you for sharing your feedback with us!
 
