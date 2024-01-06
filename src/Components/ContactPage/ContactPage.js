@@ -73,7 +73,6 @@ function ContactPage() {
                 formData.append('files', image);
             });
 
-            console.log(formData);
             axios.post(url, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then(res => {
@@ -82,9 +81,9 @@ function ContactPage() {
 
             }).catch((error) => {
                 if (error.response) {
-                    console.log(formData);
                     setErrorMessage(error.response.data.message);
                 } else {
+                    setErrorMessage('Servers are down please try after sometime');
                     console.error("An error occurred:", error.message);
                 }
             }).finally(() => {

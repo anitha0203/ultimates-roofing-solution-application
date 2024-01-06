@@ -191,7 +191,7 @@ function HomePage() {
           <div className='toast-div'>
             <Button className='estimate-btn' onClick={() => { navigate('/contact') }}>Get Your Free Estimate</Button>
             {toast1 && toast && (
-              <Toast style={{ borderRadius: "0px", position: "absolute", right: "0" }} onClose={handleToastClose}>
+              <Toast style={{ borderRadius: "0px", position: "fixed", right: "0", zIndex: "1000 !important" }} onClose={handleToastClose}>
                 <Toast.Header style={{ fontSize: "14px" }}>
                   <strong className="me-auto" >Need consultant's advise?</strong>
                 </Toast.Header>
