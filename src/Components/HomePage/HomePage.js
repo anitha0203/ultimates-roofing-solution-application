@@ -21,7 +21,6 @@ function HomePage() {
 
   const url = 'http://localhost:8080/v1/ultimates/customer/register';
   const navigate = useNavigate();
-  const [successToast, setSuccessToast] = useState(false)
   const [successToast1, setSuccessToast1] = useState(false)
   const [toast, setToast] = useState(false);
   const [toast1, setToast1] = useState(true);
@@ -157,15 +156,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-      {successToast ? (
-        <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
-          <Toast.Header>
-            <strong className="me-auto">THANK YOU</strong>
-          </Toast.Header>
-          <Toast.Body>We will call you back shortly.</Toast.Body>
-        </Toast>
-      ) : null}
 
       {successToast1 ? (
         <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
