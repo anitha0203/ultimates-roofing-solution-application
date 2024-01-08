@@ -27,7 +27,7 @@ function ReviewsPage() {
 
     const url = 'http://localhost:8080/v1/ultimates/reviews';
 
-    const [reviewData, setReviewData] = useState([]);
+    // const [reviewData, setReviewData] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [successToast, setSuccessToast] = useState(false)
     const [loading, setLoading] = useState(false);
@@ -79,6 +79,10 @@ function ReviewsPage() {
         }
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     // useEffect(() => {
     //     window.scrollTo(0, 0);
     //     setLoading(true);
@@ -102,15 +106,15 @@ function ReviewsPage() {
 
     return (
         <div>
-        <Helmet>
-        <title>Ultimations Solution LLC - Reviews</title>
-        <link rel="canonical" href="https://visheshcountrycache.tech/reviews" />
-        <meta name="description" content="Read reviews from satisfied clients who have experienced Ultimations Solution LLC's exceptional construction and home improvement services. Discover why we are a trusted partner for roofing, siding, windows, and more." />
-        <meta name="keywords" content="Ultimations Solution LLC, reviews, testimonials, residential roofing, construction, home improvement" />
-        <meta name="author" content="Ultimations Solution LLC" />
-        <meta name="robots" content="index, follow" />
-        <html lang="en" />
-      </Helmet>
+            <Helmet>
+                <title>Ultimations Solution LLC - Reviews</title>
+                <link rel="canonical" href="https://visheshcountrycache.tech/reviews" />
+                <meta name="description" content="Read reviews from satisfied clients who have experienced Ultimations Solution LLC's exceptional construction and home improvement services. Discover why we are a trusted partner for roofing, siding, windows, and more." />
+                <meta name="keywords" content="Ultimations Solution LLC, reviews, testimonials, residential roofing, construction, home improvement" />
+                <meta name="author" content="Ultimations Solution LLC" />
+                <meta name="robots" content="index, follow" />
+                <html lang="en" />
+            </Helmet>
 
             {successToast ? (
                 <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>

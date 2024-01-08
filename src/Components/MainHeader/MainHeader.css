@@ -146,6 +146,10 @@
     margin: 0px;
 }
 
+.form-control.is-invalid, .was-validated .form-control:invalid{
+    background-image: none;
+}
+
 
 @media only screen and (max-width: 1550px) {
     .logo-section {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Col, Row, Toast, Form, Spinner, Modal } from 'react-bootstrap';
+import { Button, Col, Row, Toast, Modal } from 'react-bootstrap';
 import videoSource from '../../assets/HomePageImages/Ultimate Roofing Video_Dec28.mp4';
 import AboutHouse from '../../assets/HomePageImages/AboutHouse.png';
 import './HomePage.css';
@@ -13,92 +13,21 @@ import ValueCardsComponent from './ValueCardsComponent/ValueCardsComponent';
 import VideosComponent from './VideosComponent/VideosComponent';
 import LogosComponent from './LogosComponent/LogosComponent';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import InstantRoofQuote from '../MainHeader/InstantRoofQuote';
 
 function HomePage() {
 
-  const url = 'http://localhost:8080/v1/ultimates/customer/register';
   const navigate = useNavigate();
-  const [successToast1, setSuccessToast1] = useState(false)
   const [toast, setToast] = useState(false);
   const [toast1, setToast1] = useState(true);
   const [showModel, setShowModal] = useState(false);
   const [showModel1, setShowModal1] = useState(false);
 
-  const [errorMessage, setErrorMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [messageData, setMessageData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    source: 'modal',
-    message: '',
-  });
-
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleInputChange1 = (e) => {
-    const { name, value } = e.target;
-    setErrorMessage('');
-
-    setMessageData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit1 = (e) => {
-    e.preventDefault();
-    setErrorMessage('');
-
-    if (messageData.firstName === '' || messageData.lastName === '' || messageData.phoneNumber === '') {
-      setErrorMessage("Please fill all required fields");
-    } else if (messageData.phoneNumber.length !== 10) {
-      setErrorMessage("PhoneNumber is not valid");
-    } else {
-      setErrorMessage('');
-      setLoading(true);
-      SubmitData(messageData);
-    }
-  };
-
-  const SubmitData = (ModalData) => {
-    const formData = new FormData();
-    formData.append('customerJson', JSON.stringify(ModalData));
-    axios.post(url, formData)
-      .then(res => {
-          // Reset the form after successful submission
-          setMessageData({
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            source: 'modal', // Reset source to default
-            message: '',
-          });
-          setSuccessToast1(true)
-          setShowModal1(false)
-          // Close the success toast after 15 seconds
-          setTimeout(() => {
-            setSuccessToast1(false);
-          }, 15000);
-      })
-      .catch((error) => {
-        if (error.response) {
-          setErrorMessage(error.response.data.message);
-        } else {
-          setErrorMessage("An unexpected error occurred. Please try again.");
-          console.error("An error occurred:", error.message);
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -156,16 +85,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-      {successToast1 ? (
-        <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
-          <Toast.Header>
-            <strong className="me-auto">THANK YOU</strong>
-          </Toast.Header>
-          <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
-        </Toast>
-      ) : null}
-
 
       {/**  our services */}
       <ServiceCardsComponent />
@@ -228,7 +147,7 @@ function HomePage() {
         <Modal.Header closeButton>
           <Modal.Title>Request for a call back</Modal.Title>
         </Modal.Header>
-        <InstantRoofQuote />
+        <InstantRoofQuote source="request" handleClose={handleCloseModal} />
       </Modal>
 
 
@@ -237,95 +156,8 @@ function HomePage() {
         <Modal.Header closeButton>
           <Modal.Title>Leave a message to us</Modal.Title>
         </Modal.Header>
-        <Form className='model-form'>
-          <Row className='names-roww'>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> First Name
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="firstName"
-                  value={messageData.firstName}
-                  onChange={handleInputChange1}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> Last Name
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="lastName"
-                  value={messageData.lastName}
-                  onChange={handleInputChange1}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-
-          <Row className='names-roww'>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> Phone Number
-                </Form.Label>
-                <Form.Control
-                  type="number"
-                  name="phoneNumber"
-                  value={messageData.phoneNumber}
-                  onChange={handleInputChange1}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Row className='names-roww'>
-            <Form.Group>
-              <Form.Label className="label">
-                Message
-              </Form.Label>
-              <Form.Control
-                as="textarea"
-                name="message"
-                value={messageData.message}
-                onChange={handleInputChange1}
-                placeholder='Please enter your message'
-                className="input"
-                style={{ height: "8vh" }}
-              />
-            </Form.Group>
-          </Row>
-          <div className="errormessage">
-            {errorMessage !== '' ? (
-              <div>
-                <p style={{ margin: "0px" }}>{errorMessage}</p>
-              </div>
-            ) : null}
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <Button onClick={handleSubmit1} type="submit" style={{ marginTop: "2rem", padding: "1rem 5rem" }} className='estimate-btn'>
-              Submit
-            </Button>
-          </div>
-        </Form>
+        <InstantRoofQuote source="message" handleClose={handleCloseModal1} />
       </Modal>
-
-      {loading ? (
-        <div className="loading-overlay">
-          <div className="loading-indicator">
-            <Spinner animation="border" variant="primary" />
-          </div>
-        </div>
-      ) : null}
     </div>
   )
 }

@@ -81,7 +81,7 @@ function MainHeader() {
                     <div>Please email us with your Details <span style={{ color: "#3D3B6D", fontWeight: "bold" }}>roofs@ultimatesolutionsit.com</span></div>
                     <div style={{ textAlign: "center", margin: "20px 0px" }}>OR</div>
                     <div><span onClick={() => setRequestPage(true)} style={{ cursor: "pointer", color: "#3D3B6D", textDecoration: "underline" }}>Request a call back</span> for Further Assistances on Accurate Quotes.</div>
-                    {requestPage ? <div><CloseButton style={{ float: "right", marginRight: "1rem" }} onClick={() => setRequestPage(false)} /> <InstantRoofQuote /></div> : null}
+                    {requestPage ? <div><CloseButton style={{ float: "right", marginRight: "1rem" }} onClick={() => setRequestPage(false)} /> <InstantRoofQuote source="request" handleClose={handleClose} /></div> : null}
                 </Modal.Body>
             </Modal>
 

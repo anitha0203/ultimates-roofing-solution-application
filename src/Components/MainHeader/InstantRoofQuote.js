@@ -1,22 +1,22 @@
 
 import React, { useState } from 'react'
-import { Button, Col, Row, Form, Spinner, Toast } from 'react-bootstrap';
+import { Button, Col, Row, Form, Spinner } from 'react-bootstrap';
 import './MainHeader.css'
 import axios from 'axios';
 
-function InstantRoofQuote() {
+function InstantRoofQuote({ source, handleClose }) {
 
     const url = 'http://localhost:8080/v1/ultimates/customer/register';
 
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
-    const [successToast1, setSuccessToast1] = useState(false)
 
     const [details, setDetails] = useState({
         firstName: '',
         lastName: '',
         phoneNumber: '',
         source: 'modal',
+        message: '',
     });
     const handleInputChange1 = (e) => {
         const { name, value } = e.target;
@@ -54,12 +54,16 @@ function InstantRoofQuote() {
                     lastName: '',
                     phoneNumber: '',
                     source: 'modal',
+                    message: '',
                 });
-                setSuccessToast1(true)
-                // Close the success toast after 15 seconds
-                setTimeout(() => {
-                    setSuccessToast1(false);
-                }, 15000);
+
+                if (source === 'request') {
+                    alert('We will call you back shortly.')
+                } else {
+                    alert('We will get back to you as soon as possible.');
+                }
+                // Close the modal after successful submission
+                handleClose();
 
             })
             .catch((error) => {
@@ -77,14 +81,6 @@ function InstantRoofQuote() {
 
     return (
         <div>
-            {successToast1 ? (
-                <Toast style={{ position: 'fixed', top: "9%", right: 0, color: "#fff" }} bg='success'>
-                    <Toast.Header>
-                        <strong className="me-auto">THANK YOU</strong>
-                    </Toast.Header>
-                    <Toast.Body>We will get back to you as soon as possible.</Toast.Body>
-                </Toast>
-            ) : null}
 
             <div style={{ display: 'flex', justifyContent: 'center' }} >
                 <Form className='model-form'>
@@ -138,6 +134,24 @@ function InstantRoofQuote() {
                             </Form.Group>
                         </Col>
                     </Row>
+                    {source === 'message' ? (
+                        <Row className='names-roww'>
+                            <Form.Group>
+                                <Form.Label className="label">
+                                    Message
+                                </Form.Label>
+                                <Form.Control
+                                    as="textarea"
+                                    name="message"
+                                    value={details.message}
+                                    onChange={handleInputChange1}
+                                    placeholder='Please enter your message'
+                                    className="input"
+                                    style={{ height: "8vh" }}
+                                />
+                            </Form.Group>
+                        </Row>
+                    ) : null}
                     <div className="errormessage">
                         {errorMessage !== '' ? (
                             <div>

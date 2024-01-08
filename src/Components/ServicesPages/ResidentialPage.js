@@ -4,25 +4,25 @@ import './ResidentialPage.css'
 import Roofs from '../../assets/ServicesPagesImages/Roofs.png'
 import ResidentialRoofing from '../../assets/ServicesPagesImages/ResidentialRoofing.png'
 import RoofsShining from '../../assets/ServicesPagesImages/RoofsShining.png'
-import ResidentialShingleColors from '../../assets/ServicesPagesImages/ResidentialShingleColors.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 import Arrow from '../../assets/ServicesPagesImages/Arrow 2.png'
+import PDFFile from '../../assets/ServicesPDFs/Owens Corning Oakridge.pdf'
 import { Helmet } from 'react-helmet'
 
 const ResidentialData = [
-    {title: 'Innovative Design', description: 'Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation'},
-    {title: 'Strong Adhesion', description: 'Specially formulated with wide adhesive bands to maintain lamination between shingle layers.'},
-    {title: 'Enhanced Grip:', description: 'The Tru-Bond® sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.'},
-    {title: 'SureNail® Technology', description: 'Owens Corning\'s Duration® Series Shingles boast patented SureNail® Technology for built-in strength and durability. SureNail, a visible fabric strip in the nailing area.'},
-    {title: 'Triple-Layer Reinforcement®:', description: 'The fabric overlay creates a unique triple layer, reinforcing the common bond of shingle laminate layers for superior fastener holding power.'},
-    {title: 'High Wind Resistance:', description: 'Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.'}
+    { title: 'Innovative Design', description: 'Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation' },
+    { title: 'Strong Adhesion', description: 'Specially formulated with wide adhesive bands to maintain lamination between shingle layers.' },
+    { title: 'Enhanced Grip:', description: 'The Tru-Bond® sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.' },
+    { title: 'SureNail® Technology', description: 'Owens Corning\'s Duration® Series Shingles boast patented SureNail® Technology for built-in strength and durability. SureNail, a visible fabric strip in the nailing area.' },
+    { title: 'Triple-Layer Reinforcement®:', description: 'The fabric overlay creates a unique triple layer, reinforcing the common bond of shingle laminate layers for superior fastener holding power.' },
+    { title: 'High Wind Resistance:', description: 'Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.' }
 ]
 
 function ResidentialPage() {
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const openLinkInNewTab = () => {
         window.open('https://www.owenscorning.com/en-us/roofing/duration-series-shingles', '_blank');
@@ -98,7 +98,7 @@ function ResidentialPage() {
                         <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
                         <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
                         <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
-                        <Button className='learn-btn'>Learn More</Button>
+                        <Button className='learn-btn' onClick={() => {window.open(PDFFile, '_blank');}}>Learn More</Button>
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
@@ -114,80 +114,35 @@ function ResidentialPage() {
                     <p className='service-page-text'>The Duration® Series Shingles stand out among architectural shingles, thanks to our patented SureNail® Technology, a groundbreaking innovation in shingle design that sets them apart from the competition.</p>
                     <Button className='learn-btn' onClick={openLinkInNewTab}>Learn More</Button>
                 </div>
-
-                <div>
-                    <img src={ResidentialShingleColors} className='service-main-image' alt='ultimates-roofing-llc' />
-                </div>
-
                 <Row className='roofing-sections1'>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                    {ResidentialData.slice(0, 3).map((data, index) => (
+                        <Col>
+                            <div style={{ display: "flex" }}>
+                                <div>
+                                    <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                                </div>
+                                <div>
+                                    <h4 className='section4-heading'>{data.title}</h4>
+                                    <p className='service-page-text'>{data.description}</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 className='section4-heading'>Innovative Design</h4>
-                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
-                            </div>
-                            <div>
-                                <h4 className='section4-heading'>Strong Adhesion</h4>
-                                <p className='service-page-text'>Specially formulated with wide adhesive bands to maintain lamination between shingle layers.</p>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
-                            </div>
-                            <div>
-                                <h4 className='section4-heading'>Enhanced Grip:</h4>
-                                <p className='service-page-text'>The Tru-Bond®** sealant tightly adheres to the engineered fabric nailing strip, providing outstanding grip.</p>
-                            </div>
-                        </div>
-                    </Col>
+                        </Col>
+                    ))}
                 </Row>
                 <Row className='roofing-sections1'>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                    {ResidentialData.slice(3, 6).map((data, index) => (
+                        <Col>
+                            <div style={{ display: "flex" }}>
+                                <div>
+                                    <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                                </div>
+                                <div>
+                                    <h4 className='section4-heading'>{data.title}</h4>
+                                    <p className='service-page-text'>{data.description}</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 className='section4-heading'>Triple-Layer Reinforcement®:</h4>
-                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
-                            </div>
-                            <div>
-                                <h4 className='section4-heading'>Triple-Layer Reinforcement®:</h4>
-                                <p className='service-page-text'>Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation</p>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div style={{ display: "flex" }}>
-                            <div>
-                                <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
-                            </div>
-                            <div>
-                                <h4 className='section4-heading'>High Wind Resistance:</h4>
-                                <p className='service-page-text'>Engineered for exceptional 130-MPH* wind warranty performance with just 4 nails, reducing deck penetrations.</p>
-                            </div>
-                        </div>
-                    </Col>
+                        </Col>
+                    ))}
                 </Row>
             </div>
 
