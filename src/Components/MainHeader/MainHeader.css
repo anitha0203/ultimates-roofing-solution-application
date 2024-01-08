@@ -103,13 +103,12 @@
 
 .roof-canvas {
     width: 62% !important;
-    text-align: center !important;
     top: 9.4% !important
 }
 
 .instant-heading {
-    font-weight: bold;
-    font-size: 3rem
+    font-size: 2rem;
+    text-align: center;
 }
 
 
@@ -128,6 +127,25 @@
 .display-style1 {
     display: none;
 }
+
+
+.form-btn {
+    border-radius: 0px;
+    background-color: #B22335;
+    border: 1px solid #B22335;
+    font-size: 1.3rem;
+    padding: 16px 32px 19px 32px;
+    margin: 2px;
+}
+
+.form-btn:hover {
+    background-color: #3D3B6D !important;
+    border-color: #3D3B6D !important;
+    box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.10), 0px 8px 10px -6px rgba(16, 24, 40, 0.10);
+    padding: 18px 34px 21px 34px;
+    margin: 0px;
+}
+
 
 @media only screen and (max-width: 1550px) {
     .logo-section {

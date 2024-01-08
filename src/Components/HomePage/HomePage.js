@@ -15,6 +15,7 @@ import LogosComponent from './LogosComponent/LogosComponent';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import InstantRoofQuote from '../MainHeader/InstantRoofQuote';
 
 function HomePage() {
 
@@ -29,12 +30,6 @@ function HomePage() {
 
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [requestData, setRequestData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    source: 'modal',
-  });
   const [messageData, setMessageData] = useState({
     firstName: '',
     lastName: '',
@@ -47,16 +42,6 @@ function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setErrorMessage('');
-
-    setRequestData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
 
   const handleInputChange1 = (e) => {
     const { name, value } = e.target;
@@ -79,45 +64,15 @@ function HomePage() {
     } else {
       setErrorMessage('');
       setLoading(true);
-      SubmitData(messageData, 'message');
+      SubmitData(messageData);
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrorMessage('');
-
-    if (requestData.firstName === '' || requestData.lastName === '' || requestData.phoneNumber === '') {
-      setErrorMessage("Please fill all required fields");
-    } else if (requestData.phoneNumber.length !== 10) {
-      setErrorMessage("PhoneNumber is not valid");
-    } else {
-      setErrorMessage('');
-      setLoading(true);
-      SubmitData(requestData, 'request');
-    }
-  };
-
-  const SubmitData = (ModalData, source) => {
+  const SubmitData = (ModalData) => {
     const formData = new FormData();
     formData.append('customerJson', JSON.stringify(ModalData));
     axios.post(url, formData)
       .then(res => {
-        if (source == 'request') {
-          // Reset the form after successful submission
-          setRequestData({
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            source: 'modal', // Reset source to default
-          });
-          setSuccessToast(true)
-          setShowModal(false)
-          // Close the success toast after 15 seconds
-          setTimeout(() => {
-            setSuccessToast(false);
-          }, 15000);
-        } else {
           // Reset the form after successful submission
           setMessageData({
             firstName: '',
@@ -132,8 +87,6 @@ function HomePage() {
           setTimeout(() => {
             setSuccessToast1(false);
           }, 15000);
-        }
-
       })
       .catch((error) => {
         if (error.response) {
@@ -285,70 +238,7 @@ function HomePage() {
         <Modal.Header closeButton>
           <Modal.Title>Request for a call back</Modal.Title>
         </Modal.Header>
-        <Form className='model-form'>
-          <Row className='names-roww'>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> First Name
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="firstName"
-                  value={requestData.firstName}
-                  onChange={handleInputChange}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> Last Name
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="lastName"
-                  value={requestData.lastName}
-                  onChange={handleInputChange}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-
-          <Row className='names-roww'>
-            <Col>
-              <Form.Group>
-                <Form.Label className="label">
-                  <span style={{ color: 'red' }}>*</span> Phone Number
-                </Form.Label>
-                <Form.Control
-                  type="number"
-                  name="phoneNumber"
-                  value={requestData.phoneNumber}
-                  onChange={handleInputChange}
-                  isInvalid={errorMessage}
-                  className="input"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-          <div className="errormessage">
-            {errorMessage !== '' ? (
-              <div>
-                <p style={{ margin: "0px" }}>{errorMessage}</p>
-              </div>
-            ) : null}
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <Button onClick={handleSubmit} type="submit" style={{ marginTop: "2rem", padding: "1rem 5rem" }} className='estimate-btn'>
-              Submit
-            </Button>
-          </div>
-        </Form>
+        <InstantRoofQuote />
       </Modal>
 
 

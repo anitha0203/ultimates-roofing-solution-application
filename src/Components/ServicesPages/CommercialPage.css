@@ -1,0 +1,10 @@
+@font-face {
+    font-family: hauora-medium;
+    src: url(../../../public/Hauora-Medium.ttf);
+}
+
+.commercial-page-heading {
+    font-size: 28px;
+    font-family: hauora-medium;
+    margin-bottom: 1rem;
+}
