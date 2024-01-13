@@ -110,9 +110,7 @@
     cursor: pointer;
 }
 
-
 /* Modal CSS */
-
 .video-modal {
     position: fixed;
     top: 0;
@@ -146,6 +144,7 @@
     font-size: 1.5rem;
 }
 
+/* Responsive media queries */
 @media (min-width: 778px) and (max-width: 900px) {
     .videos-slide {
         width: 38rem;

@@ -78,6 +78,7 @@
     display: none;
 }
 
+/* Responsive media queries */
 @media only screen and (min-width: 1920px) {
     .reviews-para {
         font-size: 1.1rem;
@@ -119,7 +120,7 @@
 }
 
 @media only screen and (max-width: 920px) {
-    .form-image-col{
+    .form-image-col {
         display: none;
     }
 }
@@ -165,6 +166,7 @@
         width: 25rem;
         height: 25rem;
     }
+
     .review-btn {
         font-size: 1rem;
         padding: 15px 28px 18px 28px;

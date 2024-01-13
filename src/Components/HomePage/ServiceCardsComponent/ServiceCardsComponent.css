@@ -1,8 +1,10 @@
+/* Font  */
 @font-face {
     font-family: hauora-medium;
     src: url(../../../../public/Hauora-Medium.ttf);
 }
 
+/* Animation for fading in elements */
 .fade-in {
     opacity: 0;
     transform: translateY(-20px);
@@ -112,6 +114,7 @@
     cursor: pointer;
 }
 
+/* Responsive media queries */
 @media only screen and (max-width: 1919px) {
     .cards-small-view {
         display: block;
@@ -187,6 +190,7 @@
     .hover-effect {
         width: 21rem;
     }
+
     .card-body {
         padding: 0.5rem;
     }
@@ -208,6 +212,7 @@
     .cards {
         margin: 70px 1rem;
     }
+
     .section {
         width: 16rem;
     }
@@ -215,16 +220,21 @@
     .hover-effect {
         width: 16rem;
     }
-    .service-text, .card-text {
+
+    .service-text,
+    .card-text {
         font-size: 1rem;
         letter-spacing: 1px;
     }
-    .card-text{
+
+    .card-text {
         padding: 0rem 1rem
     }
-    .card-title{
+
+    .card-title {
         font-size: large;
     }
+
     .icon-circle {
         width: 45px;
         height: 45px;
@@ -246,7 +256,8 @@
     .icon-disable {
         display: none;
     }
-    .card-text{
+
+    .card-text {
         padding: 0rem 0.8rem
     }
 

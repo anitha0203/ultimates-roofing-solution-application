@@ -33,7 +33,7 @@ function MainHeader() {
 
     const [show, setShow] = useState(false);
 
-    const handleClose = () => {setShow(false); setRequestPage(false)};
+    const handleClose = () => { setShow(false); setRequestPage(false) };
     const handleShow = () => setShow(true);
 
     return (

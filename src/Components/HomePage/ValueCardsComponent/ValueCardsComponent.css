@@ -1,3 +1,4 @@
+/* Fonts  */
 @font-face {
     font-family: hauora-medium;
     src: url(../../../../public/Hauora-Medium.ttf);
@@ -73,7 +74,7 @@
     font-size: 1.7rem;
 }
 
-
+/* Responsive media queries */
 @media only screen and (max-width: 1863px) {
     .value-cards {
         width: 20rem;

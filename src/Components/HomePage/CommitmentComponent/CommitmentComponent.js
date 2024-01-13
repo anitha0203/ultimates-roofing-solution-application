@@ -13,6 +13,7 @@ const commitment = [
 ]
 
 function CommitmentComponent() {
+    // Slider settings
     const settings = {
         dots: true,
         arrows: false,
@@ -25,7 +26,6 @@ function CommitmentComponent() {
     };
     return (
         <div>
-
             {/**    Web View */}
             <div className='commitment-section text-center' >
                 <h2 className='commitment-heading'>Our Commitment<br />to Valued Clients</h2>

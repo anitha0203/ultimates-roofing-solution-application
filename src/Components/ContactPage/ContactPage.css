@@ -1,8 +1,10 @@
+/* Font */
 @font-face {
     font-family: hauora-medium;
     src: url(../../../public/Hauora-Medium.ttf);
 }
 
+/* Contact Page Styles */
 .contact-page {
     margin-top: 150px;
 }
@@ -19,7 +21,9 @@
     margin-bottom: 3rem;
 }
 
-.form-control.is-invalid, .was-validated .form-control:invalid{
+/* Form Control Validation Styles */
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
     border-color: #dee2e6;
 }
 
@@ -34,6 +38,7 @@
     height: 15rem;
 }
 
+/* Fade In Animation Styles */
 .fade-in {
     opacity: 0;
     transform: translateY(-20px);
@@ -44,8 +49,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-
-
 
 .address-text {
     font-size: 20px;
@@ -83,19 +86,21 @@
     letter-spacing: 1px;
 }
 
+/* Error Message Styles */
 .errormessage {
     text-align: center;
     margin: 20px 0px 0px;
     color: red;
     font-size: large;
 }
-.map-style{
+
+/* Map Styles */
+.map-style {
     width: 100%;
     height: 100%;
 }
 
-
-/* loading css */
+/* Loading Styles */
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -115,8 +120,7 @@
     }
 }
 
-/* 3D3B6D */
-
+/* Responsive media queries */
 @media only screen and (min-width: 946px) and (max-width: 1100px) {
     .contact-sections {
         width: 26rem;
@@ -129,7 +133,8 @@
         width: 22.5rem;
         margin-bottom: 1rem;
     }
-    .contact-us{
+
+    .contact-us {
         margin: 1rem;
     }
 }
@@ -139,8 +144,30 @@
         width: 20rem;
         margin-bottom: 1rem;
     }
-    .contact-us{
+
+    .contact-us {
         margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-form {
+        display: block;
+    }
+
+    .map-style {
+        margin-top: 2rem;
+        width: 100%;
+        height: 25rem;
+    }
+
+    .contact-us {
+        margin: 1rem;
+    }
+
+    .address-text {
+        margin-left: 0px;
+        font-size: 16px;
     }
 }
 
@@ -156,33 +183,16 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .contact-form {
-        display: block;
-    }
-
-    .map-style{
-        margin-top: 2rem;
-        width: 100%;
-        height: 25rem;
-    }
-    .contact-us{
-        margin: 1rem;
-    }
-    .address-text{
-        margin-left: 0px;
-        font-size: 16px;
-    }
-}
-
 @media only screen and (max-width: 545px) {
     .contact-form {
         margin: 3rem 0.5rem;
-    }    
-    .contact-us{
+    }
+
+    .contact-us {
         margin: 3rem 0.5rem;
     }
-    .names-roww{
+
+    .names-roww {
         display: block;
     }
 

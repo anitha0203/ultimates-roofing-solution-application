@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: hauora-medium;
     src: url(../../../public/Hauora-Medium.ttf);
@@ -8,6 +9,7 @@
     src: url(../../../public/Hauora-Light.ttf);
 }
 
+/* Footer Section Styles */
 .footer-section {
     font-family: hauora-medium;
     color: #fff;
@@ -15,7 +17,6 @@
     padding: 4rem 5rem 2rem 5rem;
     margin: 0px;
 }
-
 
 .description {
     font-size: 2.5rem;
@@ -105,6 +106,8 @@
     font-weight: 700;
 }
 
+
+/* Responsive media queries */
 @media only screen and (max-width: 1350px) {
     .view1 {
         display: none;

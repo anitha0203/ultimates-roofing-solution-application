@@ -18,7 +18,6 @@ function ContactPage() {
     const [visible, setVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
-    const [toast, setToast] = useState(false)
     const [images, setImages] = useState([]);
     const [details, setDetails] = useState({
         firstName: '',
@@ -35,6 +34,7 @@ function ContactPage() {
     });
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
+    // Handle input change for form fields
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setErrorMessage('');
@@ -45,9 +45,12 @@ function ContactPage() {
         }));
     };
 
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
+
+        // Validations
         if (details.firstName === '' || details.lastName === '' || details.phoneNumber === '' || details.email === '' || details.address === '' || details.state === '' || details.city === '' || details.zipCode === '' || details.service === '') {
             setErrorMessage("Please fill all required fields");
         } else if (details.phoneNumber.length !== 10) {
@@ -61,7 +64,6 @@ function ContactPage() {
         } else {
             setErrorMessage('');
             setLoading(true);
-            console.log(details, images)
 
             const formData = new FormData();
 
@@ -92,18 +94,13 @@ function ContactPage() {
         }
     };
 
+    //  Scroll to top and set visibility
     useEffect(() => {
         window.scrollTo(0, 0);
         setVisible(true);
-        if (toast) {
-            const timer = setTimeout(() => {
-                setToast(false);
-            }, 10000);
+    }, []);
 
-            return () => clearTimeout(timer);
-        }
-    }, [toast]);
-
+    // Handle image selection for form
     const handleImageChange = (e) => {
         const files = e.target.files;
         setErrorMessage('');
@@ -130,6 +127,7 @@ function ContactPage() {
     return (
         <div className='contact-page'>
 
+            {/* Helmet component for SEO meta tags */}
             <Helmet>
                 <title>Ultimations Solution LLC - Contact Us</title>
                 <link rel="canonical" href="https://visheshcountrycache.tech/contact" />
@@ -140,6 +138,7 @@ function ContactPage() {
                 <html lang="en" />
             </Helmet>
 
+            {/* Contact Information Section */}
             <div className='contact-us'>
                 <h2 className='contact-heading'>Contact Us</h2>
                 <Row style={{ margin: "1px auto" }} className='contact-sections-row'>
@@ -181,16 +180,7 @@ function ContactPage() {
                 </Row>
             </div>
 
-            {toast ? (
-                <Toast style={{ position: 'fixed', top: "10%", right: 0 }}>
-                    <Toast.Header>
-                        <strong className="me-auto">THANK YOU</strong>
-                    </Toast.Header>
-                    <Toast.Body>Your message has been submitted successfully.</Toast.Body>
-                </Toast>
-            ) : null
-            }
-
+            {/* Contact Form Section */}
             <div style={{ marginTop: "5rem" }}>
                 <h2 className='contact-form-heading'>Reach Out To Us</h2>
                 <Row className='contact-form'>
@@ -405,8 +395,11 @@ function ContactPage() {
                     </Col>
                 </Row>
             </div>
+
+            {/* Logos Component */}
             <LogosComponent />
 
+            {/* Loading Spinner Overlay */}
             {loading ? (
                 <div className="loading-overlay">
                     <div className="loading-indicator">

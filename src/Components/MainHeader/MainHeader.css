@@ -111,7 +111,6 @@
     text-align: center;
 }
 
-
 .instant-input-div {
     display: flex;
     justify-content: center
@@ -127,7 +126,6 @@
 .display-style1 {
     display: none;
 }
-
 
 .form-btn {
     border-radius: 0px;
@@ -150,7 +148,7 @@
     background-image: none;
 }
 
-
+/* Responsive media queries */
 @media only screen and (max-width: 1550px) {
     .logo-section {
         width: 11.5rem;
@@ -195,15 +193,7 @@
     }
 }
 
-
-/* Styles to apply when the screen  */
 @media only screen and (max-width: 991px) {
-
-    /* Home Page CSS */
-    .homePage {
-        margin-top: 0px
-    }
-
     .navbar {
         padding: 10px;
         font-size: large;
@@ -222,7 +212,6 @@
     }
 }
 
-/* Styles to apply when the screen width is below 500px */
 @media only screen and (max-width: 650px) {
     .main-heading {
         font-size: 2rem !important;
@@ -237,7 +226,6 @@
     }
 }
 
-/* Styles to apply when the screen width is below 450px */
 @media only screen and (max-width: 450px) {
     .logo-section {
         width: 11.5rem;
@@ -252,7 +240,6 @@
     }
 }
 
-/* Styles to apply when the screen width is below 400px */
 @media only screen and (max-width: 400px) {
     .instant-input-div {
         display: block;

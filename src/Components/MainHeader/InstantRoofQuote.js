@@ -5,12 +5,11 @@ import './MainHeader.css'
 import axios from 'axios';
 
 function InstantRoofQuote({ source, handleClose }) {
-
+    // API endpoint for form submission
     const url = 'http://localhost:8080/v1/ultimates/customer/register';
 
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
-
     const [details, setDetails] = useState({
         firstName: '',
         lastName: '',
@@ -18,6 +17,8 @@ function InstantRoofQuote({ source, handleClose }) {
         source: 'modal',
         message: '',
     });
+
+    // Event handler for input changes
     const handleInputChange1 = (e) => {
         const { name, value } = e.target;
         setErrorMessage('');
@@ -28,6 +29,7 @@ function InstantRoofQuote({ source, handleClose }) {
         }));
     };
 
+    // Event handler for form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrorMessage('');
@@ -43,6 +45,7 @@ function InstantRoofQuote({ source, handleClose }) {
         }
     };
 
+    // Function to submit form data to the server
     const SubmitData = (ModalData) => {
         const formData = new FormData();
         formData.append('customerJson', JSON.stringify(ModalData));
@@ -81,7 +84,7 @@ function InstantRoofQuote({ source, handleClose }) {
 
     return (
         <div>
-
+            {/* Form Component */}
             <div style={{ display: 'flex', justifyContent: 'center' }} >
                 <Form className='model-form'>
                     <Row className='names-roww'>
@@ -159,6 +162,7 @@ function InstantRoofQuote({ source, handleClose }) {
                             </div>
                         ) : null}
                     </div>
+                    {/* Submit Button */}
                     <div style={{ textAlign: "center" }}>
                         <Button onClick={handleSubmit} type="submit" style={{ marginTop: "2rem", padding: "1rem 5rem" }} className='form-btn'>
                             Submit
@@ -167,6 +171,7 @@ function InstantRoofQuote({ source, handleClose }) {
                 </Form>
             </div >
 
+            {/* Loading Spinner */}
             {loading ? (
                 <div className="loading-overlay">
                     <div className="loading-indicator">

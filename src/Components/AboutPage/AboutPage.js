@@ -87,6 +87,7 @@ function AboutPage() {
 
   return (
     <div>
+      {/* Helmet component for SEO meta tags */}
       <Helmet>
         <title>Ultimations Solution LLC - About Us</title>
         <link rel="canonical" href="https://visheshcountrycache.tech/about" />
@@ -97,6 +98,7 @@ function AboutPage() {
         <html lang="en" />
       </Helmet>
 
+      {/* About Main Section */}
       <div className='about-main'>
         <p className='about-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> About Us</p>
         <h2 className='about-page-heading'>Ultimates Roofing LLC</h2>
@@ -108,7 +110,7 @@ function AboutPage() {
         </div>
       </div>
 
-      {/**  Cards */}
+      {/**  Cards Component */}
       <CardsComponent />
 
       <div className='about-main1'>
@@ -138,6 +140,7 @@ function AboutPage() {
         </Row>
       </div>
 
+      {/* Quick Answers Section */}
       <div className='about-main'>
         <Row className='about-experience-text'>
           <Col>
@@ -158,6 +161,8 @@ function AboutPage() {
           </Col>
         </Row>
       </div>
+
+      {/* Logos Component */}
       <LogosComponent />
     </div>
   )

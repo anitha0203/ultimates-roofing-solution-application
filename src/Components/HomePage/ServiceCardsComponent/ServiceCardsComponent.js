@@ -11,11 +11,11 @@ import { useNavigate } from 'react-router-dom';
 
 // Service data
 const services = [
-    { image: HomeRoofing, title: 'Residential Roofing', description: 'Enhance your home\'s protection with expert residential roofing solutions, blending durability and aesthetic appeal seamlessly.',path: '/residential-roofing', },
-    { image: CommercialRoofing, title: 'Commercial Roofing', description: 'Elevate your business with expert and premium commercial roofing solutions, blending durability and aesthetic appeal seamlessly.',path: '/commercial-roofing', },
-    { image: SidingEnhancement, title: 'Siding Enhancements', description: 'Transform your property\'s exterior with our premium siding options, offering a perfect fusion of style, durability, and low maintenance.',path: '/siding-enhancements', },
-    { image: GutterSystems, title: 'Gutter Systems', description: 'Safeguard your home\'s foundation with our advanced gutter systems, efficiently directing water flow for optimal protection and longevity.',path: '/gutter-systems', },
-    { image: WindowServices, title: 'Window Services', description: 'Immerse your spaces in natural light and energy efficiency with our high-quality windows, crafted for beauty and functional brilliance.',path: '/window-services', },
+    { image: HomeRoofing, title: 'Residential Roofing', description: 'Enhance your home\'s protection with expert residential roofing solutions, blending durability and aesthetic appeal seamlessly.', path: '/residential-roofing', },
+    { image: CommercialRoofing, title: 'Commercial Roofing', description: 'Elevate your business with expert and premium commercial roofing solutions, blending durability and aesthetic appeal seamlessly.', path: '/commercial-roofing', },
+    { image: SidingEnhancement, title: 'Siding Enhancements', description: 'Transform your property\'s exterior with our premium siding options, offering a perfect fusion of style, durability, and low maintenance.', path: '/siding-enhancements', },
+    { image: GutterSystems, title: 'Gutter Systems', description: 'Safeguard your home\'s foundation with our advanced gutter systems, efficiently directing water flow for optimal protection and longevity.', path: '/gutter-systems', },
+    { image: WindowServices, title: 'Window Services', description: 'Immerse your spaces in natural light and energy efficiency with our high-quality windows, crafted for beauty and functional brilliance.', path: '/window-services', },
 ];
 
 function ServiceCardsComponent() {
@@ -45,7 +45,7 @@ function ServiceCardsComponent() {
                                         <Col className='card-text'>
                                             {service.description}
                                         </Col>
-                                        <Col xs={2} onClick={() => {navigate(service.path)}} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
+                                        <Col xs={2} onClick={() => { navigate(service.path) }} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
                                     </Row>
                                 </Card.Body>
                             </Card>
@@ -63,7 +63,7 @@ function ServiceCardsComponent() {
                                         <Col className='card-text'>
                                             {service.description}
                                         </Col>
-                                        <Col xs={2} onClick={() => {navigate(service.path)}} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
+                                        <Col xs={2} onClick={() => { navigate(service.path) }} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
                                     </Row>
                                 </Card.Body>
                             </Card>
@@ -93,9 +93,9 @@ function ServiceCardsComponent() {
                                         <Col className='card-text'>
                                             {service.description}
                                         </Col>
-                                        <Col xs={2} onClick={() => {navigate(service.path)}} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
+                                        <Col xs={2} onClick={() => { navigate(service.path) }} className='icon-disable'><div className='icon-circle'><FaArrowRight className='card-icon' /></div></Col>
                                     </Row>
-                                    <p onClick={() => {navigate(service.path)}} className='learnmore-btn'>Learn More</p>
+                                    <p onClick={() => { navigate(service.path) }} className='learnmore-btn'>Learn More</p>
                                 </Card.Body>
                             </Card>
                         </Col>

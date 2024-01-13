@@ -27,11 +27,13 @@
     max-width: 100%;
 }
 
+/* Hover effect on logo slides */
 .slide1:hover {
     transform: scale(1.1);
     box-shadow: 0px 10px 15px -3px rgba(16, 24, 40, 0.15), 0px 4px 6px -4px rgba(16, 24, 40, 0.15);
 }
 
+/* Responsive media queries */
 @media only screen and (max-width: 1400px) {
     .logo-width1 {
         max-width: 14rem;

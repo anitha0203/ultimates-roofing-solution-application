@@ -61,6 +61,7 @@ function HomePage() {
         <html lang="en" />
       </Helmet>
 
+      {/**  background video */}
       <div className="background-video-container">
         <video autoPlay muted playsInline loop className="background-video">
           <source src={videoSource} type="video/mp4" />
@@ -142,7 +143,7 @@ function HomePage() {
         </Col>
       </Row>
 
-      {/** Modal Component */}
+      {/** Modal Component for request a call back */}
       <Modal show={showModel} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Request for a call back</Modal.Title>
@@ -151,7 +152,7 @@ function HomePage() {
       </Modal>
 
 
-      {/** Modal Component1 */}
+      {/** Modal Component1 for messagee */}
       <Modal show={showModel1} onHide={handleCloseModal1}>
         <Modal.Header closeButton>
           <Modal.Title>Leave a message to us</Modal.Title>

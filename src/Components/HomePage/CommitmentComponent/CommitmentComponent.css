@@ -1,13 +1,16 @@
+/* Font */
 @font-face {
     font-family: hauora-medium;
     src: url(../../../../public/Hauora-Medium.ttf);
 }
 
+/* Commitment Section Styles */
 .cards {
     font-family: hauora-medium;
 }
 
-.commitment-section {
+.commitment-section,
+.commitment-section1 {
     background-image: url('../../../assets/HomePageImages/BackgroundImage.png');
     background-size: cover;
     color: #fff;
@@ -15,10 +18,6 @@
 }
 
 .commitment-section1 {
-    background-image: url('../../../assets/HomePageImages/BackgroundImage.png');
-    background-size: cover;
-    color: #fff;
-    padding: 0rem 0rem 2rem 0rem;
     display: none;
 }
 
@@ -63,14 +62,17 @@
     color: #fff !important;
 }
 
+/* Responsive media queries */
 @media only screen and (max-width: 1272px) {
     .commit-col {
         width: 17rem;
     }
+
     .commit-text {
         font-size: 1rem;
     }
-    .commit-headd{
+
+    .commit-headd {
         font-size: 22px;
     }
 }
@@ -79,6 +81,7 @@
     .commit-col {
         width: 25rem;
     }
+
     .commitment-section {
         display: none;
     }

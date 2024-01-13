@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import SuccessImages from '../../assets/SuccessImages.png';
 
+//  Styles
 const successPageStyles = {
     backgroundContainer: {
         position: 'relative',
@@ -45,7 +46,7 @@ function SuccessPage() {
                 <img style={successPageStyles.image} src={SuccessImages} alt='ultimates-solution-llc' />
             </div>
             <div style={successPageStyles.text}>
-                <h1 style={{fontWeight: "Bold"}}>Thank You</h1>
+                <h1 style={{ fontWeight: "Bold" }}>Thank You</h1>
                 <p>Your message was received successfully. We'll be in touch soon!</p>
             </div>
         </div>

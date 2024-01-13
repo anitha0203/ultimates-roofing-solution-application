@@ -79,6 +79,7 @@
     color: #B22335 !important;
 }
 
+/* Responsive media queries */
 @media only screen and (max-width: 1400px) {
     .play-icon1 {
         top: 25%; 
