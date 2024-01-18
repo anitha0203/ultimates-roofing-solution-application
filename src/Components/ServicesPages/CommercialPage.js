@@ -3,7 +3,6 @@ import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
 import CommercialRoofing from '../../assets/ServicesPagesImages/CommercialRoofng.png'
 import Commercial1 from '../../assets/ServicesPagesImages/Commercial1.jpg'
-import Commercial2 from '../../assets/ServicesPagesImages/Commercial2.jpg'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 import { Helmet } from 'react-helmet'
 
@@ -68,20 +67,6 @@ function CommercialPage() {
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
                         <img src={Commercial1} className='roofing-image' alt='ultimates-roofing-llc' />
-                    </Col>
-                </Row>
-            </div>
-
-            <div className='service-main1'>
-                <Row className='roofing-sections'>
-                    <Col>
-                        <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
-                        <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
-                        <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
-                    </Col>
-                    <Col className='temp-col' xs={1}></Col>
-                    <Col>
-                        <img src={Commercial2} className='roofs-shining-image' alt='ultimates-roofing-llc' />
                     </Col>
                 </Row>
             </div>
