@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
+import './CommercialPage.css'
 import CommercialRoofing from '../../assets/ServicesPagesImages/CommercialRoofng.png'
 import Commercial1 from '../../assets/ServicesPagesImages/Commercial1.jpg'
+import Commercial2 from '../../assets/ServicesPagesImages/Commercial2.jpg'
+import Commercial3 from '../../assets/ServicesPagesImages/Commercial3.png'
+import Commercial4 from '../../assets/ServicesPagesImages/Commercial4.png'
 import LogosComponent from '../HomePage/LogosComponent/LogosComponent'
 import { Helmet } from 'react-helmet'
 
 function CommercialPage() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
 
     return (
         <div>
@@ -27,48 +31,43 @@ function CommercialPage() {
             <div className='service-main'>
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Commercial Roofing</h2>
-                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your premier choice for top-notch Commercial Roofing solutions in Columbus, Ohio! At Ultimates Roofing, we understand the unique demands of commercial properties, and our expert team is dedicated to providing unparalleled roofing services that blend durability, functionality, and aesthetic appeal.</p>
+                <p className='service-page-text'>Discover the pinnacle of commercial roofing excellence at Ultimates Roofing. Our Commercial Roofing services are tailored to meet the unique needs of your business. From precision installations to long-term maintenance, we deliver top-tier solutions that go beyond industry standards.</p>
                 <img src={CommercialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
                 <div className='service-section'>
-                    <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
-                    <p className='service-page-text'>Our Commercial Roofing services encompass a comprehensive range of solutions, tailored to meet the specific requirements of businesses and industrial establishments. We pride ourselves on our commitment to excellence, ensuring that every project is executed with precision and attention to detail.</p>
-                    <h5 className='service-mid-heading'>We take meticulous steps in our process:</h5>
-                    <Row className='roofing-list'>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Thorough Inspection and Analysis</li>
-                                <li className='service-page-text'>Specialized Roofing Materials</li>
-                                <li className='service-page-text'>Waterproofing and Leak Prevention</li>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Energy-Efficient Roofing Options</li>
-                                <li className='service-page-text'>Professional Installation and Timely Completion</li>
-                                <li className='service-page-text'>Comprehensive Warranty</li>
-                            </ul>
-                        </Col>
-                    </Row>
+                    <h2 className='commercial-page-heading'>Flat and Metal Roof Options</h2>
+                    <p className='service-page-text'>Ultimates Roofing takes pride in presenting our customers with roofing products that have been honored with the prestigious ENERGY STAR label. Today, our Benchmark®, Rapid Roof III®, and PUMA® roof coatings continue to lead the industry in technology, performance, and environmental responsibility, setting the standard for excellence.</p>
+                    <ol><li className='commercial-page-heading1'>Conklin Membrane Coating System</li></ol>
+                    <p className='service-page-text'>As TPO and various membranes weather over time, roofs may develop cracks, leaks, gather dirt, and experience diminished effectiveness. Enter the Conklin Membrane Coating system, offering an economical and effective solution to restore and safeguard approved membranes, ensuring renewed durability and sustained performance.</p>
+                    <p className='service-page-text'>In 1977, Conklin pioneered the first acrylic roof coating, and today, our commitment to innovation reaches new heights with a comprehensive waterproofing system for approved membranes. As TPO and other membranes weather, roofs can deteriorate, developing cracks, leaks, and accumulating dirt, diminishing their efficiency and energy-saving capabilities. Enter Conklin's elastomeric coatings, a novel and cost-effective solution designed to repair and preserve approved membranes, ultimately enhancing energy savings and ensuring the longevity of roofing systems.</p>
+                    <h5 className='service-mid-heading'>Advantages</h5>
+                    <ul>
+                        <li className='service-page-text'>Boosts energy efficiency with a cool white reflective surface.</li>
+                        <li className='service-page-text'>Superior waterproofing halts leaks.</li>
+                        <li className='service-page-text'>Prolongs the lifespan of your current roof.</li>
+                        <li className='service-page-text'>Extended 18-Year Non-Prorated Warranty for added peace of mind.</li>
+                        <li className='service-page-text'>Cost-effective solution, significantly less than roof replacement.</li>
+                    </ul>
                 </div>
+                <Row style={{margin: "0px"}}>
+                    <h5 className='service-mid-heading'>Process</h5>
+                    <Col className='steps-col'>
+                        <img src={Commercial1} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <h5 className='process-heading-step'>Step1</h5>
+                        <h5 className='process-heading-step1'>Inspection and Preparation:</h5>
+                        <p className='service-page-text'>Our technicians meticulously assess the existing roofing system, identifying vulnerabilities and preparing the surface for coating application.</p>
+                    </Col>
+                    <Col></Col>
+                    <Col className='steps-col'>
+                        <img src={Commercial2} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <h5 className='process-heading-step'>Step2</h5>
+                        <h5 className='process-heading-step1'>Inspection and Preparation:</h5>
+                        <p className='service-page-text'>Our technicians meticulously assess the existing roofing system, identifying vulnerabilities and preparing the surface for coating application.</p>
+                    </Col>
+                </Row>
             </div>
 
             <div className='service-main1'>
-                <Row className='roofing-sections'>
-                    <Col>
-                        <h2 className='service-page-heading'>Your Style with Premium Shingles</h2>
-                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles. Designed to marry durability and aesthetic appeal, our shingles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles.</p>
-                        <ul>
-                            <li className='service-page-text'>Environmentally Conscious</li>
-                            <li className='service-page-text'>Crafted from a 100% recyclable blend of natural limestone and virgin resins</li>
-                            <li className='service-page-text'>Genuine</li>
-                            <li className='service-page-text'>Experience the true beauty of authentic slate with its natural textures and edges!</li>
-                        </ul>
-                    </Col>
-                    <Col className='temp-col' xs={1}></Col>
-                    <Col>
-                        <img src={Commercial1} className='roofing-image' alt='ultimates-roofing-llc' />
-                    </Col>
-                </Row>
+
             </div>
 
             <LogosComponent />

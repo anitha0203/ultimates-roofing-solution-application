@@ -4,7 +4,35 @@
 }
 
 .commercial-page-heading {
-    font-size: 28px;
+    font-size: 30px;
     font-family: hauora-medium;
     margin-bottom: 1rem;
+}
+
+.commercial-page-heading1 {
+    font-size: calc(1.2rem + 1.3vw);
+    font-family: hauora-medium;
+    margin-bottom: 1rem;
+    margin-left: 8px;
+}
+
+.process-heading-step {
+    font-size: 25px;
+    font-family: hauora-medium;
+    margin-top: 1.5rem;
+    color: var(--Colors-Secondary-500-Default, #3D3B6D);
+}
+
+.process-heading-step1 {
+    font-size: 25px;
+    font-family: hauora-medium;
+}
+
+.process-step-img{
+    border-radius: 5px;
+    width: 38rem;
+}
+
+.steps-col{
+    gap: 2vh;
 }

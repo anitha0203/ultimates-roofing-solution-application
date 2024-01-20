@@ -76,7 +76,7 @@ function ResidentialPage() {
                 <Row className='roofing-sections'>
                     <Col>
                         <h2 className='service-page-heading'>Your Style With Our Premium Shingles & Tiles</h2>
-                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles and tiles. Designed to marry durability and aesthetic appeal, our shingles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles.</p>
+                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles and tiles. Designed to marry durability and aesthetic appeal, our shingles and tiles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles and tiles.</p>
                         <ul>
                             <li className='service-page-text'>Environmentally Conscious</li>
                             <li className='service-page-text'>Crafted from a 100% recyclable blend of natural limestone and virgin resins</li>
