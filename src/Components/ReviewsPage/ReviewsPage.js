@@ -166,7 +166,7 @@ function ReviewsPage() {
             <div className='projects-main1'>
                 <h2 className='service-page-heading'>Share Your Experience</h2>
                 <p className='projects-page-text'>Please take a moment to share your experience with Ultimates Roofing LLC. Your feedback helps us continually improve our services and assists future customers in making informed decisions. Thank you for being a part of our journey.</p>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row style={{ margin: "4rem 0px 0px" }}>
                     <Col className='form-image-col'>
                         <img className='quote-image' src={ReviewsPageImage} alt='ultimates-solution-llc' />
                     </Col>

@@ -57,12 +57,12 @@ function GuttersPage() {
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
-                        <h2 className='service-page-heading'>Your Style with Premium Shingles</h2>
-                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles. Designed to marry durability and aesthetic appeal, our shingles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles.</p>
+                        <h2 className='service-page-heading'>Leaf Relief - The Ultimate Gutter Protection</h2>
+                        <p className='service-page-text'>We understand the challenges posed by debris and leaves, especially in areas with abundant foliage. Leaf Relief's innovative solutions offer unmatched performance in keeping your gutters free from clogs.Leaf Relief's patented design effectively keeps leaves, pine needles, and other debris out of your gutters. Its low-profile, sturdy construction ensures durability without compromising the aesthetics of your home.</p>
                         <ul>
-                            <li className='service-page-text'>Environmentally Conscious</li>
-                            <li className='service-page-text'>Crafted from a 100% recyclable blend of natural limestone and virgin resins</li>
-                            <li className='service-page-text'>Genuine</li>
+                            <li className='service-page-text'>Clog-Free Gutters</li>
+                            <li className='service-page-text'>Enhanced Water Flow</li>
+                            <li className='service-page-text'>Year-Round Protection</li>
                             <li className='service-page-text'>Experience the true beauty of authentic slate with its natural textures and edges!</li>
                         </ul>
                     </Col>
@@ -76,9 +76,9 @@ function GuttersPage() {
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
-                        <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
-                        <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
-                        <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
+                        <h2 className='service-page-heading'>Gutters Services with Leaf Relief Excellence</h2>
+                        <p className='service-page-text'>We understand the importance of well-maintained gutters in safeguarding your home or business from potential water damage. Our team of experienced professionals is dedicated to providing comprehensive gutter services tailored to meet your specific needs.</p>
+                        <p className='service-page-text'>Our skilled technicians ensure a precise fit, customizing the gutters to the unique dimensions of your property. We use high-quality materials and cutting-edge techniques to guarantee durability and optimal performance.</p>
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>

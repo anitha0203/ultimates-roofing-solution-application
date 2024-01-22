@@ -36,7 +36,7 @@
 }
 
 .service-mid-heading {
-    font-size: 25px;
+    font-size: calc(1rem + 1vw);
     font-family: hauora-medium;
     margin: 1.5rem 0px;
 }
@@ -75,6 +75,10 @@
     font-size: 1.3rem;
     padding: 16px 32px 19px 32px;
     margin: 2px;
+}
+
+.roofing-sections, .roofing-list {
+    margin: 0px;
 }
 
 .learn-btn:hover {

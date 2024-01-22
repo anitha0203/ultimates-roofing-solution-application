@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
+import './WindowsPage.css'
 import Windows from '../../assets/ServicesPagesImages/Windows.png'
 import Windows1 from '../../assets/ServicesPagesImages/Windows1.jpg'
 import Windows2 from '../../assets/ServicesPagesImages/Windows2.jpg'
@@ -32,37 +33,20 @@ function WindowsPage() {
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                     <p className='service-page-text'>Our skilled installation team ensures a precise and seamless installation process. We pay careful attention to detail, ensuring that your windows not only perform optimally but also contribute to the overall aesthetic appeal of your home.</p>
-                    <h5 className='service-mid-heading'>Ultimates Window Solutions: Elevating Your Home Experience</h5>
-                    <Row className='roofing-list'>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Energy-Efficient Windows</li>
-                                <li className='service-page-text'>Customized Styles and Designs</li>
-                                <li className='service-page-text'>Durable Materials</li>
-                                <li className='service-page-text'>Noise Reduction Technology</li>
-                            </ul>
-                        </Col>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Low Maintenance and Easy Operation</li>
-                                <li className='service-page-text'>UV Protection</li>
-                                <li className='service-page-text'>Professional Installation</li>
-                            </ul>
-                        </Col>
-                    </Row>
                 </div>
             </div>
 
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
-                        <h2 className='service-page-heading'>Your Style with Premium Shingles</h2>
-                        <p className='service-page-text'>Experience roofing excellence with our selection of premium shingles. Designed to marry durability and aesthetic appeal, our shingles redefine your roof, offering not just protection but a touch of architectural sophistication. Each shingle is a testament to our commitment to quality, ensuring your home not only stands strong against the elements but also stands out in style. Discover the perfect blend of functionality and elegance for your roofing needs with our meticulously crafted shingles.</p>
+                        <h2 className='service-page-heading'>Windows Services for a Brighter Home</h2>
+                        <p className='service-page-text'>At Ultimations, we believe windows are more than just openings; they are a connection to the outdoors, allowing natural light and fresh air to fill your living spaces. Our comprehensive window services are designed to enhance the aesthetics, energy efficiency, and functionality of your home.</p>
                         <ul>
-                            <li className='service-page-text'>Environmentally Conscious</li>
-                            <li className='service-page-text'>Crafted from a 100% recyclable blend of natural limestone and virgin resins</li>
-                            <li className='service-page-text'>Genuine</li>
-                            <li className='service-page-text'>Experience the true beauty of authentic slate with its natural textures and edges!</li>
+                            <li className='service-page-text'>Window Installation & Replacement</li>
+                            <li className='service-page-text'>Customized Styles and Designs</li>
+                            <li className='service-page-text'>Noise Reduction Technology</li>
+                            <li className='service-page-text'>Low Maintenance and Easy Operation</li>
+                            <li className='service-page-text'>Energy-Efficient Windows</li>
                         </ul>
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
@@ -75,9 +59,11 @@ function WindowsPage() {
             <div className='service-main1'>
                 <Row className='roofing-sections'>
                     <Col>
-                        <h2 className='service-page-heading'>Your Roofing Experience with Owens Corning Products</h2>
-                        <p className='service-page-text'>With a legacy of over 75 years, Owens Corning stands as a prominent leader in the building materials industry. Trust in the assurance that your new roof will not only enhance but also safeguard your home for years to come. Explore the enduring performance and captivating beauty of Oakridge® Shingles – truly 'The Right Choice®’. Beyond a spectrum of popular colors, these shingles come with:</p>
-                        <p className='service-page-text'>Enhance your home with Owens Corning TruDefinition® Duration® Designer Colors Collection Shingles, bringing exclusive colors and vibrancy for unique style and value.</p>
+                        <h2 className='service-page-heading'>Experience Excellence with Ultimations Window Solutions</h2>
+                        <h5 className='window-mid-heading'>Your Home, Your Style</h5>
+                        <p className='service-page-text'>Discover the perfect windows to complement your home's unique style and personality. Our diverse range of options ensures you find the ideal fit for your space.</p>
+                        <h5 className='window-mid-heading'>Professional Consultation</h5>
+                        <p className='service-page-text'>Our knowledgeable team provides expert advice to guide you through the selection process. Your satisfaction is our priority, and we are dedicated to exceeding your expectations.</p>
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>

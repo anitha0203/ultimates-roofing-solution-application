@@ -14,7 +14,8 @@ const logos = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6]
 function LogosComponent() {
     return (
         <div className='logo-slider'>
-            <div className='slide-track text-center'>
+            {/**    Web view         */}
+            <div className='slide-track'>
                 <Row>
                     {logos.slice(0, 3).map((logo, index) => (
                         <Col key={index} className='slide1'>
@@ -25,6 +26,17 @@ function LogosComponent() {
                 <Row>
                     {logos.slice(3, 6).map((logo, index) => (
                         <Col key={index} className='slide1'>
+                            <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
+                        </Col>
+                    ))}
+                </Row>
+            </div>
+
+            {/**    Mobile view         */}
+            <div className='slide-track1'>
+                <Row>
+                    {logos.map((logo, index) => (
+                        <Col md={6} key={index} className='slide1'>
                             <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
                         </Col>
                     ))}
