@@ -64,11 +64,11 @@ function ProjectsPage() {
 
     <div>
       <Helmet>
-        <title>Ultimations Solution LLC - Projects</title>
-        <link rel="canonical" href="https://visheshcountrycache.tech/projects" />
-        <meta name='description' content='Explore the impressive projects completed by Ultimations Solution LLC. From residential roofing to commercial renovations, discover our commitment to excellence and quality craftsmanship.' />
-        <meta name='keywords' content='Ultimations Solution LLC, projects, residential roofing, commercial renovations, construction, home improvement' />
-        <meta name='author' content='Ultimations Solution LLC' />
+        <title>Ultimates Roofing LLC - Projects</title>
+        <link rel="canonical" href="https://www.ultimatesroofing.com/projects" />
+        <meta name='description' content='Explore the impressive projects completed by Ultimates Roofing LLC. From residential roofing to commercial renovations, discover our commitment to excellence and quality craftsmanship.' />
+        <meta name='keywords' content='Ultimates Roofing LLC, projects, residential roofing, commercial renovations, construction, home improvement' />
+        <meta name='author' content='Ultimates Roofing LLC' />
         <meta name='robots' content='index, follow' />
         <html lang="en" />
       </Helmet>

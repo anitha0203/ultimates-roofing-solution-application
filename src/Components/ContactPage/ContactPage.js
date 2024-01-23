@@ -129,11 +129,11 @@ function ContactPage() {
 
             {/* Helmet component for SEO meta tags */}
             <Helmet>
-                <title>Ultimations Solution LLC - Contact Us</title>
-                <link rel="canonical" href="https://visheshcountrycache.tech/contact" />
-                <meta name='description' content='Get in touch with Ultimations Solution LLC for all your construction and home improvement needs. Whether you have questions, need a quote, or want to discuss a project, our team is here to assist you.' />
-                <meta name='keywords' content='Ultimations Solution LLC, contact us, construction, home improvement, residential roofing, commercial renovations' />
-                <meta name='author' content='Ultimations Solution LLC' />
+                <title>Ultimates Roofing LLC - Contact Us</title>
+                <link rel="canonical" href="https://www.ultimatesroofing.com/contact" />
+                <meta name='description' content='Get in touch with Ultimates Roofing LLC for all your construction and home improvement needs. Whether you have questions, need a quote, or want to discuss a project, our team is here to assist you.' />
+                <meta name='keywords' content='Ultimates Roofing LLC, contact us, construction, home improvement, residential roofing, commercial renovations' />
+                <meta name='author' content='Ultimates Roofing LLC' />
                 <meta name='robots' content='index, follow' />
                 <html lang="en" />
             </Helmet>

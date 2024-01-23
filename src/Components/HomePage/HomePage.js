@@ -52,11 +52,11 @@ function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>Ultimations Solution LLC - Home</title>
-        <link rel="canonical" href="https://visheshcountrycache.tech/home" />
-        <meta name='description' content='Welcome to Ultimations Solution LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Providing top-notch services with a commitment to excellence.' />
-        <meta name='keywords' content='Ultimations Solution LLC, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
-        <meta name='author' content='Ultimations Solution LLC' />
+        <title>Ultimates Roofing LLC - Home</title>
+        <link rel="canonical" href="https://www.ultimatesroofing.com/home" />
+        <meta name='description' content='Welcome to Ultimates Roofing LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Providing top-notch services with a commitment to excellence.' />
+        <meta name='keywords' content='Ultimates Roofing LLC, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
+        <meta name='author' content='Ultimates Roofing LLC' />
         <meta name='robots' content='index, follow' />
         <html lang="en" />
       </Helmet>

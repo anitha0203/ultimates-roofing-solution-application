@@ -89,11 +89,11 @@ function AboutPage() {
     <div>
       {/* Helmet component for SEO meta tags */}
       <Helmet>
-        <title>Ultimations Solution LLC - About Us</title>
-        <link rel="canonical" href="https://visheshcountrycache.tech/about" />
-        <meta name='description' content='Learn more about Ultimations Solution LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Discover our commitment to excellence and dedication to providing top-notch construction and home improvement services.' />
-        <meta name='keywords' content='Ultimations Solution LLC, about us, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
-        <meta name='author' content='Ultimations Solution LLC' />
+        <title>Ultimation Solution LLC - About Us</title>
+        <link rel="canonical" href="https://www.ultimatesroofing.com/about" />
+        <meta name='description' content='Learn more about Ultimates Roofing LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Discover our commitment to excellence and dedication to providing top-notch construction and home improvement services.' />
+        <meta name='keywords' content='Ultimates Roofing LLC, about us, residential roofing, commercial roofing, siding, windows, gutters, construction, home improvement' />
+        <meta name='author' content='Ultimates Roofing LLC' />
         <meta name='robots' content='index, follow' />
         <html lang="en" />
       </Helmet>

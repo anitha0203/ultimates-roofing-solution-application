@@ -31,11 +31,11 @@ function ResidentialPage() {
     return (
         <div>
             <Helmet>
-                <title>Ultimations Solution LLC - Residential Roofing</title>
-                <link rel="canonical" href="https://visheshcountrycache.tech/residential-roofing" />
-                <meta name="description" content="Discover Ultimations Solution LLC's expert residential roofing services. From roof installations to repairs, we provide high-quality solutions with a focus on durability and aesthetics." />
-                <meta name="keywords" content="Ultimations Solution LLC, residential roofing, roof installations, roof repairs, construction, home improvement" />
-                <meta name="author" content="Ultimations Solution LLC" />
+                <title>Ultimates Roofing LLC - Residential Roofing</title>
+                <link rel="canonical" href="https://www.ultimatesroofing.com/residential-roofing" />
+                <meta name="description" content="Discover Ultimates Roofing LLC's expert residential roofing services. From roof installations to repairs, we provide high-quality solutions with a focus on durability and aesthetics." />
+                <meta name="keywords" content="Ultimates Roofing LLC, residential roofing, roof installations, roof repairs, construction, home improvement" />
+                <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />
             </Helmet>

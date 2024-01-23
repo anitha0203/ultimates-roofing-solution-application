@@ -31,11 +31,11 @@ function SidingPage() {
     return (
         <div>
             <Helmet>
-                <title>Ultimations Solution LLC - Siding</title>
-                <link rel="canonical" href="https://visheshcountrycache.tech/siding" />
-                <meta name="description" content="Ultimations Solution LLC offers top-quality siding solutions. Enhance the aesthetics and durability of your property with our expert siding installations and repairs." />
-                <meta name="keywords" content="Ultimations Solution LLC, siding, siding installations, siding repairs, construction, home improvement" />
-                <meta name="author" content="Ultimations Solution LLC" />
+                <title>Ultimates Roofing LLC - Siding</title>
+                <link rel="canonical" href="https://www.ultimatesroofing.com/siding" />
+                <meta name="description" content="Ultimates Roofing LLC offers top-quality siding solutions. Enhance the aesthetics and durability of your property with our expert siding installations and repairs." />
+                <meta name="keywords" content="Ultimates Roofing LLC, siding, siding installations, siding repairs, construction, home improvement" />
+                <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />
             </Helmet>
@@ -50,26 +50,26 @@ function SidingPage() {
                     <h2 className='key-heading'>Key Features</h2>
                     <Row className='key-row'>
                         <Col sm={5} style={{ padding: "0px" }}>
-                            <img src={Icon1} alt='Ultimations Solution LLC' />
+                            <img src={Icon1} alt='Ultimates Roofing LLC' />
                             <h5 className='key-heading1'>Siding Installation & Replacements</h5>
                             <p className='service-page-text'>Schedule a free consultation to discuss your vision, preferences, and project goals.</p>
                         </Col>
                         <Col sm={1}></Col>
                         <Col sm={5} style={{ padding: "0px" }}>
-                            <img src={Icon2} alt='Ultimations Solution LLC' />
+                            <img src={Icon2} alt='Ultimates Roofing LLC' />
                             <h5 className='key-heading1'>Repairs and Maintenance</h5>
                             <p className='service-page-text'>Collaborate with our experts to choose from a variety of premium siding materials, including James Hardie products.</p>
                         </Col>
                     </Row>
                     <Row className='key-row'>
                         <Col sm={5} style={{ padding: "0px" }}>
-                            <img src={Icon3} alt='Ultimations Solution LLC' />
+                            <img src={Icon3} alt='Ultimates Roofing LLC' />
                             <h5 className='key-heading1'>Color and Style Consultation</h5>
                             <p className='service-page-text'>Our skilled team ensures precise installation, guaranteeing a seamless and durable finish that enhances your property's exterior.</p>
                         </Col>
                         <Col sm={1}></Col>
                         <Col sm={5} style={{ padding: "0px" }}>
-                            <img src={Icon4} alt='Ultimations Solution LLC' />
+                            <img src={Icon4} alt='Ultimates Roofing LLC' />
                             <h5 className='key-heading1'>Energy-Efficient Solutions</h5>
                             <p className='service-page-text'>A thorough inspection is conducted to ensure the installed siding meets our high standards of craftsmanship.</p>
                         </Col>
