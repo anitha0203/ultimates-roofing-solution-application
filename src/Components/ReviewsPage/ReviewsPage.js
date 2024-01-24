@@ -28,6 +28,7 @@ function ReviewsPage() {
     const url = 'http://localhost:8080/v1/ultimates/reviews';
 
     // const [reviewData, setReviewData] = useState([]);
+    const [reviewNone, setReviewNone] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [successToast, setSuccessToast] = useState(false)
     const [loading, setLoading] = useState(false);
@@ -91,9 +92,9 @@ function ReviewsPage() {
     //     })
     //         .catch((error) => {
     //             if (error.response) {
-    //                 setErrorMessage(error.response.data.message);
+    //                 setReviewNone(error.response.data.message);
     //             } else {
-    //                 setErrorMessage("An unexpected error occurred. Please try again.");
+    //                 setReviewNone("An unexpected error occurred while fectching reviews. Please try again.");
     //                 console.error("An error occurred:", error.message);
     //             }
     //         })
@@ -130,6 +131,9 @@ function ReviewsPage() {
                 <p className='projects-page-text'>Our valued clients graciously shared their meaningful experiences, illuminating the profound impact of our roofing solutions. These testimonials, echoing with the resonance of satisfaction, went beyond mere words, offering a deep dive into our historical dedication to unmatched quality, groundbreaking innovation, and unwavering customer satisfaction. Each testimonial became a living testament to the enduring ethos that has defined our journey, showcasing the tangible difference our past commitment has made in elevating properties and exceeding expectations.</p>
             </div>
 
+            {/**    Error Message when fectching reviews data           */}
+            <div className='review-none'>{reviewNone}</div>
+
             <Row className='reviews-section'>
                 {reviews.map((review, index) => (
                     <Col key={index} style={{ padding: "0" }}>
@@ -140,7 +144,7 @@ function ReviewsPage() {
                             </div>
                             <hr style={{ color: "#F9F9F9" }} />
                             <div className='reviewcard-description'>
-                                <img className='quote' src={Quote} alt='reviews-quote' />
+                                <img className='quote' src={Quote} alt='Ultimates Roofing LLC reviews-quote' />
                                 <p className='projects-page-text'>{review.reviewerMessage}</p>
                             </div>
                         </Card>
@@ -154,7 +158,7 @@ function ReviewsPage() {
                         <Accordion.Item key={index} eventKey={index.toString()}>
                             <Accordion.Header><div>{review.reviewerName}<div style={{ fontSize: "13px" }}>{review.reviewerAddress}</div></div></Accordion.Header>
                             <Accordion.Body>
-                                <img className='quote' src={Quote} alt='reviews-quote' />
+                                <img className='quote' src={Quote} alt='Ultimates Roofing LLC reviews-quote' />
                                 <p className="reviews-para-mobile">{review.reviewerMessage}</p>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -168,7 +172,7 @@ function ReviewsPage() {
                 <p className='projects-page-text'>Please take a moment to share your experience with Ultimates Roofing LLC. Your feedback helps us continually improve our services and assists future customers in making informed decisions. Thank you for being a part of our journey.</p>
                 <Row style={{ margin: "4rem 0px 0px" }}>
                     <Col className='form-image-col'>
-                        <img className='quote-image' src={ReviewsPageImage} alt='ultimates-solution-llc' />
+                        <img className='quote-image' src={ReviewsPageImage} alt='Ultimates Roofing LLC Quote Image' />
                     </Col>
                     <Col>
                         <Form>

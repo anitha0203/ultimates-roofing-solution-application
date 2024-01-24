@@ -43,7 +43,7 @@ function SuccessPage() {
     return (
         <div style={successPageStyles.backgroundContainer}>
             <div style={successPageStyles.backgroundImage}>
-                <img style={successPageStyles.image} src={SuccessImages} alt='ultimates-solution-llc' />
+                <img style={successPageStyles.image} src={SuccessImages} alt='Ultimates Roofing LLC Home Image' />
             </div>
             <div style={successPageStyles.text}>
                 <h1 style={{ fontWeight: "Bold" }}>Thank You</h1>

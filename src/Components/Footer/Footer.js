@@ -39,6 +39,8 @@ function Footer() {
             <Col onClick={() => { navigate('/reviews') }} className={`navitems ${isCurrentPage('/reviews') ? 'underline-text' : ''}`}>Reviews</Col>
             <Col onClick={() => { navigate('/contact') }} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
+          <hr className='hr-border' />
+
           <Row style={{ margin: "0" }}>
             <Col>
               <h4 className='head-section'>Head Office</h4>
@@ -57,9 +59,9 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} alt='ultimates-solution-llc' />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
-                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='ultimates-solution-llc' />
+                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
                     roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
                   </div>
@@ -81,6 +83,7 @@ function Footer() {
             <Col onClick={() => { navigate('/reviews') }} className={`navitems ${isCurrentPage('/reviews') ? 'underline-text' : ''}`}>Reviews</Col>
             <Col onClick={() => { navigate('/contact') }} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
+          <hr className='hr-border' />
           <h2 className='description1'>Contact us for a roof over here had!</h2>
           <Button className='estimate-btn1' onClick={() => { navigate('/contact') }}>Get Your Free Estimate</Button>
           <Row style={{ margin: "0" }}>
@@ -101,9 +104,9 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} alt='ultimates-solution-llc' />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-602-7980</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
-                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='ultimates-solution-llc' />
+                  <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
                     roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
                   </div>

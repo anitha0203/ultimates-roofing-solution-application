@@ -81,9 +81,9 @@ function AboutPage() {
   }, [isIntersecting, countExperience, countWarranty, countWarranty1, countQuality]);
 
   // Effect to scroll to the top on component mount
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div>
@@ -106,7 +106,7 @@ function AboutPage() {
         <p className='about-page-text'>From comprehensive roof installation and replacement services to meticulous long-term repairs, Ultimates Roofing is your all-encompassing solution. With nearly a decade of dedicated expertise in the industry, our seasoned roofing contractor ensures that your project is not just a task but a commitment to excellence, providing you with the utmost peace of mind throughout the process.</p>
 
         <div className='image-container'>
-          <img src={AboutMainImage} className='about-main-image' alt='ultimates-roofing-llc' />
+          <img src={AboutMainImage} className='about-main-image' alt='Ultimates Roofing LLC building' />
         </div>
       </div>
 
@@ -116,7 +116,7 @@ function AboutPage() {
       <div className='about-main1'>
         <Row className='about-experience-text'>
           <Col>
-            <img className='work-image' src={AboutPageImage} alt='ultimates-roofing-llc' />
+            <img className='work-image' src={AboutPageImage} alt='Ultimates Roofing LLC work in progress' />
           </Col>
           <Col className='work-text'>
             <p className='about-page-text'>As the driving force behind Ultimates Roofing LLC, our company brings a wealth of passion and expertise to the roofing industry. With a background rooted in a genuine love for craftsmanship and a commitment to elevating properties, our journey began nearly a decade ago.</p>

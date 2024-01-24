@@ -29,9 +29,9 @@ function ValueCardsComponent() {
             <Card className='value-cards'>
               <div>
                 <div className='value-circle'>
-                  <p className='value-icon'><img src={value.icon} alt='ultimates-roofing-llc' /></p>
+                  <p className='value-icon'><img src={value.icon} alt='Ultimates Roofing LLC Icon' /></p>
                 </div>
-                <Card.Img className='value-img' src={value.imageUrl} variant="top" alt={value.title} />
+                <Card.Img className='value-img' src={value.imageUrl} variant="top" alt={value.heading} />
               </div>
               <Card.Body className='value-body'>
                 <Card.Title className='value-title'>{value.heading}</Card.Title>

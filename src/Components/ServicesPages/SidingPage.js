@@ -44,7 +44,7 @@ function SidingPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Siding Enhancements</h2>
                 <p className='service-page-text'>Experience the transformative impact of Ultimates Roofing's Siding Enhancement services, meticulously crafted to elevate your property's aesthetics and enhance durability. Our specialized team excels in revitalizing your home or business exterior, offering tailored solutions that include the finest siding products like Vinyl, James Hardie, and LP Smartside. With a focus on precision and customer satisfaction, we bring years of expertise to every project, ensuring a visually appealing and long-lasting transformation.</p>
-                <img src={SidingEnhancement} className='service-main-image' alt='ultimates-roofing-llc' />
+                <img src={SidingEnhancement} className='service-main-image' alt='Ultimates Roofing LLC Siding' />
 
                 <div>
                     <h2 className='key-heading'>Key Features</h2>
@@ -98,7 +98,7 @@ function SidingPage() {
             <div className='service-main1'>
                 <Row className='siding-experience-text'>
                     <Col>
-                        <img className='work-image' src={SidingElevate} alt='ultimates-roofing-llc' />
+                        <img className='work-image' src={SidingElevate} alt='Ultimates Roofing LLC Siding' />
                     </Col>
                     <Col className='elevate-col'>
                         <h2 className='service-page-heading'>Elevate Your Property's Appeal and Longevity with Ultimates Roofing's Siding Enhancements</h2>

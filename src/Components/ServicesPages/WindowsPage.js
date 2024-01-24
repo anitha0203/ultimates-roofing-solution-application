@@ -29,7 +29,7 @@ function WindowsPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Window Services</h2>
                 <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where our commitment to enhancing your home extends to every detail, including high-quality Window Solutions. We understand that windows play a crucial role in the aesthetics, energy efficiency, and overall comfort of your home. With Ultimates Window Solutions, we bring you a blend of style, functionality, and durability.</p>
-                <img src={Windows} className='service-main-image' alt='ultimates-roofing-llc' />
+                <img src={Windows} className='service-main-image' alt='Ultimates Roofing LLC Window' />
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                     <p className='service-page-text'>Our skilled installation team ensures a precise and seamless installation process. We pay careful attention to detail, ensuring that your windows not only perform optimally but also contribute to the overall aesthetic appeal of your home.</p>
@@ -51,7 +51,7 @@ function WindowsPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={Windows1} className='roofing-image' alt='ultimates-roofing-llc' />
+                        <img src={Windows1} className='roofing-image' alt='Ultimates Roofing LLC Window' />
                     </Col>
                 </Row>
             </div>
@@ -67,7 +67,7 @@ function WindowsPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={Windows2} className='roofs-shining-image' alt='ultimates-roofing-llc' />
+                        <img src={Windows2} className='roofs-shining-image' alt='Ultimates Roofing LLC Window' />
                     </Col>
                 </Row>
             </div>

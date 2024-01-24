@@ -36,7 +36,7 @@ function CommercialPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Commercial Roofing</h2>
                 <p className='service-page-text'>Discover the pinnacle of commercial roofing excellence at Ultimates Roofing. Our Commercial Roofing services are tailored to meet the unique needs of your business. From precision installations to long-term maintenance, we deliver top-tier solutions that go beyond industry standards.</p>
-                <img src={CommercialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+                <img src={CommercialRoofing} className='service-main-image' alt='Ultimates Roofing LLC Commercial Roofing' />
                 <div className='service-section'>
                     <h2 className='commercial-page-heading'>Flat and Metal Roof Options</h2>
                     <p className='service-page-text'>Ultimates Roofing takes pride in presenting our customers with roofing products that have been honored with the prestigious ENERGY STAR label. Today, our Benchmark®, Rapid Roof III®, and PUMA® roof coatings continue to lead the industry in technology, performance, and environmental responsibility, setting the standard for excellence.</p>
@@ -55,7 +55,7 @@ function CommercialPage() {
                 <Row className='steps-row'>
                     <h5 className='service-mid-heading'>Process</h5>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial1} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial1} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 1</h5>
                             <h5 className='process-heading-step1'>Inspection and Preparation:</h5>
@@ -64,7 +64,7 @@ function CommercialPage() {
                     </Col>
                     <Col sm={1} className='empty-col'></Col>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial2} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial2} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 2</h5>
                             <h5 className='process-heading-step1'>Primer Application:</h5>
@@ -75,7 +75,7 @@ function CommercialPage() {
 
                 <Row style={{ marginTop: "5rem" }} className='steps-row'>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial3} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial3} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 3</h5>
                             <h5 className='process-heading-step1'>Membrane Coating Application:</h5>
@@ -84,7 +84,7 @@ function CommercialPage() {
                     </Col>
                     <Col sm={1} className='empty-col'></Col>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial4} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial4} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 4</h5>
                             <h5 className='process-heading-step1'>Quality Inspection and Finalization:</h5>
@@ -101,7 +101,7 @@ function CommercialPage() {
                 </div>
                 <Row style={{ marginTop: "5rem" }} className='steps-row'>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial5} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial5} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 1</h5>
                             <h5 className='process-heading-step1'>Surface Preparation:</h5>
@@ -110,7 +110,7 @@ function CommercialPage() {
                     </Col>
                     <Col sm={1} className='empty-col'></Col>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial6} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial6} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 2</h5>
                             <h5 className='process-heading-step1'>Seam Reinforcement and Fastener Sealing:</h5>
@@ -121,7 +121,7 @@ function CommercialPage() {
 
                 <Row style={{ marginTop: "5rem" }} className='steps-row'>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial7} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial7} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 3</h5>
                             <h5 className='process-heading-step1'>Application of Industry-Leading Roof Coatings:</h5>
@@ -130,7 +130,7 @@ function CommercialPage() {
                     </Col>
                     <Col sm={1} className='empty-col'></Col>
                     <Col sm={5} className='steps-col'>
-                        <img src={Commercial8} className='process-step-img' alt='ultimates-roofing-llc' />
+                        <img src={Commercial8} className='process-step-img' alt='Ultimates Roofing LLC Commercial Roofing' />
                         <div className='text-div'>
                             <h5 className='process-heading-step'>Step 4</h5>
                             <h5 className='process-heading-step1'>Final Inspection and Preservation:</h5>

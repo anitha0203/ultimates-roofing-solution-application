@@ -19,14 +19,14 @@ function LogosComponent() {
                 <Row>
                     {logos.slice(0, 3).map((logo, index) => (
                         <Col key={index} className='slide1'>
-                            <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
+                            <img className='logo-width1' src={logo} alt='Ultimates Roofing LLC Logo' />
                         </Col>
                     ))}
                 </Row>
                 <Row>
                     {logos.slice(3, 6).map((logo, index) => (
                         <Col key={index} className='slide1'>
-                            <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
+                            <img className='logo-width1' src={logo} alt='Ultimates Roofing LLC Logo' />
                         </Col>
                     ))}
                 </Row>
@@ -37,7 +37,7 @@ function LogosComponent() {
                 <Row>
                     {logos.map((logo, index) => (
                         <Col md={6} key={index} className='slide1'>
-                            <img className='logo-width1' src={logo} alt='ultimates-roofing-llc' />
+                            <img className='logo-width1' src={logo} alt='Ultimates Roofing LLC Logo' />
                         </Col>
                     ))}
                 </Row>

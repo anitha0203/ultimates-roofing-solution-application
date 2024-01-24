@@ -87,7 +87,7 @@ function ProjectsPage() {
               <source src={video5} type="video/mp4" />
             </video>
             <div className='play-icon1' onClick={() => openModal()}>
-              <img className='play-icon-img1' src={PlayButton} alt='ultimates-roofing-llc' />
+              <img className='play-icon-img1' src={PlayButton} alt='Ultimates Roofing LLC Play Icon' />
             </div>
             <Card.Body>
               <p className='project-para'>New York, NY - Jan 25, 2023</p>
@@ -100,7 +100,7 @@ function ProjectsPage() {
           <Card className='project-card'>
             <Slider {...settings} >
               {ResidentialRoofingImages.map((imageUrl, index) => (
-                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+                <img key={index} src={imageUrl} alt='Ultimates Roofing LLC Project Image' />
               ))}
             </Slider>
             <Card.Body>
@@ -118,7 +118,7 @@ function ProjectsPage() {
           <Card className='project-card'>
             <Slider {...settings} >
               {CommercialRoofingImages.map((imageUrl, index) => (
-                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+                <img key={index} src={imageUrl} alt='Ultimates Roofing LLC Project Image' />
               ))}
             </Slider>
             <Card.Body>
@@ -132,7 +132,7 @@ function ProjectsPage() {
           <Card className='project-card'>
             <Slider {...settings} >
               {SidingEnhancementImages.map((imageUrl, index) => (
-                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+                <img key={index} src={imageUrl} alt='Ultimates Roofing LLC Project Image' />
               ))}
             </Slider>
             <Card.Body>
@@ -150,7 +150,7 @@ function ProjectsPage() {
           <Card className='project-card'>
             <Slider {...settings} >
               {WindowsImages.map((imageUrl, index) => (
-                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+                <img key={index} src={imageUrl} alt='Ultimates Roofing LLC Project Image' />
               ))}
             </Slider>
             <Card.Body>
@@ -164,7 +164,7 @@ function ProjectsPage() {
           <Card className='project-card'>
             <Slider {...settings} >
               {GuttersImages.map((imageUrl, index) => (
-                <img key={index} src={imageUrl} alt='ultimates-solution-llc' />
+                <img key={index} src={imageUrl} alt='Ultimates Roofing LLC Project Image' />
               ))}
             </Slider>
             <Card.Body>

@@ -45,7 +45,7 @@ function ResidentialPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Residential Roofing</h2>
                 <p className='service-page-text'>Welcome to Ultimates Roofing LLC, your trusted partner for elevating the protection and beauty of your home through expert roofing solutions. Our Residentail Roofing services are tailored to meet the unique needs of residential properties, ensuring durability, aesthetics, and peace of mind.</p>
-                <img src={ResidentialRoofing} className='service-main-image' alt='ultimates-roofing-llc' />
+                <img src={ResidentialRoofing} className='service-main-image' alt='Ultimates Roofing LLC Roofing' />
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
                     <p className='service-page-text'>At our core, we are experts in executing meticulous roof repairs and replacements, committed to doing it the right way. We never compromise; our process involves a thorough strip-down to the deck, a meticulous assessment to ensure it is in optimal condition before the new shingles are expertly laid. Your protection is not just a priority for us; it's our unwavering commitment and the guiding principle behind every step of our dedicated service.</p>
@@ -86,7 +86,7 @@ function ResidentialPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={Roofs} className='roofing-image' alt='ultimates-roofing-llc' />
+                        <img src={Roofs} className='roofing-image' alt='Ultimates Roofing LLC Roofing' />
                     </Col>
                 </Row>
             </div>
@@ -102,7 +102,7 @@ function ResidentialPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={RoofsShining} className='roofs-shining-image' alt='ultimates-roofing-llc' />
+                        <img src={RoofsShining} className='roofs-shining-image' alt='Ultimates Roofing LLC Roofing' />
                     </Col>
                 </Row>
             </div>
@@ -119,7 +119,7 @@ function ResidentialPage() {
                         <Col>
                             <div style={{ display: "flex" }}>
                                 <div>
-                                    <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                                    <img src={Arrow} alt='Ultimates Roofing LLC Arrow Icon' className='arrow2' />
                                 </div>
                                 <div>
                                     <h4 className='section4-heading'>{data.title}</h4>
@@ -134,7 +134,7 @@ function ResidentialPage() {
                         <Col>
                             <div style={{ display: "flex" }}>
                                 <div>
-                                    <img src={Arrow} alt='ultimates-solution-llc' className='arrow2' />
+                                    <img src={Arrow} alt='Ultimates Roofing LLC Arrow Icon' className='arrow2' />
                                 </div>
                                 <div>
                                     <h4 className='section4-heading'>{data.title}</h4>

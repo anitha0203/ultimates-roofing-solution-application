@@ -100,7 +100,7 @@ function HomePage() {
               <Button onClick={() => { navigate('/about') }} className='estimate-btn'>More About Us</Button>
             </div>
           </Col>
-          <Col><img className='about-img' src={AboutHouse} alt='ultimates-roofing-llc' /></Col>
+          <Col><img className='about-img' src={AboutHouse} alt='Ultimates Roofing LLC About' /></Col>
         </Row>
       </div>
 
@@ -127,19 +127,19 @@ function HomePage() {
           <h5 className='store-heading'>Available on:</h5>
           <div className='apps-store'>
             <div className='app-icons'>
-              <img style={{ marginLeft: "1vh" }} src={PlayStore} alt='ultimates-roofing-llc' />
+              <img style={{ marginLeft: "1vh" }} src={PlayStore} alt='Ultimates Roofing LLC PlayStore Icon' />
               <p className='store-text'>PlayStore</p>
             </div>
             <div className='app-icons'>
-              <img style={{ marginLeft: "1vh" }} src={AppStore} alt='ultimates-roofing-llc' />
+              <img style={{ marginLeft: "1vh" }} src={AppStore} alt='Ultimates Roofing LLC Appstore Icon' />
               <p className='store-text' >AppStore</p>
             </div>
-            <img className='mobile-img-view' src={Mobile} alt='ultimates-roofing-llc' />
+            <img className='mobile-img-view' src={Mobile} alt='Ultimates Roofing LLC Mobile' />
           </div>
         </Col>
         <Col xs={2}></Col>
         <Col xs={2}>
-          <img className='mobile-img' src={Mobile} alt='ultimates-roofing-llc' />
+          <img className='mobile-img' src={Mobile} alt='Ultimates Roofing LLC Mobile' />
         </Col>
       </Row>
 
