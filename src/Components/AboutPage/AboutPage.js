@@ -81,9 +81,9 @@ function AboutPage() {
   }, [isIntersecting, countExperience, countWarranty, countWarranty1, countQuality]);
 
   // Effect to scroll to the top on component mount
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
