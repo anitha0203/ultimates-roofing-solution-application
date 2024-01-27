@@ -13,6 +13,7 @@ function WindowsPage() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <div>
             <Helmet>
@@ -28,7 +29,7 @@ function WindowsPage() {
             <div className='service-main'>
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Window Services</h2>
-                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where our commitment to enhancing your home extends to every detail, including high-quality Window Solutions. We understand that windows play a crucial role in the aesthetics, energy efficiency, and overall comfort of your home. With Ultimates Window Solutions, we bring you a blend of style, functionality, and durability.</p>
+                <p className='service-page-text'>Discover a new perspective on aesthetics, functionality, and energy efficiency with Ultimates Roofing's Window Services. Our dedicated team combines expertise with innovation to offer comprehensive solutions tailored to enhance the beauty and performance of your property's windows.</p>
                 <img src={Windows} className='service-main-image' alt='Ultimates Roofing LLC Window' />
                 <div className='service-section'>
                     <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>

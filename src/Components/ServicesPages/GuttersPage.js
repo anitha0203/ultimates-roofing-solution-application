@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import './ResidentialPage.css'
+import './GuttersPage.css'
 import Gutters from '../../assets/ServicesPagesImages/Gutters.png'
 import Gutters1 from '../../assets/ServicesPagesImages/Gutters1.jpg'
 import Gutters2 from '../../assets/ServicesPagesImages/Gutters2.jpg'
@@ -28,63 +29,49 @@ function GuttersPage() {
             <div className='service-main'>
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Gutter Systems</h2>
-                <p className='service-page-text'>Welcome to Ultimates Roofing LLC, where we extend our expertise beyond roofing to provide comprehensive solutions for your home, including top-of-the-line Gutter Systems. Our commitment to safeguarding your property encompasses not only the roof but also the crucial aspect of effective water management through advanced gutter installations.</p>
+                <p className='service-page-text'>Discover unparalleled gutter solutions with Ultimates Roofing's Gutter System services, designed to safeguard your property against the elements and enhance its longevity. Our skilled team, driven by a commitment to quality, ensures precision installations and maintenance, making us your trusted partner in fortifying your property.</p>
                 <img src={Gutters} className='service-main-image' alt='Ultimates Roofing LLC Gutters' />
-                <div className='service-section'>
-                    <h2 className='service-page-heading'>Unmatched Roofing Innovation in Columbus, Ohio!</h2>
-                    <p className='service-page-text'>Invest in the protection and longevity of your home with Ultimates Gutter Systems. Our commitment to excellence extends to every aspect of your property, providing you with peace of mind and a well-protected investment. Contact us today to explore our gutter solutions and take the first step toward effective water management for your home.</p>
-                    <h5 className='service-mid-heading'>Ultimates Gutter Systems: Enhancing Protection and Efficiency</h5>
-                    <Row className='roofing-list'>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Customized Gutter Solutions</li>
-                                <li className='service-page-text'>Durable and High-Quality Materials</li>
-                                <li className='service-page-text'>Efficient Water Diversion</li>
-                                <li className='service-page-text'>Leaf Guard Protection</li>
-                            </ul>
+            </div>
+
+            <div className='service-main1'>
+                <Row className='roofing-sections'>
+                    <Col>
+                        <h2 className='service-page-heading'>The Ultimates Roofing Advantage</h2>
+                        <p className='service-page-text'>Our commitment goes beyond the mere installation of gutter systems. We recognize that these systems are not just functional necessities; they are integral components of your property's overall aesthetic and structural integrity. At Ultimates Roofing, we approach every gutter project with the understanding that each system is a vital investment in the protection and longevity of your property. Our dedication extends to ensuring that your gutter system seamlessly integrates with the architectural nuances of your home or business, becoming a harmonious addition that complements the overall visual appeal.</p>
+                        <p className='service-page-text'>Discover unparalleled peace of mind as Ultimates Roofing orchestrates a transformative fusion of precision, innovation, and durability in your gutter system. Beyond mere installation, we craft resilient solutions that enhance your property's aesthetics. Schedule your free consultation and entrust your property's protection to Ultimates Roofing, where form and function unite seamlessly.</p>
+                    </Col>
+                    <Col className='temp-col' xs={1}></Col>
+                    <Col>
+                        <img src={Gutters1} className='gutters-image' alt='Ultimates Roofing LLC Gutters' />
+                    </Col>
+                </Row>
+            </div>
+
+            <div className='service-main1'>
+                <Row className='roofing-sections'>
+                    <Col>
+                        <img src={Gutters2} className='gutters-image' alt='Ultimates Roofing LLC Gutters' />
+                    </Col>
+                    <Col className='temp-col' xs={1}></Col>
+                    <Col className='gutters-text'>
+                        <h2 className='service-page-heading'>Empowering Your Gutter System with LEAF RELIEF:</h2>
+                        <p className='service-page-text'>In our relentless pursuit of excellence, Ultimates Roofing proudly partners with LEAF RELIEF, an industry leader in cutting-edge gutter protection systems. This strategic alliance amplifies the capabilities of your gutter system, ensuring not just efficient water drainage but also fortifying it against the invasion of leaves, debris, and potential clogs.</p>
+                        <p className='service-page-text'>LEAF RELIEF's innovative gutter protection technology complements Ultimates Roofing's commitment to delivering superior solutions. This partnership guarantees that your gutter system remains free from unwanted debris, allowing it to function optimally even in the most challenging weather conditions. With LEAF RELIEF, your gutter system becomes a robust line of defense, providing enhanced durability and longevity for your property.</p>
+                    </Col>
+                </Row>
+            </div>
+
+            <div className='gutter-service'>
+                <div className='service-main1'>
+                    <Row className='roofing-sections'>
+                        <Col className='gutters-text2'>
+                            <h2 className='service-page-heading'>Winter-Ready Gutter Solutions</h2>
+                            <p className='service-page-text'>Ultimates Roofing understands the winter challenges affecting gutter systems, particularly issues like ice dams and icicles. Our specialized solutions are designed to fortify gutters against winter-related problems, ensuring optimal performance in freezing conditions. With innovative heating systems strategically placed to prevent ice formation and customized winter maintenance plans, Ultimates Roofing provides year-round protection for your property. Schedule a consultation to explore tailored solutions and shield your gutters from winter challenges.</p>
                         </Col>
-                        <Col>
-                            <ul>
-                                <li className='service-page-text'>Seamless Installation</li>
-                                <li className='service-page-text'>Aesthetic Appeal</li>
-                                <li className='service-page-text'>Professional Maintenance Services</li>
-                            </ul>
-                        </Col>
+                        <Col className='temp-col' xs={1}></Col>
+                        <Col></Col>
                     </Row>
                 </div>
-            </div>
-
-            <div className='service-main1'>
-                <Row className='roofing-sections'>
-                    <Col>
-                        <h2 className='service-page-heading'>Leaf Relief - The Ultimate Gutter Protection</h2>
-                        <p className='service-page-text'>We understand the challenges posed by debris and leaves, especially in areas with abundant foliage. Leaf Relief's innovative solutions offer unmatched performance in keeping your gutters free from clogs.Leaf Relief's patented design effectively keeps leaves, pine needles, and other debris out of your gutters. Its low-profile, sturdy construction ensures durability without compromising the aesthetics of your home.</p>
-                        <ul>
-                            <li className='service-page-text'>Clog-Free Gutters</li>
-                            <li className='service-page-text'>Enhanced Water Flow</li>
-                            <li className='service-page-text'>Year-Round Protection</li>
-                            <li className='service-page-text'>Experience the true beauty of authentic slate with its natural textures and edges!</li>
-                        </ul>
-                    </Col>
-                    <Col className='temp-col' xs={1}></Col>
-                    <Col>
-                        <img src={Gutters1} className='roofing-image' alt='Ultimates Roofing LLC Gutters' />
-                    </Col>
-                </Row>
-            </div>
-
-            <div className='service-main1'>
-                <Row className='roofing-sections'>
-                    <Col>
-                        <h2 className='service-page-heading'>Gutters Services with Leaf Relief Excellence</h2>
-                        <p className='service-page-text'>We understand the importance of well-maintained gutters in safeguarding your home or business from potential water damage. Our team of experienced professionals is dedicated to providing comprehensive gutter services tailored to meet your specific needs.</p>
-                        <p className='service-page-text'>Our skilled technicians ensure a precise fit, customizing the gutters to the unique dimensions of your property. We use high-quality materials and cutting-edge techniques to guarantee durability and optimal performance.</p>
-                    </Col>
-                    <Col className='temp-col' xs={1}></Col>
-                    <Col>
-                        <img src={Gutters2} className='roofs-shining-image' alt='Ultimates Roofing LLC Gutters' />
-                    </Col>
-                </Row>
             </div>
 
             <LogosComponent />
