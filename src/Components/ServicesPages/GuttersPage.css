@@ -35,6 +35,6 @@
 
 @media only screen and (max-width: 575px) {
     .gutters-main-image{
-        margin: 1.5rem 0px 3rem;
+        margin-top: 1.5rem;
     }
 }
