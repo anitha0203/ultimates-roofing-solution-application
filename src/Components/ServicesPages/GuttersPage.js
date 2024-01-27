@@ -30,7 +30,7 @@ function GuttersPage() {
                 <p className='service-us'><span style={{ color: "#B22335", fontWeight: "bold" }}>I</span> Services</p>
                 <h2 className='service-page-heading'>Gutter Systems</h2>
                 <p className='service-page-text'>Discover unparalleled gutter solutions with Ultimates Roofing's Gutter System services, designed to safeguard your property against the elements and enhance its longevity. Our skilled team, driven by a commitment to quality, ensures precision installations and maintenance, making us your trusted partner in fortifying your property.</p>
-                <img src={Gutters} className='service-main-image' alt='Ultimates Roofing LLC Gutters' />
+                <img src={Gutters} className='gutters-main-image' alt='Ultimates Roofing LLC Gutters' />
             </div>
 
             <div className='service-main1'>
