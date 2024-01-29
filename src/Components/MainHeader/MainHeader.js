@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Container, Nav, NavDropdown, Navbar, Modal, CloseButton } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './MainHeader.css'
 import Logo from '../../assets/Logo.png'
 import PhoneIcon from '../../assets/HeaderPhoneIcon.png'
@@ -10,6 +10,7 @@ import InstantRoofQuote from './InstantRoofQuote';
 function MainHeader() {
     // Get the current location using react-router-dom
     const location = useLocation();
+    const navigate = useNavigate();
     const [isNavbarOpen, setNavbarOpen] = useState(false);
     const [requestPage, setRequestPage] = useState(false);
     // Function to determine if a NavLink should be active based on the provided path
@@ -50,18 +51,18 @@ function MainHeader() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="justify-content-end flex-grow-1">
-                            <Nav.Link href="/home" className={`nav-link-with-margin not-active ${isNavLinkActive('/home') || isNavLinkActive('/') ? 'active' : ''}`}>Home</Nav.Link>
-                            <Nav.Link href="/about" className={`nav-link-with-margin not-active ${isNavLinkActive('/about') ? 'active' : ''}`}>About</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/home')} className={`nav-link-with-margin not-active ${isNavLinkActive('/home') || isNavLinkActive('/') ? 'active' : ''}`}>Home</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/about')} className={`nav-link-with-margin not-active ${isNavLinkActive('/about') ? 'active' : ''}`}>About</Nav.Link>
                             <NavDropdown title="Services" id="basic-nav-dropdown" className={`nav-link-with-margin ${isServicesDropdownActive() ? 'active-service' : 'not-active'}`}>
                                 {['/residential-roofing', '/commercial-roofing', '/siding-enhancements', '/gutter-systems', '/window-services'].map((path) => (
-                                    <NavDropdown.Item key={path} href={path} className={navLinkClass(path)}>
+                                    <NavDropdown.Item key={path} onClick={() => navigate(path)} className={navLinkClass(path)}>
                                         {formatDisplayText(path.replace('/', ''))}
                                     </NavDropdown.Item>
                                 ))}
                             </NavDropdown>
-                            <Nav.Link href="/projects" className={`nav-link-with-margin not-active ${isNavLinkActive('/projects') ? 'active' : ''}`}>Projects</Nav.Link>
-                            <Nav.Link href="/reviews" className={`nav-link-with-margin not-active ${isNavLinkActive('/reviews') ? 'active' : ''}`}>Reviews</Nav.Link>
-                            <Nav.Link href="/contact" className={`nav-link-with-margin not-active ${isNavLinkActive('/contact') ? 'active' : ''}`}>Contact</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/projects')} className={`nav-link-with-margin not-active ${isNavLinkActive('/projects') ? 'active' : ''}`}>Projects</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/reviews')} className={`nav-link-with-margin not-active ${isNavLinkActive('/reviews') ? 'active' : ''}`}>Reviews</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/contact')} className={`nav-link-with-margin not-active ${isNavLinkActive('/contact') ? 'active' : ''}`}>Contact</Nav.Link>
                         </Nav>
 
                         <Nav className="justify-content-end flex-grow-1">
