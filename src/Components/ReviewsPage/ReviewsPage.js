@@ -111,7 +111,8 @@ function ReviewsPage() {
                 <title>Ultimates Roofing LLC - Reviews</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/reviews" />
                 <meta name="description" content="Read reviews from satisfied clients who have experienced Ultimates Roofing LLC's exceptional construction and home improvement services. Discover why we are a trusted partner for roofing, siding, windows, and more." />
-                <meta name="keywords" content="Ultimates Roofing LLC, reviews, testimonials, residential roofing, construction, home improvement" />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
+                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />
@@ -180,7 +181,7 @@ function ReviewsPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Full Name
+                                            Full Name <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
@@ -198,7 +199,7 @@ function ReviewsPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Location
+                                            Location <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
@@ -215,7 +216,7 @@ function ReviewsPage() {
                             <Row className='names-roww'>
                                 <Form.Group>
                                     <Form.Label className="label">
-                                        <span style={{ color: 'red' }}>*</span> Message
+                                        Message <span style={{ color: 'red' }}>*</span>
                                     </Form.Label>
                                     <Form.Control
                                         as="textarea"

@@ -132,7 +132,8 @@ function ContactPage() {
                 <title>Ultimates Roofing LLC - Contact Us</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/contact" />
                 <meta name='description' content='Get in touch with Ultimates Roofing LLC for all your construction and home improvement needs. Whether you have questions, need a quote, or want to discuss a project, our team is here to assist you.' />
-                <meta name='keywords' content='Ultimates Roofing LLC, contact us, construction, home improvement, residential roofing, commercial renovations' />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
+                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name='author' content='Ultimates Roofing LLC' />
                 <meta name='robots' content='index, follow' />
                 <html lang="en" />
@@ -190,7 +191,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> First Name
+                                            First Name <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
@@ -205,7 +206,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Last Name
+                                            Last Name <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
@@ -223,7 +224,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Phone Number
+                                            Phone Number <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="number"
@@ -239,7 +240,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Email
+                                            Email <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="email"
@@ -256,7 +257,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Service
+                                            Service <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Select
                                             name="service"
@@ -279,7 +280,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> Address
+                                            Address <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="string"
@@ -298,7 +299,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> State
+                                            State <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="string"
@@ -314,7 +315,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> City
+                                            City <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="string"
@@ -329,7 +330,7 @@ function ContactPage() {
                                 <Col>
                                     <Form.Group>
                                         <Form.Label className="label">
-                                            <span style={{ color: 'red' }}>*</span> ZipCode
+                                            ZipCode <span style={{ color: 'red' }}>*</span>
                                         </Form.Label>
                                         <Form.Control
                                             type="number"

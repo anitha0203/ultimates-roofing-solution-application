@@ -91,7 +91,7 @@ function InstantRoofQuote({ source, handleClose }) {
                         <Col>
                             <Form.Group>
                                 <Form.Label className="label">
-                                    <span style={{ color: 'red' }}>*</span> First Name
+                                First Name <span style={{ color: 'red' }}>*</span>
                                 </Form.Label>
                                 <Form.Control
                                     type="text"
@@ -106,7 +106,7 @@ function InstantRoofQuote({ source, handleClose }) {
                         <Col>
                             <Form.Group>
                                 <Form.Label className="label">
-                                    <span style={{ color: 'red' }}>*</span> Last Name
+                                Last Name <span style={{ color: 'red' }}>*</span>
                                 </Form.Label>
                                 <Form.Control
                                     type="text"
@@ -124,7 +124,7 @@ function InstantRoofQuote({ source, handleClose }) {
                         <Col>
                             <Form.Group>
                                 <Form.Label className="label">
-                                    <span style={{ color: 'red' }}>*</span> Phone Number
+                                Phone Number <span style={{ color: 'red' }}>*</span>
                                 </Form.Label>
                                 <Form.Control
                                     type="number"

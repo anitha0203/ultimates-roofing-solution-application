@@ -27,7 +27,7 @@ function Footer() {
       {/* View1 for larger screens */}
       <Row className='view1'>
         <Col xs={3}>
-          <h2 className='description'>Contact us for a roof over here had!</h2>
+          <h2 className='description'>Contact us for a roof over your head!</h2>
           <Button onClick={() => { navigate('/contact') }} className='estimate-btn'>Get Your Free Estimate</Button>
         </Col>
         <Col>
@@ -84,7 +84,7 @@ function Footer() {
             <Col onClick={() => { navigate('/contact') }} className={`navitems ${isCurrentPage('/contact') ? 'underline-text' : ''}`}>Contact</Col>
           </Row>
           <hr className='hr-border' />
-          <h2 className='description1'>Contact us for a roof over here had!</h2>
+          <h2 className='description1'>Contact us for a roof over your head!</h2>
           <Button className='estimate-btn1' onClick={() => { navigate('/contact') }}>Get Your Free Estimate</Button>
           <Row style={{ margin: "0" }}>
             <Col>

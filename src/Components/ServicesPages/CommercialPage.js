@@ -26,7 +26,8 @@ function CommercialPage() {
                 <title>Ultimates Roofing LLC - Commercial Roofing</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/commercial-roofing" />
                 <meta name="description" content="Explore Ultimates Roofing LLC's commercial roofing services. Our expert team specializes in providing durable and efficient roofing solutions for businesses and commercial properties." />
-                <meta name="keywords" content="Ultimates Roofing LLC, commercial roofing, roof installations, roof repairs, construction, business improvement" />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
+                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />

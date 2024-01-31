@@ -34,7 +34,8 @@ function ResidentialPage() {
                 <title>Ultimates Roofing LLC - Residential Roofing</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/residential-roofing" />
                 <meta name="description" content="Discover Ultimates Roofing LLC's expert residential roofing services. From roof installations to repairs, we provide high-quality solutions with a focus on durability and aesthetics." />
-                <meta name="keywords" content="Ultimates Roofing LLC, residential roofing, roof installations, roof repairs, construction, home improvement" />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
+                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />
@@ -86,7 +87,7 @@ function ResidentialPage() {
                     </Col>
                     <Col className='temp-col' xs={1}></Col>
                     <Col>
-                        <img src={Roofs} className='roofing-image' alt='Ultimates Roofing LLC Roofing' />
+                        <img src={Roofs} className='roofs-shining-image' alt='Ultimates Roofing LLC Roofing' />
                     </Col>
                 </Row>
             </div>
