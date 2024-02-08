@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 
 function ReviewsPage() {
 
-    const url = 'http://72.167.150.246:8081/ultimates-backend/ultimates/reviews';
+    const url = 'https://www.ultimatesroofing.com/ultimates-backend/ultimates/reviews';
 
     // const [reviewData, setReviewData] = useState([]);
     const [reviewNone, setReviewNone] = useState([]);
