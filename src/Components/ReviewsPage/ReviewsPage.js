@@ -7,34 +7,21 @@ import ReviewsPageImage from '../../assets/ReviewsPageImage.png'
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 
-//  Reviews Data
-const reviews = [
-    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-    { reviewerName: 'John T', reviewerAddress: 'Denver, Colorado', reviewerMessage: 'Ultimates Roofing transformed our house with top-notch materials and efficient service. The cleanup was impeccable, making the entire process hassle-free.' },
-    { reviewerName: 'Sarah L', reviewerAddress: 'Austin, Texas', reviewerMessage: 'Absolutely incredible quality! Ultimates Roofing\'s utilization of top-tier materials, combined with their remarkably swift installation, surpassed all my expectations. My home has undergone a stunning transformation and has never looked better!' },
-    { reviewerName: 'Robert H', reviewerAddress: 'Orlando, Florida', reviewerMessage: 'Exceptional service! From start to finish, Ultimates Roofing prioritized professionalism. Cleanup was thorough, leaving my property in superior condition.' },
-    { reviewerName: 'Emily W', reviewerAddress: ' Seattle, Washington', reviewerMessage: 'Impressive turnaround! Ultimates Roofing\'s streamlined process and prompt dumpster removal made the entire experience seamless. A satisfied customer!' },
-]
-
 function ReviewsPage() {
 
-    const url = 'http://localhost:8080/v1/ultimates/reviews';
+    const url = 'http://72.167.150.246:8081/ultimates-backend/ultimates/reviews';
 
     // const [reviewData, setReviewData] = useState([]);
     const [reviewNone, setReviewNone] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [successToast, setSuccessToast] = useState(false)
     const [loading, setLoading] = useState(false);
+    const [showAllReviews, setShowAllReviews] = useState(false);
+    const [reviewData, setReviewData] = useState([]);
+
     const [reviewsData, setReviewsData] = useState({
         name: '',
-        address: '',
+        location: '',
         message: '',
     });
 
@@ -52,14 +39,14 @@ function ReviewsPage() {
         e.preventDefault();
         setErrorMessage('');
 
-        if (reviewsData.name === '' || reviewsData.address === '' || reviewsData.message === '') {
+        if (reviewsData.name === '' || reviewsData.location === '' || reviewsData.message === '') {
             setErrorMessage("Please fill all required fields");
         } else {
             setErrorMessage('');
             setLoading(true);
             axios.post(url, reviewsData).then(res => {
                 // Reset the form after successful submission
-                setReviewsData({ name: '', address: '', message: '' });
+                setReviewsData({ name: '', location: '', message: '' });
                 setSuccessToast(true)
                 // Close the success toast after 15 seconds
                 setTimeout(() => {
@@ -84,26 +71,24 @@ function ReviewsPage() {
         window.scrollTo(0, 0);
     }, []);
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    //     setLoading(true);
-    //     axios.get(url).then(res => {
-    //         setReviewData(res.data);
-    //     })
-    //         .catch((error) => {
-    //             if (error.response) {
-    //                 setReviewNone(error.response.data.message);
-    //             } else {
-    //                 setReviewNone("An unexpected error occurred while fectching reviews. Please try again.");
-    //                 console.error("An error occurred:", error.message);
-    //             }
-    //         })
-    //         .finally(() => {
-    //             setLoading(false);
-    //         });
-    // }, []);
-
-    // Thank you for sharing your feedback with us!
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setLoading(true);
+        axios.get(url).then(res => {
+            setReviewData(res.data);
+        })
+            .catch((error) => {
+                if (error.response) {
+                    setReviewNone(error.response.data.message);
+                } else {
+                    setReviewNone("An unexpected error occurred while fectching reviews. Please try again.");
+                    console.error("An error occurred:", error.message);
+                }
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, []);
 
     return (
         <div>
@@ -123,7 +108,7 @@ function ReviewsPage() {
                     <Toast.Header>
                         <strong className="me-auto">THANK YOU</strong>
                     </Toast.Header>
-                    <Toast.Body>Your feedback has been received and is important to us</Toast.Body>
+                    <Toast.Body>Thank you for sharing your feedback with us!</Toast.Body>
                 </Toast>
             ) : null}
 
@@ -136,7 +121,7 @@ function ReviewsPage() {
             <div className='review-none'>{reviewNone}</div>
 
             <Row className='reviews-section'>
-                {reviews.map((review, index) => (
+                {reviewData.slice(0, showAllReviews ? reviewData.length : 12).map((review, index) => (
                     <Col key={index} style={{ padding: "0" }}>
                         <Card className='review-cards'>
                             <div className='reviewcard-heading'>
@@ -153,9 +138,18 @@ function ReviewsPage() {
                 ))}
             </Row>
 
+            {reviewData.length > 12 && !showAllReviews && (
+                <div style={{textAlign: "center"}}>
+                    <Button onClick={() => setShowAllReviews(true)} className='view-more-btn'>
+                        View More
+                    </Button>
+                </div>
+            )}
+
+
             <Row className='reviews-section1'>
                 <Accordion defaultActiveKey="0" style={{ marginTop: "3rem" }}>
-                    {reviews.map((review, index) => (
+                    {reviewData.map((review, index) => (
                         <Accordion.Item key={index} eventKey={index.toString()}>
                             <Accordion.Header><div>{review.reviewerName}<div style={{ fontSize: "13px" }}>{review.reviewerAddress}</div></div></Accordion.Header>
                             <Accordion.Body>
@@ -203,8 +197,8 @@ function ReviewsPage() {
                                         </Form.Label>
                                         <Form.Control
                                             type="text"
-                                            name="address"
-                                            value={reviewsData.address}
+                                            name="location"
+                                            value={reviewsData.location}
                                             onChange={handleInputChange}
                                             isInvalid={errorMessage}
                                             className="input"

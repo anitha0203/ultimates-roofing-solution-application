@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 
 function ContactPage() {
 
-    const url = 'http://localhost:8080/v1/ultimates/customer/register';
+    const url = 'http://72.167.150.246:8081/ultimates-backend/ultimates/customer/register';
 
     const navigate = useNavigate();
     const [visible, setVisible] = useState(false);

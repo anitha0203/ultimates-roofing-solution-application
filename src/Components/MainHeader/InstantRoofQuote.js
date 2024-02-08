@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function InstantRoofQuote({ source, handleClose }) {
     // API endpoint for form submission
-    const url = 'http://localhost:8080/v1/ultimates/customer/register';
+    const url = 'http://72.167.150.246:8081/ultimates-backend/ultimates/customer/register';
 
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
