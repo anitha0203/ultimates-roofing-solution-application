@@ -125,13 +125,13 @@ function ReviewsPage() {
                     <Col key={index} style={{ padding: "0" }}>
                         <Card className='review-cards'>
                             <div className='reviewcard-heading'>
-                                <h2 className='review-client'>{review.name}</h2>
-                                <div className='review-place'>{review.location}</div>
+                                <h2 className='review-client'>{review.reviewerName}</h2>
+                                <div className='review-place'>{review.reviewerLocation}</div>
                             </div>
                             <hr style={{ color: "#F9F9F9" }} />
                             <div className='reviewcard-description'>
                                 <img className='quote' src={Quote} alt='Ultimates Roofing LLC reviews-quote' />
-                                <p className='projects-page-text'>{review.message}</p>
+                                <p className='projects-page-text'>{review.reviewerMessage}</p>
                             </div>
                         </Card>
                     </Col>
@@ -151,10 +151,10 @@ function ReviewsPage() {
                 <Accordion defaultActiveKey="0" style={{ marginTop: "3rem" }}>
                     {reviewData.map((review, index) => (
                         <Accordion.Item key={index} eventKey={index.toString()}>
-                            <Accordion.Header><div>{review.name}<div style={{ fontSize: "13px" }}>{review.location}</div></div></Accordion.Header>
+                            <Accordion.Header><div>{review.reviewerName}<div style={{ fontSize: "13px" }}>{review.reviewerLocation}</div></div></Accordion.Header>
                             <Accordion.Body>
                                 <img className='quote' src={Quote} alt='Ultimates Roofing LLC reviews-quote' />
-                                <p className="reviews-para-mobile">{review.message}</p>
+                                <p className="reviews-para-mobile">{review.reviewerMessage}</p>
                             </Accordion.Body>
                         </Accordion.Item>
                     ))}
