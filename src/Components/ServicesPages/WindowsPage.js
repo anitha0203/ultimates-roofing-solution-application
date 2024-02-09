@@ -60,7 +60,7 @@ function WindowsPage() {
                         <img src={Windows2} className='roofs-shining-image' alt='Ultimates Roofing LLC Window' />
                     </Col>
                     <Col>
-                        <h2 className='service-page-heading'>Experience Excellence with Ultimations Window Solutions</h2>
+                        <h2 className='service-page-heading'>Experience Excellence with Ultimates Roofing LLC</h2>
                         <h5 className='window-mid-heading'>Your Home, Your Style</h5>
                         <p className='service-page-text'>Discover the perfect windows to complement your home's unique style and personality. Our diverse range of options ensures you find the ideal fit for your space.</p>
                         <h5 className='window-mid-heading'>Professional Consultation</h5>
