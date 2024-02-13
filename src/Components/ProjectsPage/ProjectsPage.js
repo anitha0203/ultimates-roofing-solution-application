@@ -91,7 +91,7 @@ function ProjectsPage() {
               <img className='play-icon-img1' src={PlayButton} alt='Ultimates Roofing LLC Play Icon' />
             </div>
             <Card.Body>
-              <p className='project-para'>New York, NY - Jan 25, 2023</p>
+              <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
               <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
               <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
             </Card.Body>
@@ -123,7 +123,7 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>New York, NY - Jan 25, 2023</p>
+              <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
               <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
               <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
             </Card.Body>
@@ -155,7 +155,7 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>New York, NY - Jan 25, 2023</p>
+              <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
               <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
               <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
             </Card.Body>
