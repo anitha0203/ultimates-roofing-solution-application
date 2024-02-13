@@ -55,8 +55,8 @@ function HomePage() {
         <title>Ultimates Roofing LLC - Home</title>
         <link rel="canonical" href="https://www.ultimatesroofing.com/home" />
         <meta name='description' content='Welcome to Ultimates Roofing LLC - Your trusted partner for residential roofing, commercial roofing, siding, windows, and gutters. Providing top-notch services with a commitment to excellence.' />
-        <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
-        best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
+        <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in NewYork,NY, Best Roofing Companies in NewYork,NY, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof NewYork,NY, best roofing company near me, ultimates roof replacement NewYork,NY, 
+                best roofing company, ultimates roof repair Newyork ny, affordable roof, eplacement services in NewYork,NY, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
         <meta name='author' content='Ultimates Roofing LLC' />
         <meta name='robots' content='index, follow' />
         <html lang="en" />

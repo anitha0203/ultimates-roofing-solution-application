@@ -20,8 +20,8 @@ function WindowsPage() {
                 <title>Ultimates Roofing LLC - Windows</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/windows" />
                 <meta name="description" content="Upgrade your property with Ultimates Roofing LLC's expert window services. From installations to replacements, we provide high-quality window solutions tailored to your needs." />
-                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
-                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in NewYork,NY, Best Roofing Companies in NewYork,NY, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof NewYork,NY, best roofing company near me, ultimates roof replacement NewYork,NY, 
+                best roofing company, ultimates roof repair Newyork ny, affordable roof, eplacement services in NewYork,NY, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name="author" content="Ultimates Roofing LLC" />
                 <meta name="robots" content="index, follow" />
                 <html lang="en" />

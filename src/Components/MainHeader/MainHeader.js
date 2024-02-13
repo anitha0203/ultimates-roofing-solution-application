@@ -65,7 +65,7 @@ function MainHeader() {
                         </Nav>
 
                         <Nav className="justify-content-end flex-grow-1">
-                            <Nav.Link style={{ marginTop: "0.6vh", cursor: "default", color: "#000" }} className='nav-link-with-margin'><img src={PhoneIcon} className='phone-icon' alt='Ultimates Roofing LLC Phone Icon' />614-602-7980</Nav.Link>
+                            <Nav.Link style={{ marginTop: "0.6vh", cursor: "default", color: "#000" }} className='nav-link-with-margin'><img src={PhoneIcon} className='phone-icon' alt='Ultimates Roofing LLC Phone Icon' />614-357-7539</Nav.Link>
                             <Button className='roof-quote-btn' onClick={handleShow}>Instant Roof Quote</Button>
                         </Nav>
                     </Navbar.Collapse>

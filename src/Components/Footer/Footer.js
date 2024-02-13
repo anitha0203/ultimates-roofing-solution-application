@@ -45,8 +45,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>Columbus,</div>
-                <div>Ohio</div>
+                <div>NewYork,</div>
+                <div>NY</div>
               </div>
             </Col>
             <Col>
@@ -59,7 +59,7 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-357-7539</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
@@ -90,8 +90,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>Columbus,</div>
-                <div>Ohio</div>
+                <div>NewYork,</div>
+                <div>NY</div>
               </div>
             </Col>
             <Col>
@@ -104,7 +104,7 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Contact Info</h4>
               <div className='footer-cols'>
-                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-602-7980</div>
+                <div><img className='contact-icons' src={PhoneIcon} alt='Phone Icon' />614-357-7539</div>
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
