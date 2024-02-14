@@ -45,8 +45,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>NewYork,</div>
-                <div>NY</div>
+                <div>Columbus,</div>
+                <div>Ohio</div>
               </div>
             </Col>
             <Col>
@@ -90,8 +90,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>NewYork,</div>
-                <div>NY</div>
+                <div>Columbus,</div>
+                <div>Ohio</div>
               </div>
             </Col>
             <Col>

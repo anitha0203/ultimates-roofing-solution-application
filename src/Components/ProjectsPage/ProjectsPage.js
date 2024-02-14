@@ -92,8 +92,8 @@ function ProjectsPage() {
             </div>
             <Card.Body>
               <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
-              <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <h2 className='project-heading'>Roof renovation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Renew and enhance your home with top-notch roof renovation in Columbus, Ohio. Elevate both aesthetics and durability with our expert services.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -105,9 +105,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
-              <h2 className='project-heading'>Gutters Installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <p className='project-para'>Columbus, Ohio - Jun 05, 2023</p>
+              <h2 className='project-heading'>Siding installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Transform your home's exterior with flawless siding installation in Columbus, Ohio. Elevate curb appeal and durability with our expert craftsmanship.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -123,9 +123,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
-              <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <p className='project-para'>Columbus, Ohio - Jan 17, 2023</p>
+              <h2 className='project-heading'>Flat roofing installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Elevate your property with expert flat roofing installation in Columbus, Ohio. Rely on our skilled professionals for a durable and sleek roofing solution.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -137,9 +137,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
-              <h2 className='project-heading'>Gutters Installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <p className='project-para'>Columbus, Ohio - Apr 02, 2023</p>
+              <h2 className='project-heading'>Windows Installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Experience a seamless transformation with precision windows installation in Columbus, Ohio. Elevate your home's energy efficiency and aesthetics with our expert services.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -155,9 +155,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Jan 25, 2023</p>
-              <h2 className='project-heading'>Roof renovation in NewYork, NY</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <p className='project-para'>Columbus, Ohio - May 25, 2023</p>
+              <h2 className='project-heading'>Commercial roofing installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Elevate your business infrastructure with expert commercial roofing installation in Columbus, Ohio. Ensure durability and functionality for your property with our professional services.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -169,9 +169,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Aug 25, 2023</p>
+              <p className='project-para'>Columbus, Ohio - Mar 21, 2023</p>
               <h2 className='project-heading'>Gutters Installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Cursus tincidunt tempor aliquam mattis et mi fames at id venenatis massa mi fames at id venenatis massa.</p>
+              <p className='projects-page-text'>Upgrade your home's drainage system with precision gutters installation in Columbus, Ohio. Enhance functionality and curb appeal with our professional services.</p>
             </Card.Body>
           </Card>
         </Col>
