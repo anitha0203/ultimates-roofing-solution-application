@@ -132,8 +132,8 @@ function ContactPage() {
                 <title>Ultimates Roofing LLC - Contact Us</title>
                 <link rel="canonical" href="https://www.ultimatesroofing.com/contact" />
                 <meta name='description' content='Get in touch with Ultimates Roofing LLC for all your construction and home improvement needs. Whether you have questions, need a quote, or want to discuss a project, our team is here to assist you.' />
-                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in NewYork,NY, Best Roofing Companies in NewYork,NY, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof NewYork,NY, best roofing company near me, ultimates roof replacement NewYork,NY, 
-                best roofing company, ultimates roof repair Newyork ny, affordable roof, eplacement services in NewYork,NY, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
+                <meta name='keywords' content='Ultimates Roofing llc, Ultimates Roofing, Best Roofing design in columbus,ohio, Best Roofing Companies in columbus ohio, ultimates roof replacement near me, best roofing designs for small houses, best roofing drip edge, best roof columbus, best roofing company near me, ultimates roof replacement columbus ohio, 
+                best roofing company, ultimates roof repair columbus ohio, affordable roof, eplacement services in columbus,ohio, luxury home roofing solutions near me, roof repair, Roofer near me, roofing repairs near me, roofing sheet' />
                 <meta name='author' content='Ultimates Roofing LLC' />
                 <meta name='robots' content='index, follow' />
                 <html lang="en" />
@@ -392,7 +392,7 @@ function ContactPage() {
                         </Form>
                     </Col>
                     <Col className='image-coll'>
-                        <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.1311161105!2d-74.2914958545098!3d40.69732899508137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1707805213262!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Google Maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe className='map-style' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195656.61280534012!2d-83.15563599435002!3d39.98309783384798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1703668481347!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Google Maps" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </Col>
                 </Row>
             </div>
