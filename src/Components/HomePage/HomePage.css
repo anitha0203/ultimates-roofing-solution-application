@@ -187,6 +187,9 @@
     .app-icons {
         padding: 2vh 5vh 0px 0px;
     }
+    .mobile-img {
+        margin-left: -3rem;
+    }
 }
 
 @media (max-width: 900px),
@@ -214,7 +217,7 @@
     }
 
     .mobile-img {
-        margin-left: -3rem;
+        margin-left: -5rem;
     }
 }
 
@@ -341,21 +344,21 @@
 
 @media only screen and (max-width: 500px) {
     .appstore-toast {
-        right: 12%;
-    }
-
-    .mobile-img-view {
-        display: none;
+        right: 18%;
+        margin-top: 8rem;
     }
 
     .mobile-view-none {
         display: none;
+    } 
+    .mobile-img-view {
+        margin-left: 6rem;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .appstore-toast {
-        right: 5%;
+    .mobile-img-view {
+        margin-left: 3rem;
     }
 }
 
@@ -380,10 +383,16 @@
     }
 
     .appstore-toast {
-        right: 2%;
+        right: 20%;
         margin-top: 8rem;
     }
-
+    .mobile-img-view{
+        width: 5rem;
+        margin-top: 0px;
+    }
+    .mobile-img-view {
+        margin-left: 1.5rem;
+    }
 }
 
 
@@ -402,5 +411,8 @@
 
     .store-text {
         font-size: 15px;
+    }
+    .mobile-img-view {
+        margin-left: 0rem;
     }
 }

@@ -72,7 +72,6 @@ function ReviewsPage() {
     }, []);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         setLoading(true);
         axios.get(url).then(res => {
             setReviewData(res.data);

@@ -63,7 +63,7 @@ function Footer() {
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
-                    roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
+                    roofs@ultimatesolutionsit.com
                   </div>
                 </div>
               </div>
@@ -90,8 +90,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>Columbus,</div>
-                <div>Ohio</div>
+                <div>2756 Sawbury Blvd</div>
+                <div>Columbus, Ohio 43235, USA</div>
               </div>
             </Col>
             <Col>
@@ -108,7 +108,7 @@ function Footer() {
                 <div style={{ display: "flex", marginTop: "1vh" }}>
                   <img className='contact-icons' style={{ marginTop: "5px" }} src={EmailIcon} alt='Email Icon' />
                   <div>
-                    roofs@ultimatesolutionsit.com<br />hrroofs@ultimatesolutionsit.com
+                    roofs@ultimatesolutionsit.com
                   </div>
                 </div>
               </div>
@@ -120,7 +120,7 @@ function Footer() {
       <Container className='last-section'>
         <div>Legal Notice</div>
         <div>Privacy Policy</div>
-        <div>© 2024, All Rights Reserved.</div>
+        <div>© 2023, All Rights Reserved.</div>
       </Container>
     </div>
   )
