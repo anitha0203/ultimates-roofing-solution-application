@@ -45,8 +45,8 @@ function Footer() {
             <Col>
               <h4 className='head-section'>Head Office</h4>
               <div className='footer-cols'>
-                <div>Columbus,</div>
-                <div>Ohio</div>
+              <div>2756 Sawbury Blvd</div>
+              <div>Columbus, Ohio 43235, USA</div>
               </div>
             </Col>
             <Col>
