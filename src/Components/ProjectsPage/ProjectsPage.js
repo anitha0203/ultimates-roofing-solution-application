@@ -105,9 +105,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Jun 05, 2023</p>
-              <h2 className='project-heading'>Siding installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Transform your home's exterior with flawless siding installation in Columbus, Ohio. Elevate curb appeal and durability with our expert craftsmanship.</p>
+              <p className='project-para'>Columbus, Ohio - May 25, 2023</p>
+              <h2 className='project-heading'>Commercial roofing installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Elevate your business infrastructure with expert commercial roofing installation in Columbus, Ohio. Ensure durability and functionality for your property with our professional services.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -137,9 +137,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - Apr 02, 2023</p>
-              <h2 className='project-heading'>Windows Installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Experience a seamless transformation with precision windows installation in Columbus, Ohio. Elevate your home's energy efficiency and aesthetics with our expert services.</p>
+              <p className='project-para'>Columbus, Ohio - Jun 05, 2023</p>
+              <h2 className='project-heading'>Siding installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Transform your home's exterior with flawless siding installation in Columbus, Ohio. Elevate curb appeal and durability with our expert craftsmanship.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -155,9 +155,9 @@ function ProjectsPage() {
               ))}
             </Slider>
             <Card.Body>
-              <p className='project-para'>Columbus, Ohio - May 25, 2023</p>
-              <h2 className='project-heading'>Commercial roofing installation in Columbus, Ohio</h2>
-              <p className='projects-page-text'>Elevate your business infrastructure with expert commercial roofing installation in Columbus, Ohio. Ensure durability and functionality for your property with our professional services.</p>
+              <p className='project-para'>Columbus, Ohio - Apr 02, 2023</p>
+              <h2 className='project-heading'>Windows Installation in Columbus, Ohio</h2>
+              <p className='projects-page-text'>Experience a seamless transformation with precision windows installation in Columbus, Ohio. Elevate your home's energy efficiency and aesthetics with our expert services.</p>
             </Card.Body>
           </Card>
         </Col>

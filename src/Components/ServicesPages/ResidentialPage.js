@@ -9,7 +9,7 @@ import Arrow from '../../assets/ServicesPagesImages/Arrow 2.png'
 import PDFFile from '../../assets/ServicesPDFs/Owens Corning Oakridge.pdf'
 import PDFFile1 from '../../assets/ServicesPDFs/file1.pdf'
 import { Helmet } from 'react-helmet'
-import Services1 from '../../assets/ServicesPagesImages/RoofsShining1.jpg'
+import Services1 from '../../assets/ServicesPagesImages/RoofsShining1.png'
 
 const ResidentialData = [
     { title: 'Innovative Design', description: 'Utilizing a robust, woven engineered reinforcing fabric for consistent fastening during installation' },

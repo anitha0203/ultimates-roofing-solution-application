@@ -140,6 +140,16 @@
     padding-top: 1vh
 }
 
+.appstore-toast {
+    border-radius: 0px;
+    position: relative;
+    z-index: 1000;
+    height: 5rem;
+    width: 10rem;
+    margin-left: -4rem;
+    margin-top: 1rem
+}
+
 /* Responsive media queries */
 @media only screen and (min-width: 1920px) {
     .about-img {
@@ -172,6 +182,10 @@
 
     .about-section {
         padding-left: 2rem;
+    }
+
+    .app-icons {
+        padding: 2vh 5vh 0px 0px;
     }
 }
 
@@ -237,10 +251,38 @@
         display: block;
         width: 7rem;
         margin-top: -3.5rem;
+        margin-left: 5rem;
+    }
+}
+
+@media (max-width: 678px) {
+    .appstore-toast {
+        position: absolute;
+        right: 32%;
+        margin-left: 0rem;
     }
 
     .app-icons {
-        padding: 2vh 8vh 0px 0px;
+        padding: 2vh 2vh 0px 0px;
+    }
+
+    .mobile-img-view {
+        display: block;
+        width: 7rem;
+        margin-top: -3.5rem;
+        margin-left: 12rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .appstore-toast {
+        right: 30%;
+    }
+
+    .mobile-img-view {
+        width: 7rem;
+        margin-top: -3.5rem;
+        margin-left: 9rem;
     }
 }
 
@@ -250,14 +292,13 @@
     }
 
     .mobile-img-view {
-        display: block;
         width: 5rem;
         margin-top: -2rem;
-        margin-left: 3rem;
+        margin-left: 9rem;
     }
 
-    .app-icons {
-        padding: 2vh 2vh 0px 0px;
+    .appstore-toast {
+        right: 23%;
     }
 }
 
@@ -298,6 +339,26 @@
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .appstore-toast {
+        right: 12%;
+    }
+
+    .mobile-img-view {
+        display: none;
+    }
+
+    .mobile-view-none {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .appstore-toast {
+        right: 5%;
+    }
+}
+
 @media only screen and (max-width: 410px) {
     .about-section:before {
         top: 60%;
@@ -310,20 +371,17 @@
         display: none;
     }
 
-    .mobile-img-view {
-        display: block;
-        width: 4rem;
-        height: 8rem;
-        margin-top: -2rem;
-        margin-left: 2rem;
-    }
-
     .app-section {
         padding: 7vh 15px;
     }
 
     .app-icons {
         padding: 2vh 2vh 0px 0px;
+    }
+
+    .appstore-toast {
+        right: 2%;
+        margin-top: 8rem;
     }
 
 }
@@ -336,10 +394,6 @@
 
     .content-overlay {
         margin-left: 1rem;
-    }
-
-    .mobile-img-view {
-        margin-left: 0rem;
     }
 
     .app-icons {

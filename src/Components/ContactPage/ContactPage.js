@@ -174,7 +174,8 @@ function ContactPage() {
                         <div className={`contact-sections ${visible ? 'fade-in visible' : 'fade-in'}`}>
                             <div className='contact-text'>
                                 <p style={{ fontWeight: "bold", fontSize: "23px" }}><CiLocationOn className='contact-icon' /> Address</p>
-                                <p className='address-text'>Columbus, Ohio</p>
+                                <p className='address-text'>2756 Sawbury Blvd</p>
+                                <p className='address-text'>Columbus, Ohio 43235, USA</p>
                             </div>
                         </div>
                     </Col>
