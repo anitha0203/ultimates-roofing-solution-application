@@ -164,7 +164,7 @@ function HomePage() {
               </Button>
             </div>
           </Col>
-          <Col>
+          <Col className="home-about-img-col">
             <img
               className="about-img"
               src={AboutHouse}

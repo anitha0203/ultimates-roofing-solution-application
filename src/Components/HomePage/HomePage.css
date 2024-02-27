@@ -74,6 +74,11 @@
     position: relative;
 }
 
+.home-about-img-col {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .about-col {
     justify-content: center;
     align-items: center;
